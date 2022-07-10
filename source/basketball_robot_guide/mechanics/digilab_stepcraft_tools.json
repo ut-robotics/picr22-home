@@ -1,0 +1,948 @@
+{
+    "data": [
+        {
+            "BMC": "carbide",
+            "GRADE": "generic",
+            "description": "3mm drill",
+            "geometry": {
+                "CSP": false,
+                "DC": 3,
+                "HAND": true,
+                "LB": 15,
+                "LCF": 10.5,
+                "NOF": 2,
+                "NT": 0,
+                "OAL": 38,
+                "RE": 0,
+                "SFDM": 3.175,
+                "SIG": 130,
+                "TA": 0,
+                "TP": 0,
+                "shoulder-length": 15,
+                "thread-profile-angle": 0,
+                "tip-diameter": 0,
+                "tip-length": 0,
+                "tip-offset": 0
+            },
+            "guid": "0162423f-a601-4b31-b733-9832ad41e1a0",
+            "holder": {
+                "description": "HF-500",
+                "guid": "696a767c-cfae-4e93-a5d1-966c95bce850",
+                "last_modified": 1568541686401,
+                "product-id": "",
+                "product-link": "",
+                "reference_guid": "22b618c7-1e4a-4e40-a842-0babb35fe45e",
+                "segments": [
+                    {
+                        "height": 12,
+                        "lower-diameter": 19,
+                        "upper-diameter": 19
+                    },
+                    {
+                        "height": "5",
+                        "lower-diameter": "14",
+                        "upper-diameter": "14"
+                    },
+                    {
+                        "height": "5",
+                        "lower-diameter": 20,
+                        "upper-diameter": 20
+                    },
+                    {
+                        "height": 12,
+                        "lower-diameter": 24,
+                        "upper-diameter": 43
+                    },
+                    {
+                        "height": 30,
+                        "lower-diameter": 43,
+                        "upper-diameter": 43
+                    }
+                ],
+                "type": "holder",
+                "unit": "millimeters",
+                "vendor": "Stepcraft"
+            },
+            "last_modified": 1568541727055,
+            "post-process": {
+                "break-control": false,
+                "comment": "",
+                "diameter-offset": 10,
+                "length-offset": 10,
+                "live": true,
+                "manual-tool-change": false,
+                "number": 10,
+                "turret": 0
+            },
+            "product-id": "",
+            "product-link": "https://www.sorotec.de/shop/Cutting-Tools/sorotec-tools/1-8-tools/Drills/Drills-023175/",
+            "start-values": {
+                "presets": [
+                    {
+                        "description": null,
+                        "f_n": 0.04,
+                        "guid": "05894dc8-c64a-4e72-a7d3-17f0bae87c16",
+                        "n": 5000,
+                        "n_ramp": 5000,
+                        "name": "Default Preset",
+                        "tool-coolant": "flood",
+                        "v_c": 47.1238898038469,
+                        "v_f": 0,
+                        "v_f_leadIn": 0,
+                        "v_f_leadOut": 0,
+                        "v_f_plunge": 200,
+                        "v_f_ramp": 0,
+                        "v_f_retract": 1000
+                    }
+                ]
+            },
+            "type": "drill",
+            "unit": "millimeters",
+            "vendor": "Sorotec"
+        },
+        {
+            "BMC": "carbide",
+            "GRADE": "Mill Generic",
+            "description": "1.5mm flat endmill",
+            "geometry": {
+                "CSP": false,
+                "DC": 1.5,
+                "HAND": true,
+                "LB": 12,
+                "LCF": 6.8,
+                "NOF": 2,
+                "NT": 0,
+                "OAL": 38,
+                "RE": 0,
+                "SFDM": 3.175,
+                "SIG": 0,
+                "TA": 0,
+                "TP": 0,
+                "shoulder-length": 8,
+                "thread-profile-angle": 0,
+                "tip-diameter": 1.5,
+                "tip-length": 0,
+                "tip-offset": 0
+            },
+            "guid": "5d92f7db-41bc-49f4-bac4-067476fb4326",
+            "holder": {
+                "description": "HF-500",
+                "guid": "696a767c-cfae-4e93-a5d1-966c95bce850",
+                "last_modified": 1568541686401,
+                "product-id": "",
+                "product-link": "",
+                "reference_guid": "22b618c7-1e4a-4e40-a842-0babb35fe45e",
+                "segments": [
+                    {
+                        "height": 12,
+                        "lower-diameter": 19,
+                        "upper-diameter": 19
+                    },
+                    {
+                        "height": "5",
+                        "lower-diameter": "14",
+                        "upper-diameter": "14"
+                    },
+                    {
+                        "height": "5",
+                        "lower-diameter": 20,
+                        "upper-diameter": 20
+                    },
+                    {
+                        "height": 12,
+                        "lower-diameter": 24,
+                        "upper-diameter": 43
+                    },
+                    {
+                        "height": 30,
+                        "lower-diameter": 43,
+                        "upper-diameter": 43
+                    }
+                ],
+                "type": "holder",
+                "unit": "millimeters",
+                "vendor": "Stepcraft"
+            },
+            "last_modified": 1568701246993,
+            "post-process": {
+                "break-control": false,
+                "comment": "",
+                "diameter-offset": 4,
+                "length-offset": 4,
+                "live": true,
+                "manual-tool-change": false,
+                "number": 4,
+                "turret": 0
+            },
+            "product-id": "",
+            "product-link": "https://www.sorotec.de/shop/End-Mill-Double-Flute--Flat---1-5mm.html",
+            "start-values": {
+                "presets": [
+                    {
+                        "description": null,
+                        "f_n": 0.011111111111111112,
+                        "f_z": 0.011111111111111112,
+                        "guid": "fe21a57b-b82b-4cda-9dd3-a6aed31bb9c5",
+                        "n": 18000,
+                        "n_ramp": 18000,
+                        "name": "Default Preset",
+                        "tool-coolant": "flood",
+                        "v_c": 84.82300164692441,
+                        "v_f": 400,
+                        "v_f_leadIn": 400,
+                        "v_f_leadOut": 400,
+                        "v_f_plunge": 200,
+                        "v_f_ramp": 200,
+                        "v_f_retract": 200
+                    }
+                ]
+            },
+            "type": "flat end mill",
+            "unit": "millimeters",
+            "vendor": "Sorotec"
+        },
+        {
+            "description": "HF-500",
+            "guid": "696a767c-cfae-4e93-a5d1-966c95bce850",
+            "last_modified": 1568541686401,
+            "product-id": "",
+            "product-link": "",
+            "reference_guid": "22b618c7-1e4a-4e40-a842-0babb35fe45e",
+            "segments": [
+                {
+                    "height": 12,
+                    "lower-diameter": 19,
+                    "upper-diameter": 19
+                },
+                {
+                    "height": "5",
+                    "lower-diameter": "14",
+                    "upper-diameter": "14"
+                },
+                {
+                    "height": "5",
+                    "lower-diameter": 20,
+                    "upper-diameter": 20
+                },
+                {
+                    "height": 12,
+                    "lower-diameter": 24,
+                    "upper-diameter": 43
+                },
+                {
+                    "height": 30,
+                    "lower-diameter": 43,
+                    "upper-diameter": 43
+                }
+            ],
+            "type": "holder",
+            "unit": "millimeters",
+            "vendor": "Stepcraft"
+        },
+        {
+            "BMC": "carbide",
+            "GRADE": "Mill Generic",
+            "description": "3mm flat endmill",
+            "geometry": {
+                "CSP": false,
+                "DC": 3,
+                "HAND": true,
+                "LB": 12,
+                "LCF": 6.8,
+                "NOF": 2,
+                "NT": 0,
+                "OAL": 38,
+                "RE": 0,
+                "SFDM": 3.175,
+                "SIG": 0,
+                "TA": 0,
+                "TP": 0,
+                "shoulder-length": 8,
+                "thread-profile-angle": 0,
+                "tip-diameter": 3,
+                "tip-length": 0,
+                "tip-offset": 0
+            },
+            "guid": "71efa3eb-3798-46c1-8550-676fd6f28eb8",
+            "holder": {
+                "description": "HF-500",
+                "guid": "696a767c-cfae-4e93-a5d1-966c95bce850",
+                "last_modified": 1568541686401,
+                "product-id": "",
+                "product-link": "",
+                "reference_guid": "22b618c7-1e4a-4e40-a842-0babb35fe45e",
+                "segments": [
+                    {
+                        "height": 12,
+                        "lower-diameter": 19,
+                        "upper-diameter": 19
+                    },
+                    {
+                        "height": "5",
+                        "lower-diameter": "14",
+                        "upper-diameter": "14"
+                    },
+                    {
+                        "height": "5",
+                        "lower-diameter": 20,
+                        "upper-diameter": 20
+                    },
+                    {
+                        "height": 12,
+                        "lower-diameter": 24,
+                        "upper-diameter": 43
+                    },
+                    {
+                        "height": 30,
+                        "lower-diameter": 43,
+                        "upper-diameter": 43
+                    }
+                ],
+                "type": "holder",
+                "unit": "millimeters",
+                "vendor": "Stepcraft"
+            },
+            "last_modified": 1568700920102,
+            "post-process": {
+                "break-control": false,
+                "comment": "",
+                "diameter-offset": 1,
+                "length-offset": 1,
+                "live": true,
+                "manual-tool-change": false,
+                "number": 1,
+                "turret": 0
+            },
+            "product-id": "",
+            "product-link": "https://www.sorotec.de/shop/End-Mill-Double-Flute--Flat---3-0mm.html",
+            "reference_guid": "8a429b1d-41ab-4db7-8468-068d7ae09202",
+            "start-values": {
+                "presets": [
+                    {
+                        "description": null,
+                        "f_n": 0.011111111111111112,
+                        "f_z": 0.027777777777777776,
+                        "guid": "831199c5-ad34-4c6e-98c5-b116223141aa",
+                        "n": 18000,
+                        "n_ramp": 18000,
+                        "name": "Default Preset",
+                        "tool-coolant": "flood",
+                        "v_c": 169.64600329384882,
+                        "v_f": 1000,
+                        "v_f_leadIn": 1000,
+                        "v_f_leadOut": 1000,
+                        "v_f_plunge": 200,
+                        "v_f_ramp": 200,
+                        "v_f_retract": 200
+                    }
+                ]
+            },
+            "type": "flat end mill",
+            "unit": "millimeters",
+            "vendor": "Sorotec"
+        },
+        {
+            "BMC": "carbide",
+            "GRADE": "Mill Generic",
+            "description": "2mm flat endmill",
+            "geometry": {
+                "CSP": false,
+                "DC": 2,
+                "HAND": true,
+                "LB": 12,
+                "LCF": 6.8,
+                "NOF": 2,
+                "NT": 0,
+                "OAL": 38,
+                "RE": 0,
+                "SFDM": 3.175,
+                "SIG": 0,
+                "TA": 0,
+                "TP": 0,
+                "shoulder-length": 8,
+                "thread-profile-angle": 0,
+                "tip-diameter": 2,
+                "tip-length": 0,
+                "tip-offset": 0
+            },
+            "guid": "8a429b1d-41ab-4db7-8468-068d7ae09202",
+            "holder": {
+                "description": "HF-500",
+                "guid": "696a767c-cfae-4e93-a5d1-966c95bce850",
+                "last_modified": 1568541686401,
+                "product-id": "",
+                "product-link": "",
+                "reference_guid": "22b618c7-1e4a-4e40-a842-0babb35fe45e",
+                "segments": [
+                    {
+                        "height": 12,
+                        "lower-diameter": 19,
+                        "upper-diameter": 19
+                    },
+                    {
+                        "height": "5",
+                        "lower-diameter": "14",
+                        "upper-diameter": "14"
+                    },
+                    {
+                        "height": "5",
+                        "lower-diameter": 20,
+                        "upper-diameter": 20
+                    },
+                    {
+                        "height": 12,
+                        "lower-diameter": 24,
+                        "upper-diameter": 43
+                    },
+                    {
+                        "height": 30,
+                        "lower-diameter": 43,
+                        "upper-diameter": 43
+                    }
+                ],
+                "type": "holder",
+                "unit": "millimeters",
+                "vendor": "Stepcraft"
+            },
+            "last_modified": 1568701259495,
+            "post-process": {
+                "break-control": false,
+                "comment": "",
+                "diameter-offset": 3,
+                "length-offset": 3,
+                "live": true,
+                "manual-tool-change": false,
+                "number": 3,
+                "turret": 0
+            },
+            "product-id": "",
+            "product-link": "https://www.sorotec.de/shop/End-Mill-Double-Flute--Flat---2-0mm.html",
+            "start-values": {
+                "presets": [
+                    {
+                        "description": null,
+                        "f_n": 0.011111111111111112,
+                        "f_z": 0.016666666666666666,
+                        "guid": "69052a04-a0cc-4761-9172-14ad8e6a1d27",
+                        "n": 18000,
+                        "n_ramp": 18000,
+                        "name": "Default Preset",
+                        "tool-coolant": "flood",
+                        "v_c": 113.09733552923257,
+                        "v_f": 600,
+                        "v_f_leadIn": 600,
+                        "v_f_leadOut": 600,
+                        "v_f_plunge": 200,
+                        "v_f_ramp": 200,
+                        "v_f_retract": 200
+                    }
+                ]
+            },
+            "type": "flat end mill",
+            "unit": "millimeters",
+            "vendor": "Sorotec"
+        },
+        {
+            "BMC": "carbide",
+            "GRADE": "generic",
+            "description": "1.6mm drill",
+            "geometry": {
+                "CSP": false,
+                "DC": 1.6,
+                "HAND": true,
+                "LB": 15,
+                "LCF": 10.5,
+                "NOF": 2,
+                "NT": 0,
+                "OAL": 38,
+                "RE": 0,
+                "SFDM": 3.175,
+                "SIG": 130,
+                "TA": 0,
+                "TP": 0,
+                "shoulder-length": 15,
+                "thread-profile-angle": 0,
+                "tip-diameter": 0,
+                "tip-length": 0,
+                "tip-offset": 0
+            },
+            "guid": "9cd8cb8a-fbd6-422c-85a7-89a61480a537",
+            "holder": {
+                "description": "HF-500",
+                "guid": "696a767c-cfae-4e93-a5d1-966c95bce850",
+                "last_modified": 1568541686401,
+                "product-id": "",
+                "product-link": "",
+                "reference_guid": "22b618c7-1e4a-4e40-a842-0babb35fe45e",
+                "segments": [
+                    {
+                        "height": 12,
+                        "lower-diameter": 19,
+                        "upper-diameter": 19
+                    },
+                    {
+                        "height": "5",
+                        "lower-diameter": "14",
+                        "upper-diameter": "14"
+                    },
+                    {
+                        "height": "5",
+                        "lower-diameter": 20,
+                        "upper-diameter": 20
+                    },
+                    {
+                        "height": 12,
+                        "lower-diameter": 24,
+                        "upper-diameter": 43
+                    },
+                    {
+                        "height": 30,
+                        "lower-diameter": 43,
+                        "upper-diameter": 43
+                    }
+                ],
+                "type": "holder",
+                "unit": "millimeters",
+                "vendor": "Stepcraft"
+            },
+            "last_modified": 1568541756920,
+            "post-process": {
+                "break-control": false,
+                "comment": "",
+                "diameter-offset": 14,
+                "length-offset": 14,
+                "live": true,
+                "manual-tool-change": false,
+                "number": 14,
+                "turret": 0
+            },
+            "product-id": "",
+            "product-link": "https://www.sorotec.de/shop/Cutting-Tools/sorotec-tools/1-8-tools/Drills/Drills-023175/",
+            "start-values": {
+                "presets": [
+                    {
+                        "description": null,
+                        "f_n": 0.04,
+                        "guid": "8e90ee97-4cc2-456b-8a8c-d2915672dcd7",
+                        "n": 5000,
+                        "n_ramp": 5000,
+                        "name": "Default Preset",
+                        "tool-coolant": "flood",
+                        "v_c": 25.13274122871835,
+                        "v_f": 0,
+                        "v_f_leadIn": 0,
+                        "v_f_leadOut": 0,
+                        "v_f_plunge": 200,
+                        "v_f_ramp": 0,
+                        "v_f_retract": 1000
+                    }
+                ]
+            },
+            "type": "drill",
+            "unit": "millimeters",
+            "vendor": "Sorotec"
+        },
+        {
+            "BMC": "carbide",
+            "GRADE": "generic",
+            "description": "2.1mm drill",
+            "geometry": {
+                "CSP": false,
+                "DC": 2.1,
+                "HAND": true,
+                "LB": 15,
+                "LCF": 10.5,
+                "NOF": 2,
+                "NT": 0,
+                "OAL": 38,
+                "RE": 0,
+                "SFDM": 3.175,
+                "SIG": 130,
+                "TA": 0,
+                "TP": 0,
+                "shoulder-length": 15,
+                "thread-profile-angle": 0,
+                "tip-diameter": 0,
+                "tip-length": 0,
+                "tip-offset": 0
+            },
+            "guid": "b876a0c7-5a89-465c-9f05-cd027beeed77",
+            "holder": {
+                "description": "HF-500",
+                "guid": "696a767c-cfae-4e93-a5d1-966c95bce850",
+                "last_modified": 1568541686401,
+                "product-id": "",
+                "product-link": "",
+                "reference_guid": "22b618c7-1e4a-4e40-a842-0babb35fe45e",
+                "segments": [
+                    {
+                        "height": 12,
+                        "lower-diameter": 19,
+                        "upper-diameter": 19
+                    },
+                    {
+                        "height": "5",
+                        "lower-diameter": "14",
+                        "upper-diameter": "14"
+                    },
+                    {
+                        "height": "5",
+                        "lower-diameter": 20,
+                        "upper-diameter": 20
+                    },
+                    {
+                        "height": 12,
+                        "lower-diameter": 24,
+                        "upper-diameter": 43
+                    },
+                    {
+                        "height": 30,
+                        "lower-diameter": 43,
+                        "upper-diameter": 43
+                    }
+                ],
+                "type": "holder",
+                "unit": "millimeters",
+                "vendor": "Stepcraft"
+            },
+            "last_modified": 1568541743849,
+            "post-process": {
+                "break-control": false,
+                "comment": "",
+                "diameter-offset": 12,
+                "length-offset": 12,
+                "live": true,
+                "manual-tool-change": false,
+                "number": 12,
+                "turret": 0
+            },
+            "product-id": "",
+            "product-link": "https://www.sorotec.de/shop/Cutting-Tools/sorotec-tools/1-8-tools/Drills/Drills-023175/",
+            "start-values": {
+                "presets": [
+                    {
+                        "description": null,
+                        "f_n": 0.04,
+                        "guid": "fbec0b19-7117-4163-b68d-b5117d3a41b6",
+                        "n": 5000,
+                        "n_ramp": 5000,
+                        "name": "Default Preset",
+                        "tool-coolant": "flood",
+                        "v_c": 32.98672286269283,
+                        "v_f": 0,
+                        "v_f_leadIn": 0,
+                        "v_f_leadOut": 0,
+                        "v_f_plunge": 200,
+                        "v_f_ramp": 0,
+                        "v_f_retract": 1000
+                    }
+                ]
+            },
+            "type": "drill",
+            "unit": "millimeters",
+            "vendor": "Sorotec"
+        },
+        {
+            "BMC": "carbide",
+            "GRADE": "generic",
+            "description": "2.5mm drill",
+            "geometry": {
+                "CSP": false,
+                "DC": 2.5,
+                "HAND": true,
+                "LB": 15,
+                "LCF": 10.5,
+                "NOF": 2,
+                "NT": 0,
+                "OAL": 38,
+                "RE": 0,
+                "SFDM": 3.175,
+                "SIG": 130,
+                "TA": 0,
+                "TP": 0,
+                "shoulder-length": 15,
+                "thread-profile-angle": 0,
+                "tip-diameter": 0,
+                "tip-length": 0,
+                "tip-offset": 0
+            },
+            "guid": "c1c22511-bb34-473b-a32a-bd4fff8552e7",
+            "holder": {
+                "description": "HF-500",
+                "guid": "696a767c-cfae-4e93-a5d1-966c95bce850",
+                "last_modified": 1568541686401,
+                "product-id": "",
+                "product-link": "",
+                "reference_guid": "22b618c7-1e4a-4e40-a842-0babb35fe45e",
+                "segments": [
+                    {
+                        "height": 12,
+                        "lower-diameter": 19,
+                        "upper-diameter": 19
+                    },
+                    {
+                        "height": "5",
+                        "lower-diameter": "14",
+                        "upper-diameter": "14"
+                    },
+                    {
+                        "height": "5",
+                        "lower-diameter": 20,
+                        "upper-diameter": 20
+                    },
+                    {
+                        "height": 12,
+                        "lower-diameter": 24,
+                        "upper-diameter": 43
+                    },
+                    {
+                        "height": 30,
+                        "lower-diameter": 43,
+                        "upper-diameter": 43
+                    }
+                ],
+                "type": "holder",
+                "unit": "millimeters",
+                "vendor": "Stepcraft"
+            },
+            "last_modified": 1568541737473,
+            "post-process": {
+                "break-control": false,
+                "comment": "",
+                "diameter-offset": 11,
+                "length-offset": 11,
+                "live": true,
+                "manual-tool-change": false,
+                "number": 11,
+                "turret": 0
+            },
+            "product-id": "",
+            "product-link": "https://www.sorotec.de/shop/Cutting-Tools/sorotec-tools/1-8-tools/Drills/Drills-023175/",
+            "start-values": {
+                "presets": [
+                    {
+                        "description": null,
+                        "f_n": 0.04,
+                        "guid": "142774a9-05a1-4e3b-a639-f7b4425d21e1",
+                        "n": 5000,
+                        "n_ramp": 5000,
+                        "name": "Default Preset",
+                        "tool-coolant": "flood",
+                        "v_c": 39.26990816987242,
+                        "v_f": 0,
+                        "v_f_leadIn": 0,
+                        "v_f_leadOut": 0,
+                        "v_f_plunge": 200,
+                        "v_f_ramp": 0,
+                        "v_f_retract": 1000
+                    }
+                ]
+            },
+            "type": "drill",
+            "unit": "millimeters",
+            "vendor": "Sorotec"
+        },
+        {
+            "BMC": "carbide",
+            "GRADE": "generic",
+            "description": "2mm drill",
+            "geometry": {
+                "CSP": false,
+                "DC": 2,
+                "HAND": true,
+                "LB": 15,
+                "LCF": 10.5,
+                "NOF": 2,
+                "NT": 0,
+                "OAL": 38,
+                "RE": 0,
+                "SFDM": 3.175,
+                "SIG": 130,
+                "TA": 0,
+                "TP": 0,
+                "shoulder-length": 15,
+                "thread-profile-angle": 0,
+                "tip-diameter": 0,
+                "tip-length": 0,
+                "tip-offset": 0
+            },
+            "guid": "c47ee7c6-39a3-4b61-a7de-cd4bb1177b1a",
+            "holder": {
+                "description": "HF-500",
+                "guid": "696a767c-cfae-4e93-a5d1-966c95bce850",
+                "last_modified": 1568541686401,
+                "product-id": "",
+                "product-link": "",
+                "reference_guid": "22b618c7-1e4a-4e40-a842-0babb35fe45e",
+                "segments": [
+                    {
+                        "height": 12,
+                        "lower-diameter": 19,
+                        "upper-diameter": 19
+                    },
+                    {
+                        "height": "5",
+                        "lower-diameter": "14",
+                        "upper-diameter": "14"
+                    },
+                    {
+                        "height": "5",
+                        "lower-diameter": 20,
+                        "upper-diameter": 20
+                    },
+                    {
+                        "height": 12,
+                        "lower-diameter": 24,
+                        "upper-diameter": 43
+                    },
+                    {
+                        "height": 30,
+                        "lower-diameter": 43,
+                        "upper-diameter": 43
+                    }
+                ],
+                "type": "holder",
+                "unit": "millimeters",
+                "vendor": "Stepcraft"
+            },
+            "last_modified": 1568541750184,
+            "post-process": {
+                "break-control": false,
+                "comment": "",
+                "diameter-offset": 13,
+                "length-offset": 13,
+                "live": true,
+                "manual-tool-change": false,
+                "number": 13,
+                "turret": 0
+            },
+            "product-id": "",
+            "product-link": "https://www.sorotec.de/shop/Cutting-Tools/sorotec-tools/1-8-tools/Drills/Drills-023175/",
+            "start-values": {
+                "presets": [
+                    {
+                        "description": null,
+                        "f_n": 0.04,
+                        "guid": "82a0e034-75b8-4b5c-86a2-7924cccba6c9",
+                        "n": 5000,
+                        "n_ramp": 5000,
+                        "name": "Default Preset",
+                        "tool-coolant": "flood",
+                        "v_c": 31.41592653589793,
+                        "v_f": 0,
+                        "v_f_leadIn": 0,
+                        "v_f_leadOut": 0,
+                        "v_f_plunge": 200,
+                        "v_f_ramp": 0,
+                        "v_f_retract": 1000
+                    }
+                ]
+            },
+            "type": "drill",
+            "unit": "millimeters",
+            "vendor": "Sorotec"
+        },
+        {
+            "BMC": "carbide",
+            "GRADE": "Mill Generic",
+            "description": "2.5mm flat endmill",
+            "geometry": {
+                "CSP": false,
+                "DC": 2.5,
+                "HAND": true,
+                "LB": 12,
+                "LCF": 6.8,
+                "NOF": 2,
+                "NT": 0,
+                "OAL": 38,
+                "RE": 0,
+                "SFDM": 3.175,
+                "SIG": 0,
+                "TA": 0,
+                "TP": 0,
+                "shoulder-length": 8,
+                "thread-profile-angle": 0,
+                "tip-diameter": 2.5,
+                "tip-length": 0,
+                "tip-offset": 0
+            },
+            "guid": "f7c5f3c6-7b46-48b6-9617-4857cc8733a1",
+            "holder": {
+                "description": "HF-500",
+                "guid": "696a767c-cfae-4e93-a5d1-966c95bce850",
+                "last_modified": 1568541686401,
+                "product-id": "",
+                "product-link": "",
+                "reference_guid": "22b618c7-1e4a-4e40-a842-0babb35fe45e",
+                "segments": [
+                    {
+                        "height": 12,
+                        "lower-diameter": 19,
+                        "upper-diameter": 19
+                    },
+                    {
+                        "height": "5",
+                        "lower-diameter": "14",
+                        "upper-diameter": "14"
+                    },
+                    {
+                        "height": "5",
+                        "lower-diameter": 20,
+                        "upper-diameter": 20
+                    },
+                    {
+                        "height": 12,
+                        "lower-diameter": 24,
+                        "upper-diameter": 43
+                    },
+                    {
+                        "height": 30,
+                        "lower-diameter": 43,
+                        "upper-diameter": 43
+                    }
+                ],
+                "type": "holder",
+                "unit": "millimeters",
+                "vendor": "Stepcraft"
+            },
+            "last_modified": 1568701269255,
+            "post-process": {
+                "break-control": false,
+                "comment": "",
+                "diameter-offset": 2,
+                "length-offset": 2,
+                "live": true,
+                "manual-tool-change": false,
+                "number": 2,
+                "turret": 0
+            },
+            "product-id": "",
+            "product-link": "https://www.sorotec.de/shop/End-Mill-Double-Flute--Flat---2-5mm.html",
+            "start-values": {
+                "presets": [
+                    {
+                        "description": null,
+                        "f_n": 0.011111111111111112,
+                        "f_z": 0.022222222222222223,
+                        "guid": "83d49429-82fb-4fef-b4c1-320bb1ed0212",
+                        "n": 18000,
+                        "n_ramp": 18000,
+                        "name": "Default Preset",
+                        "tool-coolant": "flood",
+                        "v_c": 141.3716694115407,
+                        "v_f": 800,
+                        "v_f_leadIn": 800,
+                        "v_f_leadOut": 800,
+                        "v_f_plunge": 200,
+                        "v_f_ramp": 200,
+                        "v_f_retract": 200
+                    }
+                ]
+            },
+            "type": "flat end mill",
+            "unit": "millimeters",
+            "vendor": "Sorotec"
+        }
+    ],
+    "version": 1
+}
