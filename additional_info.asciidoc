@@ -1,0 +1,6 @@
+== Converting MediaWiki to AsciiDoc
+
+[source,bash]
+----
+pandoc -f mediawiki -t asciidoc -o filename.asciidoc filename.mediawiki
+----

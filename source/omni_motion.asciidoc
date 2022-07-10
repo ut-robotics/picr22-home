@@ -1,0 +1,90 @@
+= Omni motion
+
+== Coordinate system
+
+image::images/omni_motion_vectors.png[]
+
+== Units
+
+* wheelLinearVelocity - m/s
+* robotSpeed - m/s
+* robotSpeedX - m/s
+* robotSpeedY - m/s
+* robotDirectionAngle - rad
+* wheelAngle - rad
+* wheelDistanceFromCenter - m
+* robotAngularVelocity - rad/s
+
+== Wheel speed calculation
+
+----
+wheelLinearVelocity = robotSpeed * cos(robotDirectionAngle - wheelAngle) + wheelDistanceFromCenter * robotAngularVelocity`
+----
+
+== Using forward and sideways robot speeds
+
+robotSpeed and robotDirectionAngle can be calculated using sideways
+(x-axis direction) and forward (y-axis direction) speeds:
+
+----
+robotSpeed = sqrt(robotSpeedX * robotSpeedX + robotSpeedY * robotSpeedY)
+
+robotDirectionAngle = atan2(robotSpeedY, robotSpeedX)
+----
+
+== Wheel linear velocity in mainboard units
+
+----
+wheelAngularSpeedMainboardUnits = (wheelAngularVelocity / (2 * PI())) * encoderCountsPerWheelRevolution * pidControlPeriod
+----
+
+where
+
+----
+wheelAngularVelocity = wheelLinearVelocity / wheelRadius
+
+encoderCountsPerWheelRevolution = gearboxReductionRatio * encoderEdgesPerMotorRevolution
+
+pidControlPeriod = 1 / pidControlFrequency
+----
+
+*Simplified*
+
+----
+wheelAngularSpeedMainboardUnits = wheelLinearVelocity * gearboxReductionRatio * encoderEdgesPerMotorRevolution / (2 * PI  wheelRadius * pidControlFrequency)
+----
+
+OR
+
+----
+wheelAngularSpeedMainboardUnits = wheelLinearVelocity * wheelSpeedToMainboardUnits
+----
+
+Where wheelSpeedToMainboardUnits is constant and can be calculated once
+in advance:
+
+----
+wheelSpeedToMainboardUnits = gearboxReductionRatio * encoderEdgesPerMotorRevolution / (2 * PI * wheelRadius * idControlFrequency)
+----
+
+*Example*
+
+* Pololu 37D 19:1 motor
+* 60 Hz PID calculation frequency
+* 70mm diameter wheels
+
+* gearboxReductionRatio = 18.75
+* encoderEdgesPerMotorRevolution = 64
+* wheelRadius = 0.035 [m]
+* pidControlFrequency = 60 [Hz]
+* wheelLinearVelocity = 2 [m/s]
+
+----
+wheelSpeedToMainboardUnits = 18.75 * 64 / (2 * PI * 0.035 * 60)
+
+wheelSpeedToMainboardUnits ≈ 90.9
+
+wheelAngularSpeedMainboardUnits = 2 * 90.9457
+
+wheelSpeedToMainboardUnits ≈ 181.8914
+----

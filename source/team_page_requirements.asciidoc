@@ -1,0 +1,56 @@
+= Team page requirements
+
+== Introduction
+
+By the end of this course, each team must have a page that has the required data described on this page.
+This will give future students and other robot builders access to previous years knowledge
+and experience on robot building to improve overall quality of their robots.
+
+== Page requirements
+
+=== Overall
+
+Team page must have:
+
+* Names of all team members.
+* Link to all repositories (code, mechanics, electronics, etc).
+** Code repositories must include a README describing how to set up and run the code.
+
+=== Blogs
+
+Blogs should be kept at the very end of your team page.
+
+=== Programming
+
+The following questions must be answered:
+
+* What libraries did you use (and for what purposes)?
+* A brief description of your game logic and overall code structure.
+* A block diagram of your game logic.
+* A short analysis of what was good and bad in your code and how to improve.
+
+=== Electronics
+
+* If you used something different from what was given at the start of the course
+or did something different, describe it.
+* Photos illustrating electronics on your robot. (electronics board, cable management, etc.)
+* A short analysis of what was good and bad in your electronics and how to improve.
+
+=== Mechanics
+
+* If you used something different from what was given at the start of the course
+or did something different, describe it.
+* Description of the main points of interest in your ball thrower design and construction process.
+* Photos of your robot.
+* A short analysis of what was good and bad in your mechanics and how to improve.
+
+=== Personal comments
+
+Each member must write a paragraph that covers the following:
+
+* On which parts of the robot did you work on?
+* What did you learn?
+* What would you do differently next time?
+* What did you like/did not like about the course/building a robot?
+* Suggestions for next year students.
+* Suggestions for instructors.

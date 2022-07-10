@@ -1,0 +1,88 @@
+:toc:
+:toclevels: 2
+:toc-title: Table of contents
+
+= Schematic
+
+== Reference designators
+
+Reference designators are unique identifiers for each component.
+For example U1, R2, D2.
+Designators are usually prefixed with a letter or letters, that correspond to component's type.
+Prefix is followed by a number, so that the letter and number combination is unique on the entire schematic.
+Prefixes can be usually specified in component library.
+
+Common prefixes:
+
+* U or IC - integrated circuit. For example microcontroller, motor driver or voltage regulator.
+* R - resistor.
+* C - capacitor.
+* D - diode or LED (light emitting diode).
+* LED - light emitting diode.
+* L - inductor.
+* Q - transistor.
+* J or CON - connector.
+* S - switch.
+
+== Connections
+
+=== Labels
+
+Use labels on nets instead of drawing long wires between components.
+
+image::../images/schematic_net_labels.png[Net labels,600]
+
+=== Supply connections
+
+Avoid connecting all the power supply pins together. Use power supply symbols instead.
+
+image::../images/schematic_supply_symbols.png[Supply symbols,600]
+
+== Decoupling capacitors
+
+It is recommended to connect a decoupling (bypass) capacitor close to each power input pin.
+Common capacitance value is 100 nF.
+On a schematic, the capacitors can be connected directly to the power pin.
+Or they can be connected together close to the component when the component has multiple decoupling capacitors
+and there is not enough room to directly wire them to the component.
+
+image::../images/schematic_decoupling_capacitors.png[Net labels,600]
+
+== Programmer connector
+
+One place where to find the pinout for programmer connector is in
+link:https://www.st.com/resource/en/user_manual/dm00555046-stlinkv3mods-and-stlinkv3mini-mini-debuggersprogrammers-for-stm32-stmicroelectronics.pdf[STLINK-V3MINI user manual]
+under _9.1.3 STDC14 for STLINK-V3MINI (STM32 JTAG/SWD and VCP)_.
+
+On the schematic the connections should look similar to the image below:
+
+image::../images/schematic_programmer_connector_arm10.png[Programmer connector,400]
+
+== Microcontroller
+
+=== BOOT0 pin
+
+BOOT0 pin can be left unused or used for some other function if nSWBOOT0 is set to 1 in FLASH_OPTR registry.
+If nSWBOOT0 is set to 0, then pulldown resitor should be connected to BOOT0 pin.
+For more information see Boot configuration section on link:firmware.asciidoc[Firmware] page.
+
+=== nRESET pin
+
+nRESET pin has an internal pullup.
+It is recommended to connect 100 nF decoupling capacitor to nRESET pin.
+
+It is possible to connect a switch between nRESET pin and ground to reset the microcontroller manually,
+but manual reset is usually not needed and can be done by disconnecting the power.
+
+== Open drain outputs
+
+nFAULT pin on DRV8243 is an open drain output.
+
+Examples on how to use open drain outputs can be found in this
+link:https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgosgCgAzEXAFnGdewRTY+7GiQxIKWgHcmXcCjwS+YPrTAZu7GVVUgAtNm5VySQVCgCQAGQCiAERAAHAK4AbB3ZsgAbgHsHAFwCGAcwBTWn9ZcEIqTj5iXVpTJkhWMHYQFARCHiMqel8HAGdA6joAWRANFGYqBHlUyqMUAVoAJzLmGTAajTajZgw4RUIVbvVu7u4AE0Ccx29NB0Dx8CzjODBaACNwBFYUFTAkTmIoMTCOofaaugAPcKQMCGwyEAxWJNYAeRtAgDsAHTzxk1fABLP55Dx2bz2bx5f6gvLAyb-ADGHgAtjYPN8ft5aDcwIRWMQdnhsCAnm8QAAFJqBPKwvKmAD0AAl-t4POyPP5-PM8WUntgIAhiDJsK82CAAMJY7HI7yg-z-CyWfnMYgQTAZQYZTBHSkAJUCvnGiv+EKhkP+CP831yDASO2UYUw3B04BMQhEoSiqTwYskOiodHiLFSzrSuudwZAOXyhUEJ19FRGMhTxxa5TqGiUGSoYHgdCU53AGAyOZSemohmDJnekOhIBtdoctkczlcnh8AWC4mTdWT6XAtCAA[Falstad simulation]
+
+== Bulk capacitors
+
+Capacitors can be used to avoid voltage dropping too much during fast current consumption increases.
+Electrolytic or ceramic capacitors or combination of both can be used.
+Bulk capacitors should be connected between motor driver power input and ground.
