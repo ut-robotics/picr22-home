@@ -1,0 +1,87 @@
+:toc:
+:toclevels: 2
+:toc-title: Table of contents
+
+= Batteries
+
+See https://batteryuniversity.com/ for extensive information on batteries.
+
+== What do the numbers mean?
+
+* *3,7V, 7,4V, 11,1V, 14,8V, ...* - This is the nominal voltage of the battery.
+This can also be used to calculate the number of series cells on a battery,
+as a single cell has a nominal voltage of 3,7V.
+When the battery voltage drops significantly below the nominal voltage, you can consider the battery to be empty.
+You can consider this threshold to be something like 3.5V per cell.
+So 7V for-2 cell battery, 10.5V for 3-cell battery, 14V for 4-cell battery.
+A full battery actually has a voltage higher than the nominal voltage of the battery: 4.2V per cell.
+So it makes 8.4V for 2-cell battery, 12.6V for 3-cell battery, 16.8V for 4-cell battery.
+* *1S, 2S, 3S, 4S, ...* - This is the number of LiPo cells the battery has connected in series.
+This can be used to calculate the nominal voltage of the battery, as every cell has a nominal voltage of 3.7V.
+* *1000mAh, 5500mAh, 3000mAh, 4000mAh, ...* - this is the capacitance of the battery.
+This means that a 1000mAh battery can provide average current of 1000mA for 1 hour,
+500mA for 2 hours, ..., until the battery is discharged completely.
+* *15C, 20C, 34C, 80C, ...* - This number means the maximum discharge rate of the battery
+as a function of its capacitance.
+A 1000mAh 10C battery can be discharged at a maximum of 1000mAh * 10C = 10000mA = 10A rate.
+Sometimes discharge rates are shown as something like 15C - 25C,
+in which case 15C is the maximum continuous discharge rate,
+while 25C is the maximum burst rate.
+
+== Charging the battery with a 4-button charger
+
+https://youtu.be/kvr-25yGeVk[A video on charging LiPo batteries]
+
+Main points of charging:
+
+* Choose correct battery type (LiPo).
+* Choose correct program (LiPo balance).
+* Choose correct charging current (0.5C - 1C, depending on battery age).
+* Choose correct charging voltage (match battery nominal voltage and number of cells).
+* Connect battery main plug and balance plug.
+Take note of polarity (black wire should be negative).
+* Start the charge.
+* Ensure that at least one person is always in the room while the battery is charging.
+
+== Battery etiquette
+
+When you finish testing, disconnect your batteries.
+When testing on the field (programming on the robot computer) have the computer power adapter connected.
+Disconnect it only when you want to drive across the field, where the cable is not long enough.
+To change quickly between power adapter and battery,
+use the link:https://github.com/ReikoR/power_path_control_2016[power path controller board].
+
+When testing, monitor the voltage of the batteries.
+If the open circuit voltage of a cell is below 3.6 V,
+voltage is below 3.3 V under load or voltage alarm activates when you are driving around,
+it is time to charge your battery.
+
+Batteries that have been restored (cells charged from low voltage),
+should have the temperature checked during charging and testing.
+If there is a heat build-up, disconnect the battery immediately and put into LiPo-safe charge bag.
+If the heat continues to build up, take the battery outside and let it burn in a safe area.
+
+If there is no heat build-up during charging or normal operation, the battery is safe to be charged with 1C.
+
+== Using LiPo alarms/buzzers
+
+* Make sure they are set to a sensible threshold voltage (preferably 3.5V)
+* Make sure you attach them in the correct direction (black wire goes to the negative terminal).
+* Make sure they make a noise when you attach them.
+* Use at all times when actively discharging/using the battery.
+Otherwise you risk over-discharging the battery and ruining it.
+* Do not use while charging.
+* Remove alarm and unplug battery when not using the battery for a longer time period (more than one hour).
+If you leave the buzzers on overnight, they draw a small amount of current from the battery and may over-discharge it.
+
+== Dangers of the batteries
+
+When over-discharging LiPo-s, the internal resistance will increase and the damage is irreversible.
+When discharging cells below 3.0V, damage becomes significant enough to care about.
+When the voltage is below 2.5V/cell, the battery is too dangerous to be charged with 1C.
+Below 2.0V/cell the LiPo-s rate of permanent damage will only increase and it is not linear.
+Even if we manage to restore the batteries,
+they will not have their initial capacity and also the maximum current you can safely draw is reduced.
+Worst case the battery will lose its ability to hold a charge and will be unusable.
+
+Do not puncture or damage the battery mechanically or it might catch fire.
