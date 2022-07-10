@@ -14,12 +14,19 @@ link:electronics/pcb_layout.asciidoc[PCB layout]
 
 link:electronics/firmware.asciidoc[Firmware]
 
+== Mechanics
+
+link:mechanics/design.asciidoc[Design]
+
 == Document source
 
 Generated from asciidoc files available here:
-link:https://github.com/ReikoR/picr21-basketball-robot-guide[]
+link:https://github.com/TODO[]
 
 == Changelog
+
+=== 2022-07-10
+. Created mechanics design document.
 
 === 2021-11-24
 . Updated some info for newer MCU and motor driver.
