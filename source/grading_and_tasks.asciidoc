@@ -199,7 +199,7 @@ on the team’s wiki page and the team has presented their progress.
 * Instructor will move the ball when the robot gets closer than 10 centimetres to the ball.
 * Robot must follow the ball by simultaneously rotating and moving towards it.
 * Robot must use omnidirectional motion.
-** xref:omni_motion.asciidoc[Omni motion]
+** See xref:basketball_robot_guide/software/omni_motion.asciidoc[Omni-motion]
 * Task is completed when the robot is able to follow the ball.
 
 ==== Robot finds basket with a ball

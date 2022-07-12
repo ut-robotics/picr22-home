@@ -24,6 +24,10 @@ link:mechanics/design.asciidoc[Design]
 
 link:mechanics/cam.asciidoc[Fusion 360 CAM]
 
+== Software
+
+link:software/omni_motion.asciidoc[Omni-motion]
+
 == Document source
 
 Generated from asciidoc files available here:
@@ -35,6 +39,7 @@ link:https://github.com/TODO[]
 . Created mechanics design page.
 . Created Fusion 360 CAM page.
 . Created batteries page.
+. Created omni-motion page.
 
 === 2021-11-24
 . Updated some info for newer MCU and motor driver.
