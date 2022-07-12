@@ -32,6 +32,7 @@ console.log('Convert asciidoc to HTML and copy other files:');
 const sourceDir = 'source';
 const destDir = 'docs';
 const cssFile = 'asciidoctor.css';
+const asciidoctorPromises = [];
 
 for await (const filename of getFiles(sourceDir)) {
     if (filename.endsWith('.asciidoc')) {
@@ -43,7 +44,7 @@ for await (const filename of getFiles(sourceDir)) {
 
         console.log(relativePath);
 
-        await execPromise(`asciidoctor -a linkcss -a stylesheet=${cssPath} -R ${sourceDir} -D ${destDir} ${filename}`);
+        asciidoctorPromises.push(execPromise(`asciidoctor -a nofooter -a linkcss -a stylesheet=${cssPath} -R ${sourceDir} -D ${destDir} ${filename}`));
 
         continue;
     }
@@ -63,7 +64,11 @@ for await (const filename of getFiles(sourceDir)) {
     }
 }
 
+await Promise.all(asciidoctorPromises);
+
 console.log('Process links:');
+
+const htmlProcessingPromises = [];
 
 for await (const filename of getFiles('docs')) {
     if (!filename.endsWith('.html')) {
@@ -71,5 +76,7 @@ for await (const filename of getFiles('docs')) {
     }
 
     console.log(filename);
-    await processLinks(filename);
+    htmlProcessingPromises.push(processLinks(filename));
 }
+
+await Promise.all(htmlProcessingPromises);
