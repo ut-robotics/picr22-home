@@ -13,3 +13,8 @@
 == Previous years
 
 https://digilabor.ut.ee/index.php/Project_in_Competitive_Robotics
+
+== Document source
+
+Generated from asciidoc files available here: +
+link:https://github.com/ut-robotics/picr22-home/tree/main/source[]

@@ -28,11 +28,6 @@ link:mechanics/cam.asciidoc[Fusion 360 CAM]
 
 link:software/omni_motion.asciidoc[Omni-motion]
 
-== Document source
-
-Generated from asciidoc files available here:
-link:https://github.com/TODO[]
-
 == Changelog
 
 === 2022-07-10
