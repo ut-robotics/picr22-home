@@ -8,3 +8,8 @@
 * https://docs.google.com/spreadsheets/d/158vs4GSdWSMa8LCFjgW_aLJF9LO4qJrInkb_KT1zcjM/edit?usp=sharing[Teams]
 
 == Basketball teams
+
+
+== Previous years
+
+https://digilabor.ut.ee/index.php/Project_in_Competitive_Robotics
