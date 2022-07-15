@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.17">
+<title>Fusion 360 CAM</title>
+<link rel="stylesheet" href="./../../asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Fusion 360 CAM</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of contents</div>
+<ul class="sectlevel1">
+<li><a href="#_intro">Intro</a></li>
+<li><a href="#_starting">Starting</a></li>
+<li><a href="#_job_setup">Job setup</a></li>
+<li><a href="#_drilling">Drilling</a></li>
+<li><a href="#_pocket">Pocket</a></li>
+<li><a href="#_2d_contours">2D contours</a></li>
+<li><a href="#_checking_the_results">Checking the results</a></li>
+<li><a href="#_post_process">Post process</a>
+<ul class="sectlevel2">
+<li><a href="#_setting_up">Setting up</a></li>
+<li><a href="#_first_time_usage">First time usage</a></li>
+<li><a href="#_usage">Usage</a></li>
+</ul>
+</li>
+<li><a href="#_tool_settings">Tool settings</a>
+<ul class="sectlevel2">
+<li><a href="#_fusion_360_digilab_tools_library">Fusion 360 DigiLab tools library</a></li>
+</ul>
+</li>
+<li><a href="#_optimizations">Optimizations</a>
+<ul class="sectlevel2">
+<li><a href="#_order_of_operation">Order of operation</a></li>
+<li><a href="#_tool_size">Tool size</a></li>
+<li><a href="#_machining_time">Machining time</a></li>
+<li><a href="#_multiple_designs_with_single_job">Multiple designs with single job</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_intro">Intro</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To mill out your parts from plastic sheet,
+we need to generate <a href="https://en.wikipedia.org/wiki/G-code">G-code</a> for the milling machine.
+This can be achieved with Fusion&#8217;s <strong>MANUFACTURE</strong> feature.
+This document describes most important properties and methods how to prepare your designs for milling.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_starting">Starting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To start creating a CAM (computer-aided manufacturing) job for your design,
+you should select <strong>MANUFACTURE</strong> from left upper menu.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/fusion_360_cam_select_manufacture_workspace.png" alt="fusion 360 cam select manufacture workspace">
+</div>
+</div>
+<div class="paragraph">
+<p>Now you should see new toolbar with different CAM related tools:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/fusion_360_cam_manufacture_workspace_toolbar.png" alt="fusion 360 cam manufacture workspace toolbar">
+</div>
+</div>
+<div class="paragraph">
+<p>Create a Manufacturing Model (MILLING &#8594; SETUP &#8594; Create Manufacturing Model)
+to make a model that you can edit without affecting the original model.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/fusion_360_cam_manufacturing_model.png" alt="fusion 360 cam manufacturing model">
+</div>
+</div>
+<div class="paragraph">
+<p>If you have a multipart assembly you can use the "Arrange" functionality from Fusion 360 preview features
+to automatically arrange and flatten the assembly.</p>
+</div>
+<div class="paragraph">
+<p>A video tutorial on how to enable and use the "Arrange" functionality can be found here:<br>
+<a href="https://youtu.be/7egLufCg5tk" class="bare">https://youtu.be/7egLufCg5tk</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_job_setup">Job setup</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>First thing to do is to create a new setup for your job.
+For this, choose SETUP &#8594; New Setup from toolbar.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/fusion_360_cam_new_setup.png" alt="fusion 360 cam new setup">
+</div>
+</div>
+<div class="paragraph">
+<p>You should now set stock properties and origin point (the point where the milling starts).
+Usually the starting (work zero) point should be in the bottom left corner of your part on top of the stock.
+Z axis should point up, X and Y axis should point along the sides of your part.
+Correct orientation can be chosen by selecting relevant properties under Work Coordinate System (WCS).
+Depending on how the design is oriented, you might need to select different options.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/fusion_360_cam_setup_settings.png" alt="fusion 360 cam setup settings">
+</div>
+</div>
+<div class="paragraph">
+<p>Another important thing here is to set stock offsets to 0 on the Stock tab.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/fusion_360_cam_stock_settings.png" alt="fusion 360 cam stock settings">
+</div>
+</div>
+<div class="paragraph">
+<p>Now you can click OK, and you have created your first setup for milling job.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_drilling">Drilling</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Drilling should usually be the first operation.
+This can reduce toolchanges, since other operations are done with milling bits.</p>
+</div>
+<div class="paragraph">
+<p>Create new drilling operations from the toolbar DRILLING &#8594; Drill.</p>
+</div>
+<div class="paragraph">
+<p>Select or create a tool.
+Change the Spindle Speed and Plunge Feedrate if necessary.
+Refer to the tools table below.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/fusion_360_cam_drill_tool.png" alt="fusion 360 cam drill tool">
+</div>
+</div>
+<div class="paragraph">
+<p>Select the <strong>face</strong> of one of the holes.
+Same size holes can be included by selecting <strong>Select Same Diameter</strong>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/fusion_360_cam_drill_geometry.png" alt="fusion 360 cam drill geometry">
+</div>
+</div>
+<div class="paragraph">
+<p>On the heights tab, change the <strong>Feed Height Offset</strong> to 1mm.
+This helps to save time since drilling does a lot of movements in z-axis direction and (plunge) feedrate is rather slow.</p>
+</div>
+<div class="paragraph">
+<p>If the drilled holes do not start from the top of the remaining stock, change <strong>Top Height From</strong> to <strong>Stock top</strong>.
+Otherwise the drill will be plunged too fast into the uncut material.</p>
+</div>
+<div class="paragraph">
+<p>Select <strong>Drill Tip Through Bottom</strong> and add small <strong>Break-Through Depth</strong>,
+if drilling all the way through the material.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/fusion_360_cam_drill_heights.png" alt="fusion 360 cam drill heights">
+</div>
+</div>
+<div class="paragraph">
+<p>On the Cycle tab select <strong>Cycle Type</strong> to be <strong>Chip breaking - partial retract</strong> or <strong>Deep drilling - full retract</strong>.
+Those types help to avoid plastic from getting stuck in the hole and starting to melt.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/fusion_360_cam_drill_cycle.png" alt="fusion 360 cam drill cycle">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pocket">Pocket</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pocket operation can be used when you need to mill something that does not go all the way through the material.</p>
+</div>
+<div class="paragraph">
+<p>If you need to cut all the way through, then prefer 2D contour operation.
+Contours do not cut all the material inside a profile and take less time because of that.</p>
+</div>
+<div class="paragraph">
+<p>First select a flat end mill as the cutting tool and adjust the speeds and feeds if necessary.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/fusion_360_cam_pocket_tool.png" alt="fusion 360 cam pocket tool">
+</div>
+</div>
+<div class="paragraph">
+<p>Select bottom edge for <strong>Pocket Selection</strong>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/fusion_360_cam_pocket_geometry.png" alt="fusion 360 cam pocket geometry">
+</div>
+</div>
+<div class="paragraph">
+<p>Heights can be usually left unchanged.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/fusion_360_cam_pocket_heights.png" alt="fusion 360 cam pocket heights">
+</div>
+</div>
+<div class="paragraph">
+<p>On the <strong>Passes</strong> tab, change <strong>Tolerance</strong> to 0.01, if not using finishing passes.</p>
+</div>
+<div class="paragraph">
+<p>Select <strong>Multiple Depths</strong>.
+Default value of 1 mm works well for <strong>Maximum Roughing Stepdown</strong>.
+Cutting too much material in one pass can result in bad surface finish or the tool can break under load.</p>
+</div>
+<div class="paragraph">
+<p>Uncheck <strong>Stock to Leave</strong> or use small negative <strong>Radial Stock to Leave</strong> if you need looser fit.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/fusion_360_cam_pocket_passes.png" alt="fusion 360 cam pocket passes">
+</div>
+</div>
+<div class="paragraph">
+<p>On the <strong>Linking</strong> tab, uncheck <strong>Lead-In (Entry)</strong> and <strong>Lead-Out (Exit)</strong>.
+Change <strong>Ramp Type</strong> to <strong>Plunge</strong>.
+Plastic is soft enough to not require more gradual ramping.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/fusion_360_cam_pocket_linking.png" alt="fusion 360 cam pocket linking">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2d_contours">2D contours</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use contour operation if you need to cut all the way through the material,
+you need to remove some material from the edge of the existing part,
+or you need to cut a something that has the same width as the tool.
+Although you should probably use slot operation for the latter case.</p>
+</div>
+<div class="paragraph">
+<p>Most of the same settings apply to the contour operation as for the pocket operation.</p>
+</div>
+<div class="paragraph">
+<p>When selecting the contour edge make sure that the arrow is outside the part.
+The arrow shows the side of the cut.
+To change the side, click on the arrow.</p>
+</div>
+<div class="paragraph">
+<p>For outer or larger inside contours select <strong>Tabs</strong> from Geometry settings.
+Tabs help to keep the parts in place.
+Loose parts can get in the way of the tool, which can damage the parts and break the tool.
+Tabs are usually not needed for small inside contours.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/fusion_360_cam_contour_geometry.png" alt="fusion 360 cam contour geometry">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_checking_the_results">Checking the results</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now that you have created your CAM job, you can quickly check it for any obvious mistakes.
+Simulating helps with that.
+Not only does it tell you, how long the job will take,
+but allows you to see exactly how it will start to cut the material.
+Simulation can be opened from right click menu of the setup or operation(s).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/fusion_360_cam_simulation.png" alt="fusion 360 cam simulation">
+</div>
+</div>
+<div class="paragraph">
+<p>Turn on <strong>Stock</strong> and go to the end of the simulation to find any unexpected or missing cuts.
+The yellow and red lines are movement and blue lines are the cutting paths.</p>
+</div>
+<div class="paragraph">
+<p>If there are any unexpected cuts being made with non-blue line,
+then try to uncheck <strong>Keep Tool Down</strong> in the operation settings on the Linking tab.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/fusion_360_cam_simulation_stock.png" alt="fusion 360 cam simulation stock">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_post_process">Post process</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Post processing turns the operations into <a href="https://en.wikipedia.org/wiki/G-code">G-code</a>.
+G-code is used to control the milling machine.</p>
+</div>
+<div class="sect2">
+<h3 id="_setting_up">Setting up</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Go to
+<a href="https://cam.autodesk.com/hsmposts">https://cam.autodesk.com/hsmposts</a></p>
+</li>
+<li>
+<p>Search "STEPCRAFT UCCNC"</p>
+</li>
+<li>
+<p>Click "Download" and put the downloaded file in Posts folder
+(<em>C:\Users\&lt;USERNAME&gt;\AppData\Roaming\Autodesk\Fusion 360 CAM\Posts</em>)</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_first_time_usage">First time usage</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open MANUFACTURE in Fusion 360.</p>
+</li>
+<li>
+<p>Select <strong>Post process</strong> from Toolbar &#8594; Actions or by right-clicking on a setup or operation(s).</p>
+</li>
+<li>
+<p>Click on <strong>Setup</strong> and choose <strong>Use Personal Post Library</strong>.</p>
+</li>
+<li>
+<p>Make sure that <strong>STEPCRAFT UCCNC</strong> is selected under Post Configuration.</p>
+</li>
+<li>
+<p>Uncheck <strong>Open NC file in editor</strong>.</p>
+</li>
+<li>
+<p>Press <strong>Post</strong> and save the file.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_usage">Usage</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open MANUFACTURE in Fusion 360.</p>
+</li>
+<li>
+<p>Select <strong>Post process</strong> from Toolbar &#8594; Actions or by right-clicking on a
+setup or operation(s).</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If you want to include all the operations, select the setup.
+If you want to include only some of the operations, select only those operations.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Press <strong>Post</strong> and save the file.</p>
+</li>
+<li>
+<p>Collect your post process files on USB flash drive.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tool_settings">Tool settings</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_fusion_360_digilab_tools_library">Fusion 360 DigiLab tools library</h3>
+<div class="paragraph">
+<p>You can import the file below into Fusion 360.</p>
+</div>
+<div class="paragraph">
+<p><a href="digilab_stepcraft_tools.json">Tools library file</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Material: Polycarbonate</strong></p>
+</div>
+<div class="paragraph">
+<p>Plastics work better with higher feedrates.
+At low feedrates the material might start to melt
+from excessive heat generated by the tool spending too much time in one place.</p>
+</div>
+<div class="paragraph">
+<p>Following settings are good starting points that have been used before.
+Reduce feedrates by around half for smaller features like inner contours.</p>
+</div>
+<div class="paragraph">
+<p><strong>Tools available in DigiLab as of 2019-09-16:</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>End mills:</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 8.3337%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Diameter [mm]</th>
+<th class="tableblock halign-left valign-top">Flute count</th>
+<th class="tableblock halign-left valign-top">End type</th>
+<th class="tableblock halign-left valign-top">Spiral type</th>
+<th class="tableblock halign-left valign-top">Flute length [mm]</th>
+<th class="tableblock halign-left valign-top">Shoulder length [mm]</th>
+<th class="tableblock halign-left valign-top">Overall length [mm]</th>
+<th class="tableblock halign-left valign-top">Shaft diameter [mm]</th>
+<th class="tableblock halign-left valign-top">Link</th>
+<th class="tableblock halign-left valign-top">Cutting feedrate [mm/min]</th>
+<th class="tableblock halign-left valign-top">Plunge feedrate [mm/min]</th>
+<th class="tableblock halign-left valign-top">Spindle speed
+[rpm]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flat</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Upcut</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">38</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.175</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.sorotec.de/shop/End-Mill-Double-Flute--Flat---3-0mm.html" class="bare">https://www.sorotec.de/shop/End-Mill-Double-Flute--Flat---3-0mm.html</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Upcut</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.175</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.sorotec.de/shop/End-Mill-Double-Flute--Flat---2-5mm.html" class="bare">https://www.sorotec.de/shop/End-Mill-Double-Flute--Flat---2-5mm.html</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">800</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Upcut</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.175</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.sorotec.de/shop/End-Mill-Double-Flute--Flat---2-0mm.html" class="bare">https://www.sorotec.de/shop/End-Mill-Double-Flute--Flat---2-0mm.html</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">600</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Upcut</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.175</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.sorotec.de/shop/End-Mill-Double-Flute--Flat---1-5mm.html" class="bare">https://www.sorotec.de/shop/End-Mill-Double-Flute--Flat---1-5mm.html</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18000</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Drills:</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Diameter [mm]</th>
+<th class="tableblock halign-left valign-top">Tip angle</th>
+<th class="tableblock halign-left valign-top">Flute length [mm]</th>
+<th class="tableblock halign-left valign-top">Overall length [mm]</th>
+<th class="tableblock halign-left valign-top">Shaft
+diameter [mm]</th>
+<th class="tableblock halign-left valign-top">Link</th>
+<th class="tableblock halign-left valign-top">Plunge feedrate [mm/min]</th>
+<th class="tableblock halign-left valign-top">Spindle speed [rpm]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">130</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">38</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.175</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.sorotec.de/shop/Cutting-Tools/sorotec-tools/1-8-tools/Drills/Drills-023175/" class="bare">https://www.sorotec.de/shop/Cutting-Tools/sorotec-tools/1-8-tools/Drills/Drills-023175/</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">130</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">38</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.175</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.sorotec.de/shop/Cutting-Tools/sorotec-tools/1-8-tools/Drills/Drills-023175/" class="bare">https://www.sorotec.de/shop/Cutting-Tools/sorotec-tools/1-8-tools/Drills/Drills-023175/</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">130</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">38</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.175</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.sorotec.de/shop/Cutting-Tools/sorotec-tools/1-8-tools/Drills/Drills-023175/" class="bare">https://www.sorotec.de/shop/Cutting-Tools/sorotec-tools/1-8-tools/Drills/Drills-023175/</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">130</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">38</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.175</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.sorotec.de/shop/Cutting-Tools/sorotec-tools/1-8-tools/Drills/Drills-023175/" class="bare">https://www.sorotec.de/shop/Cutting-Tools/sorotec-tools/1-8-tools/Drills/Drills-023175/</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">130</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">38</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.175</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.sorotec.de/shop/Cutting-Tools/sorotec-tools/1-8-tools/Drills/Drills-023175/" class="bare">https://www.sorotec.de/shop/Cutting-Tools/sorotec-tools/1-8-tools/Drills/Drills-023175/</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5000</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_optimizations">Optimizations</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_order_of_operation">Order of operation</h3>
+<div class="paragraph">
+<p>Generally move from inside the part to outside.
+Cutting from outside first can mean that the part comes loose and the inside features can&#8217;t be cut.</p>
+</div>
+<div class="paragraph">
+<p>Example order:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Drilling</p>
+</li>
+<li>
+<p>Pockets</p>
+</li>
+<li>
+<p>Inside contours</p>
+</li>
+<li>
+<p>Outside contours</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tool_size">Tool size</h3>
+<div class="paragraph">
+<p>Largest available diameter tool size should be used based on smallest inner radius of the milled parts.
+Larger diameter tools are more rigid and can remove more material in the same time.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_machining_time">Machining time</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Check machining time from right click menu on setup or operation.</p>
+</li>
+<li>
+<p>Try to avoid cutting too much material.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Cutting large pockets with a small tool can take a lot of time.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Try to reduce part count and complexity.</p>
+</li>
+<li>
+<p>Reduce the <strong>Feed height</strong> for operations that use a lot of z-axis movements, like drilling.</p>
+</li>
+<li>
+<p>Using the least amount of different tools allows to save time by avoiding tool changes.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>One option is to design inner radiuses to be as large as possible to avoid using smaller diameter tools.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>If different tools have to be used then it is recommended to order the operations
+by grouping together those that use the same tool.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_multiple_designs_with_single_job">Multiple designs with single job</h3>
+<div class="paragraph">
+<p>If same thickness material is used for different designs or same design needs to milled out multiple times,
+then it is possible to save time by creating an assembly from those designs and single CAM job for the entire assembly.
+Parts should be placed flat next to each other with enough space between them,
+so that tool used for outer contour fits between them.
+For example when using 3 mm endmill,
+there should be at least 3 mm of space between parts to avoid cutting into the part next to the one being milled.</p>
+</div>
+<div class="paragraph">
+<p>Use joints to place the parts in the assembly. Parts should be on the same plane.</p>
+</div>
+<div class="paragraph">
+<p>Inspect stock height from setup&#8217;s settings.
+If all the parts have the same thickness, then stock height should not be larger than thickness of the parts.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/fusion_360_cam_stock_height.png" alt="fusion 360 cam stock height">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

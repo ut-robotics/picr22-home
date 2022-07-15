@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.17">
+<title>Mechanical design</title>
+<link rel="stylesheet" href="./../../asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Mechanical design</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of contents</div>
+<ul class="sectlevel1">
+<li><a href="#_sketches">Sketches</a>
+<ul class="sectlevel2">
+<li><a href="#_fully_defined_sketch">Fully defined sketch</a></li>
+<li><a href="#_sketch_complexity">Sketch complexity</a></li>
+<li><a href="#_construction_lines">Construction lines</a></li>
+</ul>
+</li>
+<li><a href="#_general">General</a>
+<ul class="sectlevel2">
+<li><a href="#_project_structure">Project structure</a></li>
+<li><a href="#_inside_sharp_corners">Inside sharp corners</a></li>
+<li><a href="#_fasteners">Fasteners</a></li>
+<li><a href="#_material_thickness">Material thickness</a></li>
+<li><a href="#_tolerances">Tolerances</a></li>
+<li><a href="#_use_extent_to_object">Use Extent: To Object</a></li>
+</ul>
+</li>
+<li><a href="#_assemblies">Assemblies</a></li>
+<li><a href="#_electronics">Electronics</a>
+<ul class="sectlevel2">
+<li><a href="#_wires_and_cables">Wires and cables</a></li>
+<li><a href="#_camera">Camera</a></li>
+<li><a href="#_pc_power_adapter_socket">PC power adapter socket</a></li>
+<li><a href="#_switches">Switches</a></li>
+</ul>
+</li>
+<li><a href="#_chassis">Chassis</a></li>
+<li><a href="#_thrower">Thrower</a></li>
+<li><a href="#_manufacturing">Manufacturing</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_sketches">Sketches</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_fully_defined_sketch">Fully defined sketch</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>All sketch lines should be black, which means that the sketch is fully defined.
+It should not be possible to drag any of the lines or points.</p>
+</li>
+<li>
+<p>Use dimensions and constraints to define the sketch.</p>
+</li>
+<li>
+<p>Do not use Fix constraint.
+Fix constraint can be used to temporarily keep parts of the sketch in place while working with a complex sketch,
+but should be removed and replaced with proper dimensions and constraints.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sketch_complexity">Sketch complexity</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Keep sketches as simple as possible.</p>
+</li>
+<li>
+<p>Complex sketches can get slow and hard to change.</p>
+</li>
+<li>
+<p>Instead of using mirroring and patterns on the sketch, use corresponding features.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_construction_lines">Construction lines</h3>
+<div class="paragraph">
+<p>Marking lines for construction can be used for defining a sketch.
+Construction lines do not appear as part of sketch profile.</p>
+</div>
+<div class="paragraph">
+<p>For example construction line can be used to center a circle in a rectangular area.
+Circle can get off-center when fixed dimensions are used and the size of the rectangle changes.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/mechanical_design_construction_line_center_hole.png" alt="mechanical design construction line center hole">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_general">General</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_project_structure">Project structure</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create separate design file for each component.</p>
+</li>
+<li>
+<p>Use subassemblies.</p>
+</li>
+<li>
+<p>Use folders for subassemblies.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Example project structure:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>robot (assembly)</p>
+</li>
+<li>
+<p>thrower (folder)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>thrower (assembly)</p>
+</li>
+<li>
+<p>thrower-side</p>
+</li>
+<li>
+<p>thrower-ramp</p>
+</li>
+<li>
+<p>thrower-motor</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>motion (folder)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>wheel-module (assembly)</p>
+</li>
+<li>
+<p>wheel</p>
+</li>
+<li>
+<p>wheel-motor</p>
+</li>
+<li>
+<p>wheel-motor-mount</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>chassis (folder)</p>
+</li>
+<li>
+<p>electronics (folder)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_inside_sharp_corners">Inside sharp corners</h3>
+<div class="paragraph">
+<p>When milling inside corners, the minimum corner radius will the same as the tool radius.
+For example 1.5mm for a tool with a diameter of 3mm.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/mechanical_design_inside_corners_milling.png" alt="mechanical design inside corners milling">
+</div>
+</div>
+<div class="paragraph">
+<p>Rounded corners can interfere when parts are joined together.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/mechanical_design_inside_corners_interference.png" alt="mechanical design inside corners interference">
+</div>
+</div>
+<div class="paragraph">
+<p>It is possible to cut the corners to avoid interference by doing a circular cut in each corner.
+Those cuts are often called dogbones.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/mechanical_design_inside_corners_cutout_sketch.png" alt="mechanical design inside corners cutout sketch"></span>
+<span class="image"><img src="../images/mechanical_design_inside_corners_cutout_feature.png" alt="mechanical design inside corners cutout feature"></span></p>
+</div>
+<div class="paragraph">
+<p>To avoid faces of narrower features getting to short, it is possible to move the circles.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/mechanical_design_inside_corners_cutout_narrow_sketch.png" alt="mechanical design inside corners cutout narrow sketch"></span>
+<span class="image"><img src="../images/mechanical_design_inside_corners_cutout_narrow_feature.png" alt="mechanical design inside corners cutout narrow feature"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fasteners">Fasteners</h3>
+<div class="paragraph">
+<p>When using bolts to attach parts together, usually only the last part should be threaded.
+Other parts should have plain holes through them.
+For M3 bolts create 3mm through holes.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/mechanical_design_fasteners_last_part_threaded.png" alt="mechanical design fasteners last part threaded">
+</div>
+</div>
+<div class="paragraph">
+<p>Consider using counterbore holes when the design does not allow for protruding bolt heads.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/mechanical_design_fasteners_counterbore.png" alt="mechanical design fasteners counterbore">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_material_thickness">Material thickness</h3>
+<div class="paragraph">
+<p>When designing parts for some existing sheet of material, do not use the nominal thickness.
+Measure the actual material and use it in the design.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tolerances">Tolerances</h3>
+<div class="paragraph">
+<p>To ease the assembly of chassis parts, it is a good idea to design/manufacture them with looser fit.</p>
+</div>
+<div class="paragraph">
+<p>Read more about
+<a href="https://en.wikipedia.org/wiki/Engineering_fit">engineering fit</a>.</p>
+</div>
+<div class="paragraph">
+<p>One option is to design parts with looser fit.
+For example it is possible to create offset sketch to cut a hole larger.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/mechanical_design_tolerances_offset_sketch_cut.png" alt="mechanical design tolerances offset sketch cut">
+</div>
+</div>
+<div class="paragraph">
+<p>Another option (and usually better) is to use negative <strong>Radial Stock to Leave</strong> in a CAM operation.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/mechanical_design_tolerances_radial_stock_to_leave_setting.png" alt="mechanical design tolerances radial stock to leave setting">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_use_extent_to_object">Use Extent: To Object</h3>
+<div class="paragraph">
+<p>When cutting through a part, prefer <strong>To Object</strong> instead of Distance.
+When the dimensions of the object change, the cut might not go all the way through the part.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_assemblies">Assemblies</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Similar to fully defining the sketch, use joints to fully define the position of parts.
+On the first component it is possible to use Ground from right click menu
+or use joints to constrain the component to the origin.</p>
+</li>
+<li>
+<p>Check that the holes that need to be aligned are aligned.</p>
+</li>
+<li>
+<p>Use Interference tool from INSPECT menu to check that parts too not collide.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_electronics">Electronics</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_wires_and_cables">Wires and cables</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Think where the cables will go.</p>
+</li>
+<li>
+<p>Leave enough room for the cables.</p>
+</li>
+<li>
+<p>Try to reduce the length of the cables by having electronics closer to each other.</p>
+</li>
+<li>
+<p>Add models of the electronics and connectors to the assembly to make sure there is enough room.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Those models do not have to be very detailed.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Make sure that cables to not extend outside the chassis.</p>
+</li>
+<li>
+<p>Consider the rigidity of the cables and how much they bend.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_camera">Camera</h3>
+<div class="paragraph">
+<p>More information about RealSense D435 camera:<br>
+<a href="https://www.intelrealsense.com/depth-camera-d435/" class="bare">https://www.intelrealsense.com/depth-camera-d435/</a></p>
+</div>
+<div class="paragraph">
+<p>3D model:<br>
+<a href="https://dev.intelrealsense.com/docs/stereo-depth-camera-d400" class="bare">https://dev.intelrealsense.com/docs/stereo-depth-camera-d400</a></p>
+</div>
+<div class="paragraph">
+<p>RGB sensor is located on the side of the camera.
+Consider having the camera offset from the center of the robot.
+It is easier to write robot software if the RGB sensor is located at the center in sideways direction.</p>
+</div>
+<div class="sect3">
+<h4 id="_angle_and_position">Angle and position</h4>
+<div class="paragraph">
+<p>Specs state that the vertical FOV (field of view) is 42.5°.</p>
+</div>
+<div class="paragraph">
+<p>For the camera to be able to see to the end of the field,
+top of the vertical FOV should be horizontal (parallel with the court).
+Pointing camera higher than that is generally not useful, because the camera starts seeing things over the walls.</p>
+</div>
+<div class="paragraph">
+<p>It is useful to see the ball that is close to the thrower.
+Otherwise the robot must move blindly for some distance to throw.
+If the distance is small, then it does not matter too much.</p>
+</div>
+<div class="paragraph">
+<p>Having the camera higher helps to separate the objects on the camera’s frames.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/mechanical_design_camera_position.png" alt="mechanical design camera position">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pc_power_adapter_socket">PC power adapter socket</h3>
+<div class="paragraph">
+<p>Link to the socket:<br>
+<a href="https://www.tme.eu/ee/en/details/pc-gm2.5/dc-power-connectors/ninigi/" class="bare">https://www.tme.eu/ee/en/details/pc-gm2.5/dc-power-connectors/ninigi/</a></p>
+</div>
+<div class="paragraph">
+<p>Since the thread on the socket is not long enough for over 3mm thickness,
+it is recommended to sink the socket into the material.</p>
+</div>
+<div class="paragraph">
+<p>Recommended cutout:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/mechanical_design_pc_power_socket_recommended_cutout.png" alt="mechanical design pc power socket recommended cutout">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_switches">Switches</h3>
+<div class="paragraph">
+<p>Link to the switch:<br>
+<a href="https://www.tme.eu/ee/en/details/ae-c1500abbb/rocker-switches/bulgin/c1500abmbb/" class="bare">https://www.tme.eu/ee/en/details/ae-c1500abbb/rocker-switches/bulgin/c1500abmbb/</a></p>
+</div>
+<div class="paragraph">
+<p>Relevant dimensions from the datasheet:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/mechanical_design_switch_panel_thickness.png" alt="mechanical design switch panel thickness">
+</div>
+</div>
+<div class="paragraph">
+<p>Cutout and bezel:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/mechanical_design_switch_cutout_and_bezel.png" alt="mechanical design switch cutout and bezel">
+</div>
+</div>
+<div class="paragraph">
+<p>Panel thickness:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/mechanical_design_switch_panel_thickness.png" alt="mechanical design switch panel thickness">
+</div>
+</div>
+<div class="paragraph">
+<p>To avoid milling from both sides, if the switch and the PC power adapter socket are connected on the same part,
+the following cutout is recommended:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/mechanical_design_switch_recommended_cutout.png" alt="mechanical design switch recommended cutout">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_chassis">Chassis</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Recommended bottom clearance is about 5 - 10 mm.</p>
+</li>
+<li>
+<p>Make sure that chassis covers everything that is not in the allowed color, including wheels.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_thrower">Thrower</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Make sure that thrower motor is not too high from the ground that it can’t grab the ball.</p>
+</li>
+<li>
+<p>Make sure that the ball is not too loose in the thrower.
+Distance between the motor and the ramp should provide enough friction between motor
+and the ball to effectively throw the ball.</p>
+</li>
+<li>
+<p>Create a spacer for the motor so that the motor is closer to the center of the thrower.</p>
+</li>
+<li>
+<p>Make sure that there is room for the motor wires and that the wires do not collide with the ball.</p>
+</li>
+<li>
+<p>When using fixed throwing angle,
+try to use throwing angle larger than 45 degrees and smaller than 90 degrees (straight up).
+Around 50 to 70 degrees should work.</p>
+</li>
+<li>
+<p>Make sure that the path of the ball into and through the thrower is not obstructed by anything.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_manufacturing">Manufacturing</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>When designing the parts, consider how they are manufactured (for example milled).</p>
+</li>
+<li>
+<p>When designing for milling it is useful to ensure that all the cuts can be made from one side.
+This reduces the time spent on manual operations.</p>
+</li>
+<li>
+<p>If there are cuts that need to be made from both sides of the sheet,
+ensure that there are holes that are symmetric in some axis,
+so that after flipping the part the features stay in the same place relative to the zero point.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
