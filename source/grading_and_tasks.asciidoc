@@ -423,20 +423,16 @@ so that the edge of the bottom plate touches the ball before the side of the rob
 
 ==== Mainboard documented
 
-* Functionality described.
-* Connector pinouts.
-* Schematics PDF files.
-* Link to firmware.
-* Components BOM.
-* Gerber files.
+* All documentation must be in your team's repository with electronics design files.
+* Functionality and connector pinouts described in AsciiDoc format in `electronics/README.asciidoc` file.
+* Schematic PDF file.
+* Components BOM in TSV (tab-separated values, *.tsv) format.
+* Gerber files in separate directory.
+** Gerber X2 format is preferred.
 
 ==== Motor driver documented
 
-* Functionality described.
-* Connector pinouts.
-* Schematics PDF files.
-* Components BOM.
-* Gerber files.
+* Same requirements as for "Mainboard documented".
 
 ==== Power path controller soldered and working
 
