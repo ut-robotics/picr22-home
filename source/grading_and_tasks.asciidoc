@@ -227,6 +227,7 @@ on the team’s wiki page and the team has presented their progress.
 ** Start signal - Robot starts to move on the court.
 ** Stop signal - Robot stops moving.
 * Robot correctly uses basket color from the signal's info.
+* Robot retries to connect to basketball manager if connection is lost or not established.
 
 ==== Code works on new robot
 
