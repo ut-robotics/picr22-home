@@ -1,3 +1,11 @@
+== Generating HTML
+
+. Install `asciidoctor` +
+https://docs.asciidoctor.org/asciidoctor/latest/install/
+. Install `node.js` +
+https://nodejs.org/en/download/
+. Run `node generate-html.mjs`
+
 == Converting MediaWiki to AsciiDoc
 
 [source,bash]
