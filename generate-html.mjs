@@ -53,15 +53,8 @@ for await (const filename of getFiles(sourceDir)) {
 
     console.log(toFilename);
 
-    try {
-        await fsPromises.copyFile(filename, toFilename);
-    } catch (e) {
-        if (e.code !== 'ENOENT') {
-            throw e;
-        }
-
-        await fsPromises.mkdir(path.dirname(toFilename), {recursive: true});
-    }
+    await fsPromises.mkdir(path.dirname(toFilename), {recursive: true});
+    await fsPromises.copyFile(filename, toFilename);
 }
 
 await Promise.all(asciidoctorPromises);
