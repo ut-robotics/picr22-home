@@ -1,3 +1,0 @@
-= Project in Competitive Robotics 2022
-
-https://ut-robotics.github.io/picr22-home/
