@@ -5,7 +5,6 @@
 * xref:team_page_requirements.asciidoc[Team page requirements]
 * xref:forms.asciidoc[Forms]
 * xref:basketball_robot_guide/index.asciidoc[Basketball robot guide]
-* https://docs.google.com/spreadsheets/d/158vs4GSdWSMa8LCFjgW_aLJF9LO4qJrInkb_KT1zcjM/edit?usp=sharing[Teams]
 
 == Basketball teams
 
