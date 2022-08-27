@@ -144,7 +144,7 @@ https://pwir.ee[*Tasks Table*]
 === Progress blog and presentation
 
 Task is completed when each team member has written down their progress since the last presentation
-on the team’s wiki page and the team has presented their progress.
+on the team repository's README and the team has presented their progress.
 
 ==== Blog
 
@@ -500,16 +500,13 @@ on how to use the board.
 ** Wires connecting electronics.
 *** Wires that connect to power sources should not be exposed.
 
-==== Team wiki page created
+==== Team documentation started
 
-* In English
-* Members
-** Name
-* Repositories
-** Code (link to GitHub or similar)
-** Mechanics (public Fusion 360 project link)
-** Electronics
-* Progress blog section
+* In team's GitHub repository `documentation` branch and `README.asciidoc` file.
+* In English.
+* Names of the team members.
+* Public Fusion 360 project link.
+* Progress blog section.
 
 ==== Test competition
 
@@ -545,7 +542,7 @@ on how to use the board.
 
 * Bonus points for the 3rd best team among course participants.
 
-==== Team wiki page completed and final presentation
+==== Team documentation completed and final presentation
 
 * Refer to xref:team_page_requirements.asciidoc[team page requirements]
 * No grades if not completed.
