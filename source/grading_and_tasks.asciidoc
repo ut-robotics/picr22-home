@@ -474,6 +474,8 @@ to ensure that changing battery voltage doesn't affect thrower motor speed.
 ** To move wheel motors.
 ** Change thrower motor speed.
 * Power buttons and power path control board works.
+** Refer to link:https://github.com/ReikoR/power_path_control_2016[power path control board] GitHub repository
+on how to use the board.
 
 === Other
 
@@ -490,6 +492,8 @@ to ensure that changing battery voltage doesn't affect thrower motor speed.
 ** Motors for each wheel.
 ** Motor controller for each motor.
 ** Power path control board with PC adapter and battery inputs and PC power output.
+*** Refer to link:https://github.com/ReikoR/power_path_control_2016[power path control board] GitHub repository
+on how to use the board.
 ** Batteries
 ** Power switch between motor battery’s positive power connection.
 *** Power switch for a computer battery is optional.
