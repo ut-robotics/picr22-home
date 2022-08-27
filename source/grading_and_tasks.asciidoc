@@ -154,14 +154,18 @@ on the team’s wiki page and the team has presented their progress.
 * Days without any activity do not need to be blogged about.
 * Example:
 
+[source,asciidoc]
 ----
-= Blog =
-=== Monday 07.09.2020 ===
-'''Kristiina:''' Soldered mainboard. Broke one lead, but fortunately it was not important. (2h)
-'''Kalle:''' Started designing chassis. Was too hard for me. Must ask for help. (3.5h)
-'''Abraham:''' Installed Python. Failed with lots of errors. (1.5h)
+== Blog
 
-=== Tuesday 08.09.2020 ===
+=== Monday 2022-09-05
+
+*Kristiina:* Soldered mainboard. Broke one lead, but fortunately it was not important. (2h) +
+*Kalle:* Started designing chassis. Was too hard for me. Must ask for help. (3.5h) +
+*Abraham:* Installed Python. Failed with lots of errors. (1.5h) +
+
+=== Tuesday 2022-09-06
+
 ...
 ----
 
