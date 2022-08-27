@@ -171,10 +171,14 @@ on the team’s wiki page and the team has presented their progress.
 
 ==== Progress presentation
 
-* Delta 2024
-* Mondays 18:15 - 19:00
+* In Delta room 2024.
+* Mondays 18:15 - 19:00, once every two weeks.
 * 5 minutes per team.
 * At least 1 team member presents the progress of all team members.
+* Slides must be prepared and used to illustrate the progress.
+** Slides can, for example, contain pictures of the current designs, videos about how the robot is working,
+pictures and videos of some components and simple diagrams or drawings.
+** Avoid using too much text or only text.
 
 === Programming
 
