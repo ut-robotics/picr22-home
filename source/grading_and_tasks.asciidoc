@@ -513,24 +513,20 @@ on how to use the board.
 
 ==== Test competition
 
-* New robot qualifies according to basketball rules:
+* Either old robot or new robot qualifies according to basketball rules:
 ** Fits into the weight limit.
 ** Fits into size limits.
 ** Does not have any forbidden colors visible.
 ** Properly reacts to referee commands.
 ** Scores at least 1 point.
 
+===== Test competition with new robot
+
+* Bonus points for qualifying with new robot.
+
 ===== Test competition winner
 
 * Bonus points for the best team among course participants.
-
-===== Old robot test competition
-
-* Test robot allowed.
-
-===== New robot test competition
-
-* Test robot not allowed.
 
 ==== Delta X
 
