@@ -545,14 +545,18 @@ on how to use the board.
 
 * Bonus points for the 3rd best team among course participants.
 
-==== Team documentation completed and final presentation
+==== Team documentation completed
 
 * Refer to xref:team_page_requirements.asciidoc[team page requirements]
+* Must be reviewed and approved by instructors.
 * No grades if not completed.
-* Presentation:
-** 10 minutes per team.
-** Overview of the robot.
-** Talk about your experience.
+
+==== Final presentation
+
+* 10 minutes per team.
+* Overview of the robot.
+* Talk about your experience.
+* No grades if not completed.
 
 ==== Parts returned
 
