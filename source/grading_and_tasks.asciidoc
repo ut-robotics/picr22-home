@@ -18,7 +18,7 @@ Points you have earned will determine your grade. Refer to the list below.
 
 === Task points and deadlines
 
-Earned points can be found in *https://pwir.ee[tasks table]*.
+Earned points can be found in *https://utr.ee[tasks table]*.
 
 [cols=",,",options="header",]
 |===
@@ -139,7 +139,7 @@ and the other half of the points from another team.
 
 == Tasks
 
-https://pwir.ee[*Tasks Table*]
+https://utr.ee[*Tasks Table*]
 
 === Progress blog and presentation
 

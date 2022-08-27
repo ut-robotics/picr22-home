@@ -1,6 +1,6 @@
 = Project in Competitive Robotics 2022
 
-* https://pwir.ee[Tasks Table]
+* https://utr.ee[Tasks Table]
 * xref:grading_and_tasks.asciidoc[Grading and tasks]
 * xref:team_page_requirements.asciidoc[Team page requirements]
 * xref:forms.asciidoc[Forms]
