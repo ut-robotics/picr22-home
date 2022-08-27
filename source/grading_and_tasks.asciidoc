@@ -187,7 +187,7 @@ pictures and videos of some components and simple diagrams or drawings.
 
 ==== Mainboard communication
 
-* Code running on test robot's PC.
+* Code running on robot's PC.
 ** Sends speed commands to the mainboard.
 * Robot moves at least 1 meter on the court.
 * 30 seconds per attempt.
@@ -235,7 +235,7 @@ pictures and videos of some components and simple diagrams or drawings.
 ** Start signal - Robot starts to move on the court.
 ** Stop signal - Robot stops moving.
 * Robot correctly uses basket color from the signal's info.
-* Robot retries to connect to basketball manager if connection is lost or not established.
+* Robot retries to connect to basketball manager if connection is lost or has not been established yet.
 
 ==== Code works on new robot
 
@@ -315,7 +315,7 @@ the opponent robot moves between basket and the ball and remains there.
 
 ==== Test robot thrower design completed
 
-* Design approved.
+* Thrower should technically be able to throw the ball.
 
 ==== Test robot thrower fabricated
 
@@ -344,7 +344,7 @@ the opponent robot moves between basket and the ball and remains there.
 
 ==== Ball thrower design completed
 
-* Thrower attached to the chassis.
+* Thrower attached to the chassis in the design.
 * Thrower should technically be able to throw the ball.
 
 ==== Adjustable ball throwing angle design completed
@@ -353,7 +353,7 @@ the opponent robot moves between basket and the ball and remains there.
 
 ==== Ball holding thrower design completed
 
-* Thrower designed to grab a ball and hold it while moving.
+* Thrower designed to grab a ball, hold the ball while moving and release or throw the ball while holding.
 
 ==== Robot chassis design completed
 
@@ -364,20 +364,22 @@ the opponent robot moves between basket and the ball and remains there.
 ** Mainboard
 ** Motor boards
 ** Cutouts for power switches and PC power adapter connector.
-* Design that prevents balls from getting stuck against the robot:
-** If the robot drives against the ball, the ball should roll away.
-** When robot sides are angled outwards, then the ball would get stuck,
+* Design that prevents balls from getting stuck against the robot.
+If the robot drives against the ball, the ball should roll away.
+** Problem:
+*** When robot sides are angled outwards, then the ball would get stuck,
 because the ball does not slide against the carpet and the robot sides.
-*** image:images/ball_stuck_outwards_angle.png[width=100]
-** Ball can also get stuck with vertical robot sides, when the ball is not sliding against the carpet and the side.
+**** image:images/ball_stuck_outwards_angle.png[width=160]
+*** Ball can also get stuck with vertical robot sides, when the ball is not sliding against the carpet and the side.
 In this case the ball can't rotate and roll away.
-*** image:images/ball_stuck_vertical_angle.png[width=100]
-** One option to solve this is to have the sides angled inwards.
-*** image:images/ball_not_stuck_inwards_angle.png[width=100]
-** Another option is to make the bottom plate extend outwards,
+**** image:images/ball_stuck_vertical_angle.png[width=160]
+** Possible solutions:
+*** One option to solve this is to have the sides angled inwards.
+**** image:images/ball_not_stuck_inwards_angle.png[width=160]
+*** Another option is to make the bottom plate extend outwards,
 so that the edge of the bottom plate touches the ball before the side of the robot.
-*** image:images/ball_not_stuck_extended_bottom.png[width=100]
-** Both options push the ball below its center, which helps the ball to roll away.
+*** image:images/ball_not_stuck_extended_bottom.png[width=160]
+*** Both options push the ball below its center, which helps the ball to roll away.
 
 ==== Whole new robot fabricated
 
@@ -397,25 +399,16 @@ so that the edge of the bottom plate touches the ball before the side of the rob
 
 ==== Test robot thrower electronics attached and working
 
-* Motor and ESC attached and working
-* Motor speed can be controlled through mainboard
+* Motor and ESC attached and working.
+* Motor speed can be controlled through mainboard.
 
 ==== Mainboard design completed
 
 * Design approved.
 * Required functionality:
-** Closed loop control of at least 3 motors
+** Closed loop control of at least 3 motors.
 ** Thrower motor control.
 ** Communication with robot’s computer.
-
-==== Mainboard soldered and working
-
-* Motors can be controlled through the mainboard.
-
-==== Mainboard firmware completed
-
-* Implements required functionality.
-* Code hosted on GitHub.
 
 ==== Motor driver design completed
 
@@ -426,11 +419,21 @@ so that the edge of the bottom plate touches the ball before the side of the rob
 ** Works with batteries that are used on the robot.
 ** Electrically isolated from the mainboard.
 
+==== Mainboard soldered and working
+
+* Motors can be controlled through the mainboard.
+
 ==== Motor drivers soldered and working
 
 * Can be controlled through a mainboard.
 * Motors can be rotated in both directions.
 * Encoders must work. Closed loop (e.g. PI or PID) speed control must work.
+
+==== Mainboard firmware completed
+
+* Implements required functionality.
+* Code hosted on GitHub in team's repository.
+* Code reviewed and approved.
 
 ==== Mainboard documented
 
@@ -451,7 +454,7 @@ so that the edge of the bottom plate touches the ball before the side of the rob
 
 ==== Motor driver documented
 
-* Same requirements as for "Mainboard documented".
+* Same requirements as for "Mainboard documented" task.
 
 ==== Throwing angle adjustable through mainboard
 
