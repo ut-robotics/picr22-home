@@ -438,6 +438,14 @@ so that the edge of the bottom plate touches the ball before the side of the rob
 * Functionality and connector pinouts described in AsciiDoc format in `electronics/README.asciidoc` file.
 * Schematic PDF file.
 * Components BOM in TSV (tab-separated values, *.tsv) format.
+** Columns
+*** Name
+*** Description
+*** Designator
+*** Quantity
+*** Mouser order code
+*** Farnell order code
+*** TME order code
 * Gerber files in separate directory.
 ** Gerber X2 format is preferred.
 
