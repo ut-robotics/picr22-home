@@ -453,12 +453,6 @@ so that the edge of the bottom plate touches the ball before the side of the rob
 
 * Same requirements as for "Mainboard documented".
 
-==== Power path controller soldered and working
-
-* Works with 2 power supplies
-* Refer to link:https://github.com/ReikoR/power_path_control_2016[power path control board] GitHub repository
-on how to use the board.
-
 ==== Throwing angle adjustable through mainboard
 
 * Commands can be sent to the mainboard to change the thrower angle.
