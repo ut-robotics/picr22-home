@@ -563,4 +563,4 @@ on how to use the board.
 * Return parts, but keep robots assembled.
 * No grades if parts are not returned.
 * Refer to
-https://docs.google.com/spreadsheets/d/1lhE7Z-Hq4iUc30kQaS82116T_d7Zvy0P9nbsBC_Bbbk/edit?usp=sharing[Handed out equipment]
+https://docs.google.com/spreadsheets/d/1gsIoC2Nv1ZVQKLSPud_-EncrXJNts9rtKSdF_09fl6k/edit?usp=sharing[Handed out equipment]
