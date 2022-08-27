@@ -74,13 +74,12 @@
 <ul class="sectlevel3">
 <li><a href="#_test_robot_thrower_electronics_attached_and_working">Test robot thrower electronics attached and working</a></li>
 <li><a href="#_mainboard_design_completed">Mainboard design completed</a></li>
-<li><a href="#_mainboard_soldered_and_working">Mainboard soldered and working</a></li>
-<li><a href="#_mainboard_firmware_completed">Mainboard firmware completed</a></li>
 <li><a href="#_motor_driver_design_completed">Motor driver design completed</a></li>
+<li><a href="#_mainboard_soldered_and_working">Mainboard soldered and working</a></li>
 <li><a href="#_motor_drivers_soldered_and_working">Motor drivers soldered and working</a></li>
+<li><a href="#_mainboard_firmware_completed">Mainboard firmware completed</a></li>
 <li><a href="#_mainboard_documented">Mainboard documented</a></li>
 <li><a href="#_motor_driver_documented">Motor driver documented</a></li>
-<li><a href="#_power_path_controller_soldered_and_working">Power path controller soldered and working</a></li>
 <li><a href="#_throwing_angle_adjustable_through_mainboard">Throwing angle adjustable through mainboard</a></li>
 <li><a href="#_ball_holder_controllable_through_mainboard">Ball holder controllable through mainboard</a></li>
 <li><a href="#_thrower_voltage_regulator_attached_and_working">Thrower voltage regulator attached and working</a></li>
@@ -90,13 +89,13 @@
 <li><a href="#_other">Other</a>
 <ul class="sectlevel3">
 <li><a href="#_test_robot_assembled">Test robot assembled</a></li>
-<li><a href="#_team_wiki_page_created">Team wiki page created</a></li>
+<li><a href="#_team_documentation_started">Team documentation started</a></li>
 <li><a href="#_test_competition">Test competition</a></li>
 <li><a href="#_delta_x">Delta X</a></li>
 <li><a href="#_delta_x_best_course_robot">Delta X best course robot</a></li>
 <li><a href="#_delta_x_2nd_best_course_robot">Delta X 2nd best course robot</a></li>
 <li><a href="#_delta_x_3rd_best_course_robot">Delta X 3rd best course robot</a></li>
-<li><a href="#_team_wiki_page_completed_and_final_presentation">Team wiki page completed and final presentation</a></li>
+<li><a href="#_team_documentation_completed_and_final_presentation">Team documentation completed and final presentation</a></li>
 <li><a href="#_parts_returned">Parts returned</a></li>
 </ul>
 </li>
@@ -643,7 +642,7 @@ and the other half of the points from another team.</p>
 <h3 id="_progress_blog_and_presentation">Progress blog and presentation</h3>
 <div class="paragraph">
 <p>Task is completed when each team member has written down their progress since the last presentation
-on the team’s wiki page and the team has presented their progress.</p>
+on the team repository&#8217;s README and the team has presented their progress.</p>
 </div>
 <div class="sect3">
 <h4 id="_blog">Blog</h4>
@@ -672,14 +671,17 @@ on the team’s wiki page and the team has presented their progress.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>= Blog =
-=== Monday 07.09.2020 ===
-'''Kristiina:''' Soldered mainboard. Broke one lead, but fortunately it was not important. (2h)
-'''Kalle:''' Started designing chassis. Was too hard for me. Must ask for help. (3.5h)
-'''Abraham:''' Installed Python. Failed with lots of errors. (1.5h)
+<pre class="highlight"><code class="language-asciidoc" data-lang="asciidoc">== Blog
 
-=== Tuesday 08.09.2020 ===
-...</pre>
+=== Monday 2022-09-05
+
+*Kristiina:* Soldered mainboard. Broke one lead, but fortunately it was not important. (2h) +
+*Kalle:* Started designing chassis. Was too hard for me. Must ask for help. (3.5h) +
+*Abraham:* Installed Python. Failed with lots of errors. (1.5h) +
+
+=== Tuesday 2022-09-06
+
+...</code></pre>
 </div>
 </div>
 </div>
@@ -688,16 +690,30 @@ on the team’s wiki page and the team has presented their progress.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Delta 2024</p>
+<p>In Delta room 2024.</p>
 </li>
 <li>
-<p>Mondays 18:15 - 19:00</p>
+<p>Mondays 18:15 - 19:00, once every two weeks.</p>
 </li>
 <li>
 <p>5 minutes per team.</p>
 </li>
 <li>
 <p>At least 1 team member presents the progress of all team members.</p>
+</li>
+<li>
+<p>Slides must be prepared and used to illustrate the progress.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Slides can, for example, contain pictures of the current designs, videos about how the robot is working,
+pictures and videos of some components and simple diagrams or drawings.</p>
+</li>
+<li>
+<p>Avoid using too much text or only text.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -720,7 +736,7 @@ on the team’s wiki page and the team has presented their progress.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Code running on test robot&#8217;s PC.</p>
+<p>Code running on robot&#8217;s PC.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -874,7 +890,7 @@ on the team’s wiki page and the team has presented their progress.</p>
 <p>Robot correctly uses basket color from the signal&#8217;s info.</p>
 </li>
 <li>
-<p>Robot retries to connect to basketball manager if connection is lost or not established.</p>
+<p>Robot retries to connect to basketball manager if connection is lost or has not been established yet.</p>
 </li>
 </ul>
 </div>
@@ -958,6 +974,17 @@ on the team’s wiki page and the team has presented their progress.</p>
 </li>
 <li>
 <p>Robot’s starting position will be selected by the instructors.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For example robot can be placed outside the playing court (outside black lines)
+looking at the balls that are outside the playing area (not on the orange carpet).</p>
+</li>
+<li>
+<p>Robot can also be placed behind basket&#8217;s backboard.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>At least 2 points must be scored.</p>
@@ -1095,7 +1122,7 @@ the opponent robot moves between basket and the ball and remains there.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Design approved.</p>
+<p>Thrower should technically be able to throw the ball.</p>
 </li>
 </ul>
 </div>
@@ -1170,7 +1197,7 @@ the opponent robot moves between basket and the ball and remains there.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Thrower attached to the chassis.</p>
+<p>Thrower attached to the chassis in the design.</p>
 </li>
 <li>
 <p>Thrower should technically be able to throw the ball.</p>
@@ -1193,7 +1220,7 @@ the opponent robot moves between basket and the ball and remains there.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Thrower designed to grab a ball and hold it while moving.</p>
+<p>Thrower designed to grab a ball, hold the ball while moving and release or throw the ball while holding.</p>
 </li>
 </ul>
 </div>
@@ -1228,19 +1255,21 @@ the opponent robot moves between basket and the ball and remains there.</p>
 </div>
 </li>
 <li>
-<p>Design that prevents balls from getting stuck against the robot:</p>
+<p>Design that prevents balls from getting stuck against the robot.
+If the robot drives against the ball, the ball should roll away.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>If the robot drives against the ball, the ball should roll away.</p>
-</li>
+<p>Problem:</p>
+<div class="ulist">
+<ul>
 <li>
 <p>When robot sides are angled outwards, then the ball would get stuck,
 because the ball does not slide against the carpet and the robot sides.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><span class="image"><img src="images/ball_stuck_outwards_angle.png" alt="ball stuck outwards angle" width="100"></span></p>
+<p><span class="image"><img src="images/ball_stuck_outwards_angle.png" alt="ball stuck outwards angle" width="160"></span></p>
 </li>
 </ul>
 </div>
@@ -1251,17 +1280,24 @@ In this case the ball can&#8217;t rotate and roll away.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><span class="image"><img src="images/ball_stuck_vertical_angle.png" alt="ball stuck vertical angle" width="100"></span></p>
+<p><span class="image"><img src="images/ball_stuck_vertical_angle.png" alt="ball stuck vertical angle" width="160"></span></p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
 </li>
 <li>
+<p>Possible solutions:</p>
+<div class="ulist">
+<ul>
+<li>
 <p>One option to solve this is to have the sides angled inwards.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><span class="image"><img src="images/ball_not_stuck_inwards_angle.png" alt="ball not stuck inwards angle" width="100"></span></p>
+<p><span class="image"><img src="images/ball_not_stuck_inwards_angle.png" alt="ball not stuck inwards angle" width="160"></span></p>
 </li>
 </ul>
 </div>
@@ -1269,16 +1305,15 @@ In this case the ball can&#8217;t rotate and roll away.</p>
 <li>
 <p>Another option is to make the bottom plate extend outwards,
 so that the edge of the bottom plate touches the ball before the side of the robot.</p>
-<div class="ulist">
-<ul>
-<li>
-<p><span class="image"><img src="images/ball_not_stuck_extended_bottom.png" alt="ball not stuck extended bottom" width="100"></span></p>
 </li>
-</ul>
-</div>
+<li>
+<p><span class="image"><img src="images/ball_not_stuck_extended_bottom.png" alt="ball not stuck extended bottom" width="160"></span></p>
 </li>
 <li>
 <p>Both options push the ball below its center, which helps the ball to roll away.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -1340,10 +1375,10 @@ so that the edge of the bottom plate touches the ball before the side of the rob
 <div class="ulist">
 <ul>
 <li>
-<p>Motor and ESC attached and working</p>
+<p>Motor and ESC attached and working.</p>
 </li>
 <li>
-<p>Motor speed can be controlled through mainboard</p>
+<p>Motor speed can be controlled through mainboard.</p>
 </li>
 </ul>
 </div>
@@ -1360,7 +1395,7 @@ so that the edge of the bottom plate touches the ball before the side of the rob
 <div class="ulist">
 <ul>
 <li>
-<p>Closed loop control of at least 3 motors</p>
+<p>Closed loop control of at least 3 motors.</p>
 </li>
 <li>
 <p>Thrower motor control.</p>
@@ -1370,29 +1405,6 @@ so that the edge of the bottom plate touches the ball before the side of the rob
 </li>
 </ul>
 </div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_mainboard_soldered_and_working">Mainboard soldered and working</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Motors can be controlled through the mainboard.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_mainboard_firmware_completed">Mainboard firmware completed</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Implements required functionality.</p>
-</li>
-<li>
-<p>Code hosted on GitHub.</p>
 </li>
 </ul>
 </div>
@@ -1427,6 +1439,16 @@ so that the edge of the bottom plate touches the ball before the side of the rob
 </div>
 </div>
 <div class="sect3">
+<h4 id="_mainboard_soldered_and_working">Mainboard soldered and working</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Motors can be controlled through the mainboard.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
 <h4 id="_motor_drivers_soldered_and_working">Motor drivers soldered and working</h4>
 <div class="ulist">
 <ul>
@@ -1438,6 +1460,22 @@ so that the edge of the bottom plate touches the ball before the side of the rob
 </li>
 <li>
 <p>Encoders must work. Closed loop (e.g. PI or PID) speed control must work.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mainboard_firmware_completed">Mainboard firmware completed</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Implements required functionality.</p>
+</li>
+<li>
+<p>Code hosted on GitHub in team&#8217;s repository.</p>
+</li>
+<li>
+<p>Code reviewed and approved.</p>
 </li>
 </ul>
 </div>
@@ -1457,6 +1495,38 @@ so that the edge of the bottom plate touches the ball before the side of the rob
 </li>
 <li>
 <p>Components BOM in TSV (tab-separated values, *.tsv) format.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Columns</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Name</p>
+</li>
+<li>
+<p>Description</p>
+</li>
+<li>
+<p>Designator</p>
+</li>
+<li>
+<p>Quantity</p>
+</li>
+<li>
+<p>Mouser order code</p>
+</li>
+<li>
+<p>Farnell order code</p>
+</li>
+<li>
+<p>TME order code</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>Gerber files in separate directory.</p>
@@ -1476,21 +1546,7 @@ so that the edge of the bottom plate touches the ball before the side of the rob
 <div class="ulist">
 <ul>
 <li>
-<p>Same requirements as for "Mainboard documented".</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_power_path_controller_soldered_and_working">Power path controller soldered and working</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Works with 2 power supplies</p>
-</li>
-<li>
-<p>Refer to <a href="https://github.com/ReikoR/power_path_control_2016">power path control board</a> GitHub repository
-on how to use the board.</p>
+<p>Same requirements as for "Mainboard documented" task.</p>
 </li>
 </ul>
 </div>
@@ -1555,6 +1611,14 @@ to ensure that changing battery voltage doesn&#8217;t affect thrower motor speed
 </li>
 <li>
 <p>Power buttons and power path control board works.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Refer to <a href="https://github.com/ReikoR/power_path_control_2016">power path control board</a> GitHub repository
+on how to use the board.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -1603,6 +1667,14 @@ to ensure that changing battery voltage doesn&#8217;t affect thrower motor speed
 </li>
 <li>
 <p>Power path control board with PC adapter and battery inputs and PC power output.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Refer to <a href="https://github.com/ReikoR/power_path_control_2016">power path control board</a> GitHub repository
+on how to use the board.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>Batteries</p>
@@ -1634,40 +1706,23 @@ to ensure that changing battery voltage doesn&#8217;t affect thrower motor speed
 </div>
 </div>
 <div class="sect3">
-<h4 id="_team_wiki_page_created">Team wiki page created</h4>
+<h4 id="_team_documentation_started">Team documentation started</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>In English</p>
+<p>In team&#8217;s GitHub repository <code>documentation</code> branch and <code>README.html</code> file.</p>
 </li>
 <li>
-<p>Members</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Name</p>
-</li>
-</ul>
-</div>
+<p>In English.</p>
 </li>
 <li>
-<p>Repositories</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Code (link to GitHub or similar)</p>
+<p>Names of the team members.</p>
 </li>
 <li>
-<p>Mechanics (public Fusion 360 project link)</p>
+<p>Public Fusion 360 project link.</p>
 </li>
 <li>
-<p>Electronics</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Progress blog section</p>
+<p>Progress blog section.</p>
 </li>
 </ul>
 </div>
@@ -1677,7 +1732,7 @@ to ensure that changing battery voltage doesn&#8217;t affect thrower motor speed
 <div class="ulist">
 <ul>
 <li>
-<p>New robot qualifies according to basketball rules:</p>
+<p>Either old robot or new robot qualifies according to basketball rules:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -1701,31 +1756,21 @@ to ensure that changing battery voltage doesn&#8217;t affect thrower motor speed
 </ul>
 </div>
 <div class="sect4">
+<h5 id="_test_competition_with_new_robot">Test competition with new robot</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Bonus points for qualifying with new robot.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
 <h5 id="_test_competition_winner">Test competition winner</h5>
 <div class="ulist">
 <ul>
 <li>
 <p>Bonus points for the best team among course participants.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_old_robot_test_competition">Old robot test competition</h5>
-<div class="ulist">
-<ul>
-<li>
-<p>Test robot allowed.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_new_robot_test_competition">New robot test competition</h5>
-<div class="ulist">
-<ul>
-<li>
-<p>Test robot not allowed.</p>
 </li>
 </ul>
 </div>
@@ -1775,7 +1820,7 @@ to ensure that changing battery voltage doesn&#8217;t affect thrower motor speed
 </div>
 </div>
 <div class="sect3">
-<h4 id="_team_wiki_page_completed_and_final_presentation">Team wiki page completed and final presentation</h4>
+<h4 id="_team_documentation_completed_and_final_presentation">Team documentation completed and final presentation</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1815,7 +1860,7 @@ to ensure that changing battery voltage doesn&#8217;t affect thrower motor speed
 </li>
 <li>
 <p>Refer to
-<a href="https://docs.google.com/spreadsheets/d/1lhE7Z-Hq4iUc30kQaS82116T_d7Zvy0P9nbsBC_Bbbk/edit?usp=sharing">Handed out equipment</a></p>
+<a href="https://docs.google.com/spreadsheets/d/1gsIoC2Nv1ZVQKLSPud_-EncrXJNts9rtKSdF_09fl6k/edit?usp=sharing">Handed out equipment</a></p>
 </li>
 </ul>
 </div>
