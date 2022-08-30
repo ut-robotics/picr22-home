@@ -548,7 +548,7 @@ on how to use the board.
 
 ==== Team documentation completed
 
-* Refer to xref:team_page_requirements.asciidoc[team page requirements]
+* Refer to xref:team_documentation_requirements.asciidoc[Team documentation requirements]
 * Must be reviewed and approved by instructors.
 * No grades if not completed.
 

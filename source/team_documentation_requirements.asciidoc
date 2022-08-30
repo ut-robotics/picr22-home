@@ -1,26 +1,33 @@
-= Team page requirements
+= Team documentation requirements
 
 == Introduction
 
-By the end of this course, each team must have a page that has the required data described on this page.
+By the end of this course, each team must have a documentation that has the required data described in it.
 This will give future students and other robot builders access to previous years knowledge
 and experience on robot building to improve overall quality of their robots.
 
-== Page requirements
+== Documentation requirements
 
-=== Overall
+=== Team repository structure
 
-Team page must have:
+* *README.asciidoc*
+** Names of all team members.
+** Links to all external sources (public link to Fusion 360 assembly and any other repositories).
+** Programming section (see below for requirements).
+** Electronics section (see below for requirements).
+** Mechanics section (see below for requirements).
+** Personal comments section (see below for requirements).
+** Blogs at the end.
+* *software/README.asciidoc*
+** Instructions on how to set up and run the code.
+* *electronics/README.asciidoc*
+** Refer to "Mainboard documented" task requirements.
+* *firmware/README.asciidoc*
+** Format and description of the data that can be sent to and received from mainboard.
 
-* Names of all team members.
-* Link to all repositories (code, mechanics, electronics, etc).
-** Code repositories must include a README describing how to set up and run the code.
+=== README.asciidoc sections
 
-=== Blogs
-
-Blogs should be kept at the very end of your team page.
-
-=== Programming
+==== Programming
 
 The following questions must be answered:
 
@@ -29,14 +36,14 @@ The following questions must be answered:
 * A block diagram of your game logic.
 * A short analysis of what was good and bad in your code and how to improve.
 
-=== Electronics
+==== Electronics
 
 * If you used something different from what was given at the start of the course
 or did something different, describe it.
 * Photos illustrating electronics on your robot. (electronics board, cable management, etc.)
 * A short analysis of what was good and bad in your electronics and how to improve.
 
-=== Mechanics
+==== Mechanics
 
 * If you used something different from what was given at the start of the course
 or did something different, describe it.
@@ -44,7 +51,7 @@ or did something different, describe it.
 * Photos of your robot.
 * A short analysis of what was good and bad in your mechanics and how to improve.
 
-=== Personal comments
+==== Personal comments
 
 Each member must write a paragraph that covers the following:
 
