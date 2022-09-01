@@ -2,6 +2,13 @@
 
 . Install PrusaSlicer https://www.prusa3d.com/page/prusaslicer_424/
 . During installation, when prompted to select “Features”, do not install any of the “Drivers (for updating firmware)”.
+. Exporting file for printing:
+.. For Standalone software users: +
+In Fusion 360, select File > 3D Print. This will open up a prompt, select the model you want to export, for the format choose STL (Binary), and Unit Type as Millimeters. Click “OK” and a prompt should appear to save the .stl file. Save it somewhere that you can access easily.
+.. For online software users: +
+In Fusion 360, select File > Export. This will open a prompt, under “Type”, select STL files (*.stl). This should start a cloud translation of the file. The prompt will notify you where you can access the file.
+
+
 . In Fusion 360, select File > 3D Print. This will open up a prompt, select the model you want to export, for the format choose STL (Binary), and Unit Type as Millimeters. Click “OK” and a prompt should appear to save the .stl file. Save it somewhere that you can access easily.
 . Open PrusaSlicer. A configuration wizard should appear. Click “Next”. Select these options when prompted:
 .. Prusa FFF > Original Prusa i3 MK3S & MK3S+ > 0.4 mm nozzle
