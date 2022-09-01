@@ -1,5 +1,6 @@
 = Project in Competitive Robotics 2022
 
+* xref:boot_camp_tasks/index.asciidoc[Boot camp tasks]
 * https://utr.ee[Tasks Table]
 * xref:grading_and_tasks.asciidoc[Grading and tasks]
 * xref:team_documentation_requirements.asciidoc[Team documentation requirements]

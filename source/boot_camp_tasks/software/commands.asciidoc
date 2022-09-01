@@ -1,0 +1,15 @@
+= Send commands to mainboard to rotate a motor
+
+. Select a serial communications library for Python and install it. As an example *PySerial* works well.
+. Serial communications under Ubuntu require some permission adjustments. Run these commands *“sudo usermod -a -G tty robot”*, *“sudo usermod -a -G dialout robot”* and then *log out and in*. Without this, opening a serial port won’t work without sudo permissions.
+. Open the cloned repository in your IDE.
+. Use *motion.py* as an example and create the class *OmniMotionRobot* that implements the *IRobotMotion* interface.
+.. Create the new class *OmniMotionRobot* that extends *IRobotMotion*.
+.. Add implementations for the *open* and *close* methods. Use *TurtleRobot* as an example. Consider that you should be able to define what port the serial connection should be created for.
+.. Define a new method for sending commands to the mainboard over serial. Refer to https://reikor.github.io/picr21-basketball-robot-guide/electronics/test_robot.html#_mainboard for a detailed explanation of the command structure and how to assemble a command.
+.. Test your code to validate that you can connect to and disconnect from the mainboard.
+.. *In case of issues, debug and ask instructors for help.*
+.. Connect the mainboard to the computer and check that the mainboard is wired to a motor driver correctly. It should be able to control a motor.
+.. Use your created functionality to control the motor. *Tell the motor to spin with a speed of 20 and after 2 seconds, reverse its direction.*
+. Show your progress to a instructor.
+. If everything works, you can continue to the next step. In case of issues, consult with instructors.

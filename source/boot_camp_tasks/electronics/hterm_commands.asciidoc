@@ -1,0 +1,3 @@
+= Send commands to mainboard with HTerm
+
+. Connect a micro USB cable to the mainboard.

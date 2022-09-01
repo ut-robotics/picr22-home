@@ -1,0 +1,4 @@
+= Connect motor to motor mount with correct length M3 screws
+* Check the drawing for information on how deep the holes for the mounting screws are: https://a.pololu-files.com/picture/0J10507.1200.jpg?a74e1fcac2491c43bd004da35fafb5ab
+* Choose appropriate M3 screws from the drawer
+* Attach the motor to the motor mount

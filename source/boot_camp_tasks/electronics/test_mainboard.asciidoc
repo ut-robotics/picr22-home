@@ -1,0 +1,18 @@
+= Test mainboard with a power supply and a motor
+
+. Set up power supply
+.. Select one of the power supply channels.
+.. Set the voltage to 16 V. This is about the same voltage as the batteries.
+.. Set the current limit to 100 mA. Low current limit helps to prevent electronics from burning out from excessive power when something is shorted on the board.Current can be raised afterwards, if needed.
+.. Connect the leads to the selected power supply channel outputs.
+.. *Do not turn on the output yet.*
+. Connect the leads to the mainboard.
+. Turn on the power supply.
+. Turn on the output.
+. Check that the current is not at the limit. If it is, then there might be something shorted on the board or it might consume more current, in which case the current limit needs to be set higher. The higher current limit might not prevent components from burning out, so it’s better to visually check for shorts. For example adjacent legs of a component might be bridged together with solder.
+. Turn off the power supply outputs, if everything is fine with the mainboard.
+. Connect a motor driver board to the mainboard.
+. Connect a motor to the motor driver board.
+. Turn on the power supply output.
+. Check again that the current is not at the limit.
+. Turn off the power supply outputs, if everything is fine.

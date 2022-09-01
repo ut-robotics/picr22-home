@@ -1,0 +1,15 @@
+= Solder wires with 2mm bullet connector to PCB
+
+. Cut about 5 cm pieces of red and black wire.
+. Strip about 5 mm of insulation from each end of the wire.
+. Lightly twist the strands of the wire at each end to prevent the strands from separating.
+. Add some flux to the ends.
+. Cover the ends with some solder. Make sure to evenly coat all around the wire.
+. Add solder into the ends of the bullet connectors.
+. Remelt the solder in the connector and at the end of the wire and push the wire into the connector. 
+. Keep the wire straight until the solder solidifies.
+. Add some solder to the pads on the PCB.
+. Place the end of the wire onto the pads and remelt the solder on the pad and at the end of the wire.
+. Keep the wire in place until the solder has solidified.
+. Cut two pieces of heatshrink (one red, other black). Heatshrink should cover all the conductive parts when the connector is connected and about 5 mm of the wire insulation.
+. Place the heatshrink onto the connector and heat it with hot air. Suitable temperature is around 150 - 200 degrees.

@@ -1,0 +1,46 @@
+= Boot camp tasks
+
+== Electronics
+
+link:electronics/solder_usb.asciidoc[Solder USB connector with hot air]
+
+link:electronics/solder_wires.asciidoc[Solder wires with 2mm bullet connector to PCB]
+
+link:electronics/test_mainboard.asciidoc[Test mainboard with a power supply and a motor]
+
+link:electronics/hterm_commands.asciidoc[Send commands to mainboard with HTerm]
+
+== Mechanics
+
+link:mechanics/install.asciidoc[Install Fusion 360]
+
+link:mechanics/model.asciidoc[Model a minimal motor mount]
+
+link:mechanics/assemble.asciidoc[Assemble a motor with the motor mount]
+
+link:mechanics/print.asciidoc[3D print]
+
+link:mechanics/drill.asciidoc[Drill over a 2.5mm hole and cut an M3 thread]
+
+link:mechanics/connect.asciidoc[Connect motor to motor mount with correct length M3 screws]
+
+link:mechanics/attach.asciidoc[Attach motor with mount to test robot]
+
+== Software
+
+link:software/setup.asciidoc[Setup]
+
+link:software/commands.asciidoc[Send commands to mainboard to rotate a motor]
+
+link:software/motion.asciidoc[Simulate ball following with TurtleMotion]
+
+link:software/omni_motion.asciidoc[Follow ball with TurtleOmniMotion]
+
+link:software/follow_ball.asciidoc[Follow ball with the test robot]
+
+== Changelog
+
+=== 2022-09-01
+. Created Electronics guide documents
+. Created Mechanics guide documents
+. Created Software guide documents

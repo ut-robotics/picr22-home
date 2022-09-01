@@ -1,0 +1,13 @@
+= Initial setup
+
+. Install Linux to a provided computer. Use the provided USB stick.
+.. Use *“robot”* for both the username and password
+Install Python 3.9 to your linux machine. A guide can be found here: https://linuxhint.com/install-python-3-9-linux-mint/
+Install pip3.9. A guide can be found here: https://askubuntu.com/questions/1331391/how-do-you-install-pip-for-python3-9-4
+Install a IDE of your choice, Visual Studio Code or PyCharm are good options. Visual Studio Code can be simply installed from the Application Centre.
+Use Git to clone the provided example repository to a directory of your choice: *https://github.com/ut-robotics/picr22-boot-camp-programming*
+Install the required dependencies using pip: *“pip3.9 install opencv-python pyrealsense2 numpy”*.
+Familiarise yourself with the provided readme file.
+Compile the segmentation library as by the instructions.
+Connect a camera and try running the *config_colors.py* and *main.py* files. If you are missing the tkinter module, you can install them with the command *“sudo apt-get install python3.9-tk”*.
+If they work, you can continue to the next step. In case of issues, consult with instructors

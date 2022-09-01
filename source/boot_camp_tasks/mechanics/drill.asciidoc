@@ -1,0 +1,15 @@
+= Drill over a 2.5mm hole and cut an M3 thread
+. Get a 2.5mm drill bit. Check the drill with a caliper to make sure it is the correct size.
+. Attach the drill bit into the chuck of the drill bench
+. Make sure that the drill bit is centered
+. Affix your 3D printed piece into vice chucks
+. Place the chucks under the drill
+. Make sure that the drill bit can go far enough to drill through the part
+. Raise the drill bench plate if necessary
+. Drill through the holes of the part
+. Get a M3 tap (will be given by instructor)
+. Affix the tap to the tap wrench
+. Center the tap to the hole
+. Start turning the tap into the hole clockwise
+. Tap through the hole
+. Bring the tap out by turning it counter-clockwise.

@@ -1,0 +1,2 @@
+= Attach motor with mount to test robot
+. Attach motor with mount to test robot with appropriate length M3 screws
