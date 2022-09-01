@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.17">
+<title>Test mainboard with a power supply and a motor</title>
+<link rel="stylesheet" href="./../../asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Test mainboard with a power supply and a motor</h1>
+</div>
+<div id="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Set up power supply</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Select one of the power supply channels.</p>
+</li>
+<li>
+<p>Set the voltage to 16 V. This is about the same voltage as the batteries.</p>
+</li>
+<li>
+<p>Set the current limit to 100 mA. Low current limit helps to prevent electronics from burning out from excessive power when something is shorted on the board.Current can be raised afterwards, if needed.</p>
+</li>
+<li>
+<p>Connect the leads to the selected power supply channel outputs.</p>
+</li>
+<li>
+<p><strong>Do not turn on the output yet.</strong></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Connect the leads to the mainboard.</p>
+</li>
+<li>
+<p>Turn on the power supply.</p>
+</li>
+<li>
+<p>Turn on the output.</p>
+</li>
+<li>
+<p>Check that the current is not at the limit. If it is, then there might be something shorted on the board or it might consume more current, in which case the current limit needs to be set higher. The higher current limit might not prevent components from burning out, so it’s better to visually check for shorts. For example adjacent legs of a component might be bridged together with solder.</p>
+</li>
+<li>
+<p>Turn off the power supply outputs, if everything is fine with the mainboard.</p>
+</li>
+<li>
+<p>Connect a motor driver board to the mainboard.</p>
+</li>
+<li>
+<p>Connect a motor to the motor driver board.</p>
+</li>
+<li>
+<p>Turn on the power supply output.</p>
+</li>
+<li>
+<p>Check again that the current is not at the limit.</p>
+</li>
+<li>
+<p>Turn off the power supply outputs, if everything is fine.</p>
+</li>
+</ol>
+</div>
+</div>
+</body>
+</html>

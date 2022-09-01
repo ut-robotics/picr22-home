@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.17">
+<meta name="author" content=". Install PrusaSlicer https://www.prusa3d.com/page/prusaslicer_424/">
+<title>3D print</title>
+<link rel="stylesheet" href="./../../asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>3D print</h1>
+<div class="details">
+<span id="author" class="author">. Install PrusaSlicer https://www.prusa3d.com/page/prusaslicer_424/</span><br>
+<span id="revnumber">version ,</span>
+<span id="revdate">do not install any of the “Drivers (for updating firmware)”.</span>
+</div>
+</div>
+<div id="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In Fusion 360, select File &gt; 3D Print. This will open up a prompt, select the model you want to export, for the format choose STL (Binary), and Unit Type as Millimeters. Click “OK” and a prompt should appear to save the .stl file. Save it somewhere that you can access easily.</p>
+</li>
+<li>
+<p>Open PrusaSlicer. A configuration wizard should appear. Click “Next”. Select these options when prompted:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prusa FFF &gt; Original Prusa i3 MK3S &amp; MK3S+ &gt; 0.4 mm nozzle</p>
+</li>
+<li>
+<p>Filaments &gt; Printer: (All) &gt; Type: PLA &gt; Vendor: Made for Prusa &gt;</p>
+</li>
+<li>
+<p>Profile: Prusa PLA</p>
+</li>
+<li>
+<p>View mode &gt; Advanced mode</p>
+</li>
+<li>
+<p>Click “Finish”</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Import the earlier saved .stl file from File &gt; Import &gt; Import STL/OBJ/… .</p>
+</li>
+<li>
+<p>The model might be imported in a not ideal orientation for printing. Click on the model, then use “Place on face” to select a face that will be set against the print bed.
+image::../images/prusa_place.png[]</p>
+</li>
+<li>
+<p>Under “Print settings” select “0.3mm DRAFT”.</p>
+</li>
+<li>
+<p>At the bottom right, select “Slice now”. The model will be “sliced” and show how the filament will be layed out.</p>
+</li>
+<li>
+<p>At the bottom right, select “Export G-code, which will prompt you to save the file. Save it somewhere that you can access easily.</p>
+</li>
+<li>
+<p>An instructor will provide you with a memory stick, onto which you will load your file.</p>
+</li>
+<li>
+<p>An instructor will then instruct on starting the printing process.</p>
+</li>
+</ol>
+</div>
+</div>
+</body>
+</html>

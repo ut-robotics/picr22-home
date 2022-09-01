@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.17">
+<title>Simulate ball following with TurtleMotion</title>
+<link rel="stylesheet" href="./../../asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Simulate ball following with TurtleMotion</h1>
+</div>
+<div id="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open <strong>main.py.</strong> This file contains an example implementation of the image processor and motion classes. <strong>For this task in case of questions, ask an instructor.</strong></p>
+</li>
+<li>
+<p>There should be a main loop that processes every camera frame and outputs a <strong>ProcessedResults</strong> object that contains information about objects detected in the frame.</p>
+</li>
+<li>
+<p>Use the return data to find if there are any balls in the frame.</p>
+</li>
+<li>
+<p>If there are balls in the frame, <strong>find the largest balls Object.</strong></p>
+</li>
+<li>
+<p><strong>Find the X and Y coordinates of the ball.</strong> Take into consideration that the zero coordinates of the frame are in the upper left corner.</p>
+</li>
+<li>
+<p>Using these coordinates calculate the side speed, forward speed and rotation for the robot. <strong>The robot must centre the ball horizontally, vertically the ball should be on the bottom third of the frame.</strong></p>
+</li>
+<li>
+<p>Use the <strong>TurtleRobot</strong> class to visualise the robots motion vector.</p>
+</li>
+<li>
+<p>Play around with your speed calculation methods to provide a smooth trajectory for the robot. <strong>Don&#8217;t only use constant speeds</strong> since it leads to jerky motion. Instead try to use proportional movement where the delta of the desired ball location to the current ball location determines the robot&#8217;s speed.</p>
+</li>
+<li>
+<p>Demo your solution to the instructors. Iterate on the solution in case deficiencies are brought up by instructors.</p>
+</li>
+<li>
+<p>If everything works, continue to the next task.</p>
+</li>
+</ol>
+</div>
+</div>
+</body>
+</html>
