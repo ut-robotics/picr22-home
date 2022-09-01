@@ -6,7 +6,7 @@
 . Use *motion.py* as an example and create the class *OmniMotionRobot* that implements the *IRobotMotion* interface.
 .. Create the new class *OmniMotionRobot* that extends *IRobotMotion*.
 .. Add implementations for the *open* and *close* methods. Use *TurtleRobot* as an example. Consider that you should be able to define what port the serial connection should be created for.
-.. Define a new method for sending commands to the mainboard over serial. Refer to xref:./basketball_robot_guide/electronics/test_robot.asciidoc[Omni motion guide] for a detailed explanation of the command structure and how to assemble a command.
+.. Define a new method for sending commands to the mainboard over serial. Refer to xref:../../basketball_robot_guide/electronics/test_robot.asciidoc[Omni motion guide] for a detailed explanation of the command structure and how to assemble a command.
 .. Test your code to validate that you can connect to and disconnect from the mainboard.
 .. *In case of issues, debug and ask instructors for help.*
 .. Connect the mainboard to the computer and check that the mainboard is wired to a motor driver correctly. It should be able to control a motor.
