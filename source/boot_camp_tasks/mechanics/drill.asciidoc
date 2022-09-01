@@ -1,4 +1,5 @@
 = Drill over a 2.5mm hole and cut an M3 thread
+
 . Get a 2.5mm drill bit. Check the drill with a caliper to make sure it is the correct size.
 . Attach the drill bit into the chuck of the drill bench
 . Make sure that the drill bit is centered

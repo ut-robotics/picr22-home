@@ -1,4 +1,5 @@
 = 3D print
+
 . Install PrusaSlicer https://www.prusa3d.com/page/prusaslicer_424/
 . During installation, when prompted to select “Features”, do not install any of the “Drivers (for updating firmware)”.
 . In Fusion 360, select File > 3D Print. This will open up a prompt, select the model you want to export, for the format choose STL (Binary), and Unit Type as Millimeters. Click “OK” and a prompt should appear to save the .stl file. Save it somewhere that you can access easily.
@@ -10,7 +11,9 @@
 .. Click “Finish”
 . Import the earlier saved .stl file from File > Import > Import STL/OBJ/… .
 . The model might be imported in a not ideal orientation for printing. Click on the model, then use “Place on face” to select a face that will be set against the print bed.
+
 image::../images/prusa_place.png[]
+
 . Under “Print settings” select “0.3mm DRAFT”.
 . At the bottom right, select “Slice now”. The model will be “sliced” and show how the filament will be layed out.
 . At the bottom right, select “Export G-code, which will prompt you to save the file. Save it somewhere that you can access easily.
