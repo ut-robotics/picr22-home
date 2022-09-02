@@ -1,3 +1,24 @@
 = Send commands to mainboard with HTerm
 
+. Use bench power supply to power the boards.
+. Download HTerm.
+** https://www.der-hammer.info/pages/terminal.html
 . Connect a micro USB cable to the mainboard.
+. Open HTerm.
+. Select the correct port.
+** On Windows the ports are listed in the Device Manager.
+** On Linux running `dmesg` can list recently connected devices.
+. Leave other settings to defaults.
+. Press Connect.
+. Command structure can be found on the
+xref:../../basketball_robot_guide/electronics/test_robot.asciidoc[Test robot page].
+. In `HTerm` under `Input control` change `Type` to `HEX`.
+. Send `10 00 10 00 10 00 00 00 00 AA AA` to set all the motors to rotate at the speed of 10.
+** Byte order is little endian, which means that least significant byte is first.
+. Send `F6 FF F6 FF F6 FF 00 00 00 AA AA` to set all the motors to rotate at the speed of -10.
+** Negative values are https://en.wikipedia.org/wiki/Two%27s_complement[two's complement] of the positive value.
+. 10 is relatively low speed, so if any of the motors is rotating fast,
+the motor power wires might need to be reversed
+(because the encoder values need to count in a positive direction if the speed is set to a positive value)
+or the encoder signal connections might be faulty.
+

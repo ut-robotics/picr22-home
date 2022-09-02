@@ -1,11 +1,18 @@
 = Solder USB connector with hot air
 
-. Cover surface mount pads with solder. Try to keep the amount of solder relatively low and equal height on all of the pads.
+. Cover surface mount pads with solder.
+Try to keep the amount of solder relatively low and equal height on all the pads.
 . Add some soldering flux onto pads.
 . Place connector on the pads.
-. Start heating the connector with hot air. Make sure to move the hot air nozzle around above the connector to heat it evenly. Try with the temperature around 300 - 350 degrees.
-. When the solder has melted the connector should drop closer to the PCB. Keep heating the connector for a little longer to make sure that all the solder has melted.
+. Start heating the connector with hot air.
+Make sure to move the hot air nozzle around above the connector to heat it evenly.
+Try with the temperature around 300 - 350 degrees.
+. When the solder has melted the connector should drop closer to the PCB.
+Keep heating the connector for a little longer to make sure that all the solder has melted.
 . Let the solder cool a bit.
-. Inspect solder joints under the microscope. If any of the pins are not connected, it might be possible to solder them with a soldering iron. Otherwise it might be easier to desolder the connector with hot air and try the procedure from the start.
-. Solder the through hole pads with a soldering iron. Be careful not to get any solder into the connector.
-. Clean the PCB with the ultrasonic cleaner.
+. Inspect solder joints under the microscope.
+If any of the pins are not connected, it might be possible to solder them with a soldering iron.
+Otherwise it might be easier to desolder the connector with hot air and try the procedure from the start.
+. Solder the through hole pads with a soldering iron.
+Be careful not to get any solder into the connector.
+. Clean the PCB in the ultrasonic cleaner.
