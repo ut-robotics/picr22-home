@@ -3,7 +3,7 @@
 . A drawing of the motor mount is provided below.
 . Model the motor mount based on the drawing.
 
-Below is a video guide on how to model
+Below is a video guide on how to model:
 
 https://www.youtube.com/watch?v=d3qGQ2utl2A
 

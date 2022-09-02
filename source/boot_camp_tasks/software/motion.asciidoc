@@ -1,12 +1,20 @@
 = Simulate ball following with TurtleMotion
 
-. Open *main.py.* This file contains an example implementation of the image processor and motion classes. *For this task in case of questions, ask an instructor.*
-. There should be a main loop that processes every camera frame and outputs a *ProcessedResults* object that contains information about objects detected in the frame.
+. Open `main.py`.
+This file contains an example implementation of the image processor and motion classes.
+*For this task in case of questions, ask an instructor.*
+. There should be a main loop that processes every camera frame
+and outputs a `ProcessedResults` object that contains information about objects detected in the frame.
 . Use the return data to find if there are any balls in the frame.
 . If there are balls in the frame, *find the largest balls Object.*
-. *Find the X and Y coordinates of the ball.* Take into consideration that the zero coordinates of the frame are in the upper left corner.
-. Using these coordinates calculate the side speed, forward speed and rotation for the robot. *The robot must centre the ball horizontally, vertically the ball should be on the bottom third of the frame.*
-. Use the *TurtleRobot* class to visualise the robots motion vector.
-. Play around with your speed calculation methods to provide a smooth trajectory for the robot. *Don't only use constant speeds* since it leads to jerky motion. Instead try to use proportional movement where the delta of the desired ball location to the current ball location determines the robot's speed.
-. Demo your solution to the instructors. Iterate on the solution in case deficiencies are brought up by instructors.
+. *Find the X and Y coordinates of the ball.*
+Take into consideration that the zero coordinates of the frame are in the upper left corner.
+. Using these coordinates calculate the side speed, forward speed and rotation for the robot.
+*The robot must centre the ball horizontally. Vertically the ball should be on the bottom third of the frame.*
+. Use the `TurtleRobot` class to visualise the robots motion vector.
+. Play around with your speed calculation methods to provide a smooth trajectory for the robot.
+*Don't only use constant speeds* since it leads to jerky motion.
+Instead, try to use proportional movement where the delta of the desired ball location to the current ball location determines the robot's speed.
+. Demo your solution to the instructors.
+Iterate on the solution in case deficiencies are brought up by instructors.
 . If everything works, continue to the next task.

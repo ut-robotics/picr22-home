@@ -3,7 +3,7 @@
 . You will be given a model of a motor.
 . Assemble the motor and the motor mount together.
 
-Below is a video guide on how assemblies work
+Below is a video guide on how assemblies work:
 
 https://www.youtube.com/watch?v=O1p7Sn1eMmE
 

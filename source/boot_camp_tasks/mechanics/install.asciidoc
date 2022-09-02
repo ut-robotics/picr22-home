@@ -1,11 +1,11 @@
 = Install Fusion 360
 
-== Standalone software (only Windows & Mac users):
+== Standalone software (only Windows & Mac users)
 
 . Go to https://manage.autodesk.com/products
-. Log in when prompted
-. Select “Download” under “Fusion 360”
+. Log in when prompted.
+. Select "Download" under "Fusion 360".
 
-== Fusion 360 in browser (better for users who are unable to install standalone program):
+== Fusion 360 in browser (better for users who are unable to install standalone program)
 
 . Go to https://fusion.online.autodesk.com/ and follow the instructions and log in when prompted.

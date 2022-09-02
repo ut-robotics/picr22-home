@@ -1,28 +1,44 @@
 = 3D print
 
-. Install PrusaSlicer https://www.prusa3d.com/page/prusaslicer_424/
-. During installation, when prompted to select “Features”, do not install any of the “Drivers (for updating firmware)”.
+. Install PrusaSlicer: +
+https://www.prusa3d.com/page/prusaslicer_424/
+
+. During installation, when prompted to select "Features",
+do not install any of the "Drivers (for updating firmware)".
+
 . Exporting file for printing:
 .. For Standalone software users: +
-In Fusion 360, select File > 3D Print. This will open up a prompt, select the model you want to export, for the format choose STL (Binary), and Unit Type as Millimeters. Click “OK” and a prompt should appear to save the .stl file. Save it somewhere that you can access easily.
+In Fusion 360, select File > 3D Print.
+This will open up a prompt.
+Select the model you want to export.
+For the format choose STL (Binary)
+and Unit Type as Millimeters.
+Click "OK" and a prompt should appear to save the .stl file.
+Save it somewhere that you can access easily.
 .. For online software users: +
-In Fusion 360, select File > Export. This will open a prompt, under “Type”, select STL files (*.stl). This should start a cloud translation of the file. The prompt will notify you where you can access the file.
+In Fusion 360, select File > Export.
+This will open a prompt, under "Type", select STL files (*.stl).
+This should start a cloud translation of the file.
+The prompt will notify you where you can access the file.
 
-
-. In Fusion 360, select File > 3D Print. This will open up a prompt, select the model you want to export, for the format choose STL (Binary), and Unit Type as Millimeters. Click “OK” and a prompt should appear to save the .stl file. Save it somewhere that you can access easily.
-. Open PrusaSlicer. A configuration wizard should appear. Click “Next”. Select these options when prompted:
+. Open PrusaSlicer. A configuration wizard should appear.
+Click "Next".
+Select these options when prompted:
 .. Prusa FFF > Original Prusa i3 MK3S & MK3S+ > 0.4 mm nozzle
 .. Filaments > Printer: (All) > Type: PLA > Vendor: Made for Prusa > 
 .. Profile: Prusa PLA
 .. View mode > Advanced mode
-.. Click “Finish”
-. Import the earlier saved .stl file from File > Import > Import STL/OBJ/… .
-. The model might be imported in a not ideal orientation for printing. Click on the model, then use “Place on face” to select a face that will be set against the print bed.
-
+.. Click "Finish"
+. Import the earlier saved .stl file from File > Import > Import STL/OBJ/...
+. The model might be imported in a not ideal orientation for printing.
+Click on the model, then use "Place on face" to select a face that will be set against the print bed. +
++
 image::../images/prusa_place.png[]
 
-. Under “Print settings” select “0.3mm DRAFT”.
-. At the bottom right, select “Slice now”. The model will be “sliced” and show how the filament will be layed out.
-. At the bottom right, select “Export G-code, which will prompt you to save the file. Save it somewhere that you can access easily.
-. An instructor will provide you with a memory stick, onto which you will load your file.
+. Under "Print settings" select "0.3mm DRAFT".
+. At the bottom right, select "Slice now".
+The model will be "sliced" and show how the filament will be layed out.
+. At the bottom right, select "Export G-code, which will prompt you to save the file.
+Save it somewhere that you can access easily.
+. An instructor will provide you with a SD card, onto which you will load your file.
 . An instructor will then instruct on starting the printing process.

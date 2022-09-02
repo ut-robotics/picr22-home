@@ -1,16 +1,41 @@
 = Drill over a 2.5mm hole and cut an M3 thread
 
-. Get a 2.5mm drill bit. Check the drill with a caliper to make sure it is the correct size.
-. Attach the drill bit into the chuck of the drill bench
-. Make sure that the drill bit is centered
-. Affix your 3D printed piece into vice chucks
-. Place the chucks under the drill
-. Make sure that the drill bit can go far enough to drill through the part
-. Raise the drill bench plate if necessary
-. Drill through the holes of the part
-. Get a M3 tap (will be given by instructor)
-. Affix the tap to the tap wrench
-. Center the tap to the hole
-. Start turning the tap into the hole clockwise
-. Tap through the hole
-. Bring the tap out by turning it counter-clockwise.
+3D printed holes might be smaller than designed or not very accurate.
+It is useful to drill over the holes to make them fit the screws or prepare them for cutting a thread.
+
+. Get a 2.5 mm drill bit.
+Check the drill with a caliper to make sure it is the correct size.
+2.5 mm is the recommended hole diameter for cutting a M3 thread.
+. Drill the holes
+** (Option 1) Using drill press:
+... Attach the drill bit into the chuck of the drill press.
+Make sure that the drill bit is centered.
+... Clamp your 3D printed piece into the vice.
+... Place the vice under the drill.
+... Make sure that the drill bit can go far enough to drill through the part.
+... Raise the drill press plate if necessary.
+... Drill through the holes of the part.
+** (Option 2) Using cordless drill:
+... Attach the drill bit into the chuck of a cordless drill.
+... Hold the piece with your hand.
+You can hold it flat on the edge of the table.
+... Drill the holes.
+. Cut a thread into the holes.
+** (Option 1) By hand:
+... Get a M3 tap (will be given by instructor).
+... Attach the tap to the tap wrench.
+... Center the tap to the hole.
+... Start turning the tap into the hole clockwise.
+... Try to keep the tap straight with the hole.
+... Tap through the hole.
+... Bring the tap out by turning it counter-clockwise.
+** (Option 2) With cordless drill:
+... Attach M3 tap into the chuck of the cordless drill.
+... Set cordless drill clutch to the lowest torque setting (increase the torque setting if the lowest is too weak).
+Low torque setting helps to prevent destroying the thread by over-torquing it.
+... Set cordless drill speed to 1 (the lowest speed) for better speed control.
+... Make sure that the drill rotates clockwise.
+... Clamp the piece into a vice or hold it flat on the table by hand.
+... Try to keep the tap straight with the hole.
+... Tap through the hole.
+... Bring the tap out by setting the drill to rotate counter-clockwise.

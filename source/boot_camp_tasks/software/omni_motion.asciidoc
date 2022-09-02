@@ -1,9 +1,17 @@
 = Follow ball with TurtleOmniMotion
 
-. Replace the *TurtleRobot* motion class with *TurtleOmniRobot*. The new class allows the robot to more closely emulate the real command structures used in the robot.
-. A robot uses 3 omni wheels to move about. These wheels allow the robot to move in any direction but using them requires a bit of maths. Familiarise yourself with the maths here: xref:../../basketball_robot_guide/software/omni_motion.asciidoc[Omni motion guide]
-. Implement the *move(self, x_speed, y_speed, rot_speed)* method using existing code in *TurtleOmniRobot*. Calculate the speeds for three motors. 
+. Replace the `TurtleRobot` motion class with `TurtleOmniRobot`.
+The new class allows the robot to more closely emulate the real command structures used in the robot.
+. A robot uses 3 omni wheels to move about.
+These wheels allow the robot to move in any direction but using them requires a bit of maths.
+Familiarise yourself with the maths here:
+xref:../../basketball_robot_guide/software/omni_motion.asciidoc[Omni motion guide].
+. Implement the `move(self, x_speed, y_speed, rot_speed)` method using existing code in `TurtleOmniRobot`.
+Calculate the speeds for three motors.
 . Send the calculated speeds to the simulation method to visualise the motion vector for the robot.
-. Use code from the previous tasks to test and validate your omni motion calculations. Both *TurtleOmniRobot* and *TurtleRobot* classes. They should behave similarly.
-. Demo your solution to the instructors. Iterate on the solution in case deficiencies are brought up by instructors.
+. Use code from the previous tasks to test and validate your omni motion calculations.
+Both `TurtleOmniRobot` and `TurtleRobot` classes.
+They should behave similarly.
+. Demo your solution to the instructors.
+Iterate on the solution in case deficiencies are brought up by instructors.
 . If everything works, continue to the next task.
