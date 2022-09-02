@@ -90,6 +90,12 @@ Using with python's link:https://docs.python.org/3/library/struct.html[struct li
 actual_speed1, actual_speed2, actual_speed3, feedback_delimiter = struct.unpack('<hhhH', received_data)
 ----
 
+==== Thrower speeds
+
+Thrower speeds are sent to thrower motor controller using
+https://dmrlawson.co.uk/index.php/2017/12/04/dshot-in-the-dark/[DShot protocol].
+Speed values are between 48 - 2047 for 0 to 100% speed.
+
 == Wheel motor driver
 
 link:https://digilabor.ut.ee/index.php/MC33886_driver_board[Wiki page]
