@@ -1,4 +1,4 @@
-= Follow ball with TurtleOmniMotion
+= Follow ball with TurtleOmniRobot
 
 . Replace the `TurtleRobot` motion class with `TurtleOmniRobot`.
 The new class allows the robot to more closely emulate the real command structures used in the robot.

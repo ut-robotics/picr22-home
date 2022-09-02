@@ -1,4 +1,4 @@
-= Simulate ball following with TurtleMotion
+= Simulate ball following with TurtleRobot
 
 . Open `main.py`.
 This file contains an example implementation of the image processor and motion classes.
@@ -10,11 +10,15 @@ and outputs a `ProcessedResults` object that contains information about objects 
 . *Find the X and Y coordinates of the ball.*
 Take into consideration that the zero coordinates of the frame are in the upper left corner.
 . Using these coordinates calculate the side speed, forward speed and rotation for the robot.
-*The robot must centre the ball horizontally. Vertically the ball should be on the bottom third of the frame.*
+Use `TurtleRobot` and its move method to visualize the robots motion.
+Its motion can be seen in the "Default turtle robot" window.
+Write code so that *the robot centers the ball horizontally*.
+*Vertically the ball must be on the bottom third of the frame.*
 . Use the `TurtleRobot` class to visualise the robots motion vector.
 . Play around with your speed calculation methods to provide a smooth trajectory for the robot.
 *Don't only use constant speeds* since it leads to jerky motion.
-Instead, try to use proportional movement where the delta of the desired ball location to the current ball location determines the robot's speed.
+Instead, try to use proportional movement
+where the delta of the desired ball location to the current ball location determines the robot's speed.
 . Demo your solution to the instructors.
 Iterate on the solution in case deficiencies are brought up by instructors.
 . If everything works, continue to the next task.
