@@ -16,63 +16,81 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Install Linux to a provided computer. Use the provided USB stick. You should choose the simple install and overwrite any existing OS-es.</p>
+<p>Install Linux to a provided computer.
+Use the provided USB stick.
+You should choose the simple install and overwrite any existing OS-es.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Use <strong>“robot”</strong> for both the username and password</p>
+<p>Use <code>robot</code> for both the username and password.</p>
 </li>
 </ol>
 </div>
 </li>
 <li>
-<p>Install Python 3.9 to your linux machine. A guide can be found here: <a href="https://linuxhint.com/install-python-3-9-linux-mint/" class="bare">https://linuxhint.com/install-python-3-9-linux-mint/</a></p>
+<p>Install Python 3.9 to your linux machine.<br>
+A guide can be found here: <a href="https://linuxhint.com/install-python-3-9-linux-mint/" class="bare">https://linuxhint.com/install-python-3-9-linux-mint/</a></p>
 </li>
 <li>
-<p>Install distutils for python 3.9: "sudo apt-get install python3.10-distutils"</p>
-</li>
-<li>
-<p>Install pip3.9 using these commands</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>wget <a href="https://bootstrap.pypa.io/get-pip.py" class="bare">https://bootstrap.pypa.io/get-pip.py</a></p>
-</li>
-<li>
-<p>python3.9 get-pip.py</p>
-</li>
-<li>
-<p>echo 'export PATH=~/.local/bin/:$PATH' &gt;&gt; ~/.bashrc</p>
-</li>
-<li>
-<p>source ~/.bashrc</p>
-</li>
-</ol>
+<p>Install <code>distutils</code> for python 3.9:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo apt-get install python3.10-distutils</code></pre>
+</div>
 </div>
 </li>
 <li>
-<p>Install a IDE of your choice, Visual Studio Code or PyCharm are good options. Visual Studio Code can be simply installed from the Ubuntu Software app. Later you might want to install python specific plugins for the IDE as well&#8230;&#8203;</p>
+<p>Install pip3.9 using these commands:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">wget https://bootstrap.pypa.io/get-pip.py
+python3.9 get-pip.py
+echo 'export PATH=~/.local/bin/:$PATH' &gt;&gt; ~/.bashrc
+source ~/.bashrc</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Install a IDE of your choice.
+Visual Studio Code or PyCharm are good options.
+Visual Studio Code can be simply installed from the Ubuntu Software app.
+Later you might want to install python specific plugins for the IDE as well.</p>
 </li>
 <li>
 <p>Install git.</p>
 </li>
 <li>
-<p>Use Git to clone the provided example repository to a directory of your choice: <strong><a href="https://github.com/ut-robotics/picr22-boot-camp-programming" class="bare">https://github.com/ut-robotics/picr22-boot-camp-programming</a></strong></p>
+<p>Use Git to clone the provided example repository to a directory of your choice:<br>
+<strong><a href="https://github.com/ut-robotics/picr22-boot-camp-programming" class="bare">https://github.com/ut-robotics/picr22-boot-camp-programming</a></strong></p>
 </li>
 <li>
-<p>Install the required dependencies using pip: <strong>“pip3.9 install opencv-python pyrealsense2 numpy”</strong>.</p>
+<p>Install the required dependencies using pip:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">pip3.9 install opencv-python pyrealsense2 numpy</code></pre>
+</div>
+</div>
 </li>
 <li>
-<p>Familiarise yourself with the provided readme file.</p>
+<p>Familiarise yourself with the provided README file.</p>
 </li>
 <li>
-<p>Compile the segmentation library as by the instructions. Remember that you need python dev tools to compile code (python3.9-dev and build-essential).</p>
+<p>Compile the segmentation library as by the instructions.
+Remember that you need python dev tools to compile code (python3.9-dev and build-essential).</p>
 </li>
 <li>
-<p>Connect a camera and try running the <strong>config_colors.py</strong> and <strong>main.py</strong> files. Both programs can be quit out of by pressing "q" when a camera window is active. If you are missing the tkinter module, you can install them with the command <strong>“sudo apt-get install python3.9-tk”</strong>.</p>
+<p>Connect a camera and try running the <code>config_colors.py</code> and <code>main.py</code> files.
+Both programs can be quit out of by pressing <code>q</code> when a camera window is active.
+If you are missing the <code>tkinter</code> module, you can install it with the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo apt-get install python3.9-tk</code></pre>
+</div>
+</div>
 </li>
 <li>
-<p>If they work, you can continue to the next step. In case of issues, consult with instructors</p>
+<p>If they work, you can continue to the next step.
+In case of issues, consult with instructors.</p>
 </li>
 </ol>
 </div>

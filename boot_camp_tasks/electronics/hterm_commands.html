@@ -16,7 +16,75 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
+<p>Use bench power supply to power the boards.</p>
+</li>
+<li>
+<p>Download HTerm.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.der-hammer.info/pages/terminal.html" class="bare">https://www.der-hammer.info/pages/terminal.html</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
 <p>Connect a micro USB cable to the mainboard.</p>
+</li>
+<li>
+<p>Open HTerm.</p>
+</li>
+<li>
+<p>Select the correct port.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>On Windows the ports are listed in the Device Manager.</p>
+</li>
+<li>
+<p>On Linux running <code>dmesg</code> can list recently connected devices.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Leave other settings to defaults.</p>
+</li>
+<li>
+<p>Press Connect.</p>
+</li>
+<li>
+<p>Command structure can be found on the
+<a href="../../basketball_robot_guide/electronics/test_robot.html">Test robot page</a>.</p>
+</li>
+<li>
+<p>In <code>HTerm</code> under <code>Input control</code> change <code>Type</code> to <code>HEX</code>.</p>
+</li>
+<li>
+<p>Send <code>10 00 10 00 10 00 00 00 00 AA AA</code> to set all the motors to rotate at the speed of 10.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Byte order is little endian, which means that least significant byte is first.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Send <code>F6 FF F6 FF F6 FF 00 00 00 AA AA</code> to set all the motors to rotate at the speed of -10.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Negative values are <a href="https://en.wikipedia.org/wiki/Two%27s_complement">two&#8217;s complement</a> of the positive value.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>10 is relatively low speed, so if any of the motors is rotating fast,
+the motor power wires might need to be reversed
+(because the encoder values need to count in a positive direction if the speed is set to a positive value)
+or the encoder signal connections might be faulty.</p>
 </li>
 </ol>
 </div>

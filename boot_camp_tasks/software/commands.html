@@ -16,26 +16,42 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Select a serial communications library for Python and install it. As an example <strong>PySerial</strong> works well.</p>
+<p>Select a serial communications library for Python and install it.
+As an example <code>PySerial</code> works well.</p>
 </li>
 <li>
-<p>Serial communications under Ubuntu require some permission adjustments. Run these commands <strong>“sudo usermod -a -G tty robot”</strong>, <strong>“sudo usermod -a -G dialout robot”</strong> and then <strong>log out and in</strong>. Without this, opening a serial port won’t work without sudo permissions.</p>
+<p>Serial communications under Ubuntu require some permission adjustments.<br>
+Run these commands:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sudo usermod -a -G tty robot
+sudo usermod -a -G dialout robot</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and then <strong>log out and in</strong>.
+Without this, opening a serial port won&#8217;t work without sudo permissions.</p>
+</div>
 </li>
 <li>
 <p>Open the cloned repository in your IDE.</p>
 </li>
 <li>
-<p>Use <strong>motion.py</strong> as an example and create the class <strong>OmniMotionRobot</strong> that implements the <strong>IRobotMotion</strong> interface.</p>
+<p>Use <code>motion.py</code> as an example and create the class <code>OmniMotionRobot</code> that implements the <code>IRobotMotion</code> interface.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Create the new class <strong>OmniMotionRobot</strong> that extends <strong>IRobotMotion</strong>.</p>
+<p>Create the new class <code>OmniMotionRobot</code> that extends <code>IRobotMotion</code>.</p>
 </li>
 <li>
-<p>Add implementations for the <strong>open</strong> and <strong>close</strong> methods. Use <strong>TurtleRobot</strong> as an example. Consider that you should be able to define what port the serial connection should be created for.</p>
+<p>Add implementations for the <code>open</code> and <code>close</code> methods.
+Use <code>TurtleRobot</code> as an example.
+Consider that you should be able to define what port the serial connection should be created for.</p>
 </li>
 <li>
-<p>Define a new method for sending commands to the mainboard over serial. Refer to <a href="../../basketball_robot_guide/electronics/test_robot.html">Omni motion guide</a> for a detailed explanation of the command structure and how to assemble a command.</p>
+<p>Define a new method for sending commands to the mainboard over serial.
+Refer to <a href="../../basketball_robot_guide/electronics/test_robot.html">Test robot page</a>
+for a detailed explanation of the command structure and how to assemble a command.</p>
 </li>
 <li>
 <p>Test your code to validate that you can connect to and disconnect from the mainboard.</p>
@@ -44,16 +60,18 @@
 <p><strong>In case of issues, debug and ask instructors for help.</strong></p>
 </li>
 <li>
-<p>Connect the mainboard to the computer and check that the mainboard is wired to a motor driver correctly. It should be able to control a motor.</p>
+<p>Connect the mainboard to the computer and check that the mainboard is wired to a motor driver correctly.
+It should be able to control motors.</p>
 </li>
 <li>
-<p>Use your created functionality to control the motor. <strong>Tell the motor to spin with a speed of 20 and after 2 seconds, reverse its direction.</strong></p>
+<p>Use your created functionality to control the motors.
+<strong>Tell the motor to spin with a speed of 20 and after 2 seconds, reverse its direction.</strong></p>
 </li>
 </ol>
 </div>
 </li>
 <li>
-<p>Show your progress to a instructor.</p>
+<p>Show your progress to an instructor.</p>
 </li>
 <li>
 <p>If everything works, you can continue to the next step. In case of issues, consult with instructors.</p>
