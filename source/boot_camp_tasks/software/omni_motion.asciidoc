@@ -1,4 +1,4 @@
-= Follow ball with TurtleOmniMotion
+= Follow ball with TurtleOmniRobot
 
 . Replace the *TurtleRobot* motion class with *TurtleOmniRobot*. The new class allows the robot to more closely emulate the real command structures used in the robot.
 . A robot uses 3 omni wheels to move about. These wheels allow the robot to move in any direction but using them requires a bit of maths. Familiarise yourself with the maths here: xref:../../basketball_robot_guide/software/omni_motion.asciidoc[Omni motion guide]
