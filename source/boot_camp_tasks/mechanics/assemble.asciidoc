@@ -9,6 +9,10 @@
 . Create a new file for the assembly.
 . Assemble the motor and the motor mount together.
 
+How the assembly should look:
+
+image::../images/motor_assembly.png[]
+
 Below is a video guide on how assemblies work:
 
 https://www.youtube.com/watch?v=O1p7Sn1eMmE
