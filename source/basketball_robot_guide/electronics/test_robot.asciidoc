@@ -104,3 +104,7 @@ link:https://github.com/ReikoR/MC33886_driver_board[Altium Designer project]
 
 link:https://github.com/ReikoR/MC33886_driver_board/blob/master/MC33886_driver_board.PDF[Schematic PDF]
 
+== Wiring
+
+image:../images/nucleo_mainboard_wiring.svg[]
+

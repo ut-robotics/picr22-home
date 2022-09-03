@@ -1,19 +1,26 @@
-= Solder wires with 2mm bullet connector to PCB
+= Solder wires with 2mm connectors and XT30 connectors to test mainboard
 
-. Cut about 5 cm pieces of red and black wire.
+Refer to the wiring on the xref:../../basketball_robot_guide/electronics/test_robot.asciidoc[test robot page].
+
+You need to solder the power wires and connectors to the test mainboard.
+
+. Cut 5 pairs of red and black 18 AWG wire.
+The pieces of wire can be about 5 cm long.
 . Strip about 5 mm of insulation from each end of the wire.
 . Lightly twist the strands of the wire at each end to prevent the strands from separating.
 . Add some flux to the ends.
 . Cover the ends with some solder.
 Make sure to evenly coat all around the wire.
-. Add solder into the ends of the bullet connectors.
+. Add solder into the ends of the 2 mm connectors and XT30 connectors.
 . Remelt the solder in the connector and at the end of the wire and push the wire into the connector. 
 . Keep the wire straight until the solder solidifies.
-. Add some solder to the pads on the PCB.
-. Place the end of the wire onto the pads and remelt the solder on the pad and at the end of the wire.
-. Keep the wire in place until the solder has solidified.
-. Cut pieces of heatshrink.
-Red for red wire and black for black wire.
+. Cut pieces of heatshrink that are slightly larger in diameter than the wire and the connectors.
+Red heatshrink for red wire and black for black wire.
 Heatshrink should cover all the conductive parts when the connector is connected and about 5 mm of the wire insulation.
 . Place the heatshrink onto the connector and heat it with hot air.
 Suitable temperature is around 150 - 200 degrees.
+. Add some solder to the pads on the PCB.
+. Place the end of the wire onto the pads and remelt the solder on the pad and at the end of the wire.
+. Keep the wire in place until the solder has solidified.
+
+
