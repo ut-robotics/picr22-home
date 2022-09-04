@@ -1,5 +1,9 @@
 = Boot camp tasks
 
+== Tracking the tasks progress
+
+https://docs.google.com/spreadsheets/d/1OJ7R3AdgoMiFVJVyTDcVawOvu7XUHg0bvuKxGmzRn4Q/edit?usp=sharing
+
 == Electronics
 
 link:electronics/solder_usb.asciidoc[Solder USB connector with hot air]
