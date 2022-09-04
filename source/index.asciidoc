@@ -7,6 +7,7 @@
 * xref:forms.asciidoc[Forms]
 * xref:basketball_robot_guide/index.asciidoc[Basketball robot guide]
 * https://docs.google.com/spreadsheets/d/110xu9Vz40CifaTGEaPtd99K00uAHqox3XryNWg3fnHc[Teams]
+* https://ut-robotics.github.io/robot-basketball-rules/[Basketball rules]
 
 == Basketball teams
 
