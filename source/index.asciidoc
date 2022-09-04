@@ -6,6 +6,7 @@
 * xref:team_documentation_requirements.asciidoc[Team documentation requirements]
 * xref:forms.asciidoc[Forms]
 * xref:basketball_robot_guide/index.asciidoc[Basketball robot guide]
+* https://docs.google.com/spreadsheets/d/110xu9Vz40CifaTGEaPtd99K00uAHqox3XryNWg3fnHc[Teams]
 
 == Basketball teams
 
