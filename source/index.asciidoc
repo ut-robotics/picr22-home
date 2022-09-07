@@ -12,6 +12,17 @@
 
 == Basketball teams
 
+. https://github.com/ut-robotics/picr22-team-teletupsud[Teletupsud]
+. https://github.com/ut-robotics/picr22-team-placeholder[%placeholder%]
+. https://github.com/ut-robotics/picr22-team-mu[µ]
+. https://github.com/ut-robotics/picr22-team-jackbot[Jackbot]
+. https://github.com/ut-robotics/picr22-team-snax[snäx]
+. https://github.com/ut-robotics/picr22-team-kivipallur-jurto[Kivipallur Jürto]
+. https://github.com/ut-robotics/picr22-team-robodendron[Robodendron]
+. https://github.com/ut-robotics/picr22-team-owo[OWO]
+. https://github.com/ut-robotics/picr22-team-saga[SAGA]
+. https://github.com/ut-robotics/picr22-team-gibibot[GibiBot]
+. https://github.com/ut-robotics/picr22-team-valdis[Valdis]
 
 == Previous years
 
