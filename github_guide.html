@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.17">
+<title>GitHub guide</title>
+<link rel="stylesheet" href="./asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>GitHub guide</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_team_repository">Team repository</a>
+<ul class="sectlevel2">
+<li><a href="#_directory_structure">Directory structure</a></li>
+<li><a href="#_branches">Branches</a></li>
+<li><a href="#_workflow">Workflow</a>
+<ul class="sectlevel3">
+<li><a href="#_general_documentation">General documentation</a></li>
+<li><a href="#_software">Software</a></li>
+<li><a href="#_firmware">Firmware</a></li>
+<li><a href="#_electronics">Electronics</a></li>
+<li><a href="#_mechanics">Mechanics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_team_repository">Team repository</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_directory_structure">Directory structure</h3>
+<div class="paragraph">
+<p>Refer to <a href="team_documentation_requirements.html#_team_repository_structure">Team repository structure</a>
+for more information on team repository documentation.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>/</code> - general documentation</p>
+</li>
+<li>
+<p><code>software/</code> - robot&#8217;s code</p>
+</li>
+<li>
+<p><code>electronics/</code> - electronics design</p>
+</li>
+<li>
+<p><code>firmware/</code> - mainboard firmware</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_branches">Branches</h3>
+<div class="paragraph">
+<p>Use correct branch to edit files in a specific directory.
+It is allowed to create subdirectories in the root directory
+if the directory names don&#8217;t conflict with directories listed above.
+For example <code>images</code> directory for documentation.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>main</code> (protected) - default branch.
+Direct pushing not allowed.
+Pull requests should be created against this branch.</p>
+</li>
+<li>
+<p><code>documentation</code> - for editing main README.html and any other general documentation in root directory.</p>
+</li>
+<li>
+<p><code>software</code> - for robot&#8217;s code and related documentation in <code>software</code> directory.</p>
+</li>
+<li>
+<p><code>electronics</code> - for electronics design and related documentation in <code>electronics</code> directory.</p>
+</li>
+<li>
+<p><code>firmware</code> - for mainboard firmware and related documentation in <code>firmware</code> directory.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_workflow">Workflow</h3>
+<div class="sect3">
+<h4 id="_general_documentation">General documentation</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>documentation</code> branch should be used.</p>
+</li>
+<li>
+<p>Daily blogs should be written into README.html in root directory.</p>
+</li>
+<li>
+<p>Pull request should be created when general documentation is ready for review.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_software">Software</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>software</code> branch should be used.</p>
+</li>
+<li>
+<p>When the functionality for a programming task has been implemented and thoroughly tested on the court,
+a pull request should be created.</p>
+</li>
+<li>
+<p>Instructors will review the pull request and either give feedback that needs to be resolved or merge the pull request.</p>
+</li>
+<li>
+<p>After the pull request has been merged, the relevant task can be presented during practical.</p>
+</li>
+<li>
+<p>If the robot is able to complete the task, then the team gets the task approved.</p>
+</li>
+<li>
+<p>If code changes are needed for completing the task, new pull request needs to be created.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_firmware">Firmware</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>firmware</code> branch should be used.</p>
+</li>
+<li>
+<p>When the functionality has been implemented and thoroughly tested, a pull request should be created.</p>
+</li>
+<li>
+<p>Instructors will review the pull request and either give feedback that needs to be resolved or merge the pull request.</p>
+</li>
+<li>
+<p>After the pull request has been merged, the relevant task can be presented during practical.</p>
+</li>
+<li>
+<p>If the mainboard functionality is demonstrated and meets the firmware task requirements,
+then the team gets the task approved.</p>
+</li>
+<li>
+<p>If code changes are needed for completing the task, new pull request needs to be created.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_electronics">Electronics</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>electronics</code> branch should be used.</p>
+</li>
+<li>
+<p>Instructors should be notified in Slack,
+when the team would like feedback on preliminary design or review of completed design.</p>
+</li>
+<li>
+<p>Design will be reviewed by instructors and feedback will be given as GitHub issues.</p>
+</li>
+<li>
+<p>All issues need to be resolved.
+If the issues are resolved, instructors should be notified in Slack for reviewing the design again.
+Issues should not be closed by team members.
+Instructors will close the issues when they have been resolved.</p>
+</li>
+<li>
+<p>If the final review has been completed and there are no more issues,
+then the design tasks are completed and the PCBs will be ordered by instructors.</p>
+</li>
+<li>
+<p>When the electronics documentation is ready, it needs to be reviewed the same way as the design.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mechanics">Mechanics</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Mechanics design must be created in Fusion 360.</p>
+</li>
+<li>
+<p>Instructors should be notified in Slack,
+when the team would like feedback on preliminary design or review of completed design.</p>
+</li>
+<li>
+<p>Design will be reviewed by instructors and feedback will be given as GitHub issues.</p>
+</li>
+<li>
+<p>All issues need to be resolved.
+If the issues are resolved, instructors should be notified in Slack for reviewing the design again.
+Issues should not be closed by team members.
+Instructors will close the issues when they have been resolved.</p>
+</li>
+<li>
+<p>If the final review has been completed and there are no more issues,
+then the design tasks are completed and the design can be prepared for milling.</p>
+</li>
+<li>
+<p>Manufacturing setup for milling needs to be reviewed the same way as the designs.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
