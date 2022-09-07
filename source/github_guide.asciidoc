@@ -32,6 +32,18 @@ Pull requests should be created against this branch.
 
 === Workflow
 
+=== Cloning the repository
+
+Instead of switching between branches, it's more convenient to clone documentation branch and other branches you are working with into separate directories.
+
+Example:
+[source,bash]
+----
+git clone --single-branch --branch documentation git@github.com:ut-robotics/picr22-team-<team-name>.git picr22-team-<team-name>-documentation
+
+git clone --single-branch --branch software https://github.com/ut-robotics/picr22-team-<team-name> picr22-team-<team-name>-software
+----
+
 ==== General documentation
 
 * `documentation` branch should be used.
