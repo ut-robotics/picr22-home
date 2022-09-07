@@ -1,0 +1,90 @@
+:toc:
+:toclevels: 3
+
+= GitHub guide
+
+== Team repository
+
+=== Directory structure
+
+Refer to xref:team_documentation_requirements.asciidoc#_team_repository_structure[Team repository structure]
+for more information on team repository documentation.
+
+* `/` - general documentation
+* `software/` - robot's code
+* `electronics/` - electronics design
+* `firmware/` - mainboard firmware
+
+=== Branches
+
+Use correct branch to edit files in a specific directory.
+It is allowed to create subdirectories in the root directory
+if the directory names don't conflict with directories listed above.
+For example `images` directory for documentation.
+
+* `main` (protected) - default branch.
+Direct pushing not allowed.
+Pull requests should be created against this branch.
+* `documentation` - for editing main README.asciidoc and any other general documentation in root directory.
+* `software` - for robot's code and related documentation in `software` directory.
+* `electronics` - for electronics design and related documentation in `electronics` directory.
+* `firmware` - for mainboard firmware and related documentation in `firmware` directory.
+
+=== Workflow
+
+==== General documentation
+
+* `documentation` branch should be used.
+* Daily blogs should be written into README.asciidoc in root directory.
+* Pull request should be created when general documentation is ready for review.
+
+==== Software
+
+* `software` branch should be used.
+* When the functionality for a programming task has been implemented and thoroughly tested on the court,
+a pull request should be created.
+* Instructors will review the pull request and either give feedback that needs to be resolved or merge the pull request.
+* After the pull request has been merged, the relevant task can be presented during practical.
+* If the robot is able to complete the task, then the team gets the task approved.
+* If code changes are needed for completing the task, new pull request needs to be created.
+
+==== Firmware
+
+* `firmware` branch should be used.
+* When the functionality has been implemented and thoroughly tested, a pull request should be created.
+* Instructors will review the pull request and either give feedback that needs to be resolved or merge the pull request.
+* After the pull request has been merged, the relevant task can be presented during practical.
+* If the mainboard functionality is demonstrated and meets the firmware task requirements,
+then the team gets the task approved.
+* If code changes are needed for completing the task, new pull request needs to be created.
+
+==== Electronics
+
+* `electronics` branch should be used.
+* Instructors should be notified in Slack,
+when the team would like feedback on preliminary design or review of completed design.
+* Design will be reviewed by instructors and feedback will be given as GitHub issues.
+* All issues need to be resolved.
+If the issues are resolved, instructors should be notified in Slack for reviewing the design again.
+Issues should not be closed by team members.
+Instructors will close the issues when they have been resolved.
+* If the final review has been completed and there are no more issues,
+then the design tasks are completed and the PCBs will be ordered by instructors.
+* When the electronics documentation is ready, it needs to be reviewed the same way as the design.
+
+==== Mechanics
+
+* Mechanics design must be created in Fusion 360.
+* Instructors should be notified in Slack,
+when the team would like feedback on preliminary design or review of completed design.
+* Design will be reviewed by instructors and feedback will be given as GitHub issues.
+* All issues need to be resolved.
+If the issues are resolved, instructors should be notified in Slack for reviewing the design again.
+Issues should not be closed by team members.
+Instructors will close the issues when they have been resolved.
+* If the final review has been completed and there are no more issues,
+then the design tasks are completed and the design can be prepared for milling.
+* Manufacturing setup for milling needs to be reviewed the same way as the designs.
+
+
+
