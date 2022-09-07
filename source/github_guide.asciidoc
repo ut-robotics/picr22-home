@@ -21,6 +21,7 @@ Use correct branch to edit files in a specific directory.
 It is allowed to create subdirectories in the root directory
 if the directory names don't conflict with directories listed above.
 For example `images` directory for documentation.
+Do not merge between branches listed below.
 
 * `main` (protected) - default branch.
 Direct pushing not allowed.
