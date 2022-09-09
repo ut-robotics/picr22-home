@@ -23,6 +23,7 @@
 . https://github.com/ut-robotics/picr22-team-saga[SAGA]
 . https://github.com/ut-robotics/picr22-team-gibibot[GibiBot]
 . https://github.com/ut-robotics/picr22-team-valdis[Valdis]
+. https://github.com/ut-robotics/picr22-team-twelve[Twelve]
 
 == Previous years
 
