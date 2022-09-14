@@ -8,7 +8,7 @@ const execPromise = util.promisify(child_process.exec);
 async function processLinks(filename) {
     let content = await fsPromises.readFile(filename, 'utf8');
 
-    content = content.replace(/\.asciidoc/g, '.html');
+    content = content.replace(/(<a.*)(\.asciidoc)(.*<\/a>)/g, '$1.html$3');
 
     await fsPromises.writeFile(filename, content, 'utf8');
 }
