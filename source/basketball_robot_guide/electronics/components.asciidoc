@@ -5,6 +5,81 @@
 
 = Components
 
+== Inventory
+
+List of components available in the lab.
+
+Date: 2022-08-27
+
+|===
+|Name|Description|Quantity
+
+|STM32G431KBT6
+|Microcontroller, 32-pin
+|33
+
+|STM32G441KBT6
+|Microcontroller, 32-pin
+|33
+
+|STM32G441CBT6
+|Microcontroller, 48-pin
+|20
+
+|10118193-0001LF
+|Micro USB socket
+|100
+
+|CM1223-02SO
+|TVS diodes 2-ch
+|57
+
+|BUK6Y10-30PX
+|PFET SOT669
+|20
+
+|BUK6Y24-40PX
+|PFET SOT669
+|30
+
+|NCP718BSN500T1G
+|LDO 5V 300mA
+|40
+
+|NCV8730ASN500T1G
+|LDO 5V 150mA
+|24
+
+|NCP164CSN330T1G
+|LDO 3.3V 300mA
+|63
+
+|XTPS62933DRLR
+|TPS62933 buck converter
+|50
+
+|SRP6060FA-5R6M
+|Inductor 5.6uH 10A
+|20
+
+|FTSH-105-01-L-DV-K
+|Programmer connector
+|18
+
+|MAX14930DASE+
+|4-ch isolator
+|27
+
+|MAX12930EASA+
+|2-ch isolator
+|16
+
+|PDRV8243HRXYQ1
+|DRV8243 motor driver
+|36
+
+|===
+
 == Motor driver
 
 === Requirements

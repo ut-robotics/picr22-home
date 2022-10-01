@@ -33,6 +33,7 @@ link:software/omni_motion.asciidoc[Omni-motion]
 === 2022-10-01
 
 . Added pre-production datasheet for DRV8243
+. Added inventory table to components page.
 
 === 2022-07-10
 . Created mechanics design page.
