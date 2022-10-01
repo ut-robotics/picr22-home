@@ -13,7 +13,7 @@
 . Command structure can be found on the
 xref:../../basketball_robot_guide/electronics/test_robot.asciidoc[Test robot page].
 . In `HTerm` under `Input control` change `Type` to `HEX`.
-. Send `10 00 10 00 10 00 00 00 00 AA AA` to set all the motors to rotate at the speed of 10.
+. Send `0A 00 0A 00 0A 00 00 00 00 AA AA` to set all the motors to rotate at the speed of 10.
 ** Byte order is little endian, which means that least significant byte is first.
 . Send `F6 FF F6 FF F6 FF 00 00 00 AA AA` to set all the motors to rotate at the speed of -10.
 ** Negative values are https://en.wikipedia.org/wiki/Two%27s_complement[two's complement] of the positive value.
