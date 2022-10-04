@@ -30,9 +30,13 @@ link:software/omni_motion.asciidoc[Omni-motion]
 
 == Changelog
 
+=== 2022-10-04
+
+. Fixed DRV8243 pre-production datasheet link.
+
 === 2022-10-01
 
-. Added pre-production datasheet for DRV8243
+. Added pre-production datasheet for DRV8243.
 . Added inventory table to components page.
 
 === 2022-07-10

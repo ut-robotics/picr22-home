@@ -103,7 +103,7 @@ Driving the motor at stall current for longer period will overheat the motor.
 * Package: VQFN-HR (14)
 * link:https://www.ti.com/product/DRV8243-Q1[Product page]
 * link:https://www.ti.com/lit/ds/symlink/drv8243-q1.pdf[Datasheet latest]
-* link:https://www.ti.com/lit/ds/symlink/drv8243-q1.pdf[Datasheet 2022-08] (contains pre-production version information)
+* link:drv8243-q1_datasheet_2021-08.pdf[Datasheet 2021-08] (contains pre-production version information)
 
 == Microcontroller
 
