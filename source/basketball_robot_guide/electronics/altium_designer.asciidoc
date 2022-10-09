@@ -125,13 +125,23 @@ and clicking on the rectangle.
 
 === Changing units
 
-* Open Rules with Design -> Rules...
-
-=== Changing grid
-
 * Press *Q*
 ** Units can be checked in the bottom left corner.
 ** Millimeters are recommended for the PCB.
+
+=== Changing grid
+
+* In the schematic document:
+** Press *G*
+** Active grid is shown at the bottom left next to the coordinates.
+** It's recommended to use 100 mil grid for components and wires as the symbols are created for that grid size.
+Sometimes it's useful to use finer grid when creating schematic symbols
+or moving reference designators and component values.
+* In PCB layout document:
+** Press *G* and select suitable grid size from the list.
+** Good grid size for most of the layout is 0.1 mm.
+0.025mm might work better for smaller components and thin tracks.
+1mm grid is useful for changing board size.
 
 === Changing board size
 
@@ -156,3 +166,8 @@ and clicking on the rectangle.
 === Routing traces
 
 * Press Ctrl + W to start routing.
+
+=== Repouring polygons
+
+. Select **T**ools -> Poly**g**on Pours -> Repour **A**ll
+** Shortcut: T -> G -> A

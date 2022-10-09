@@ -35,6 +35,9 @@ link:software/omni_motion.asciidoc[Omni-motion]
 . Improved omni motion page.
 Added wheel velocity calculation in mainboard units.
 Changed example pidControlFrequency to 100 Hz (same as in the test robot mainboard firmware).
+. Improved Altium Designer page.
+Added/fixed changing grid section.
+Added repouring polygons section.
 
 === 2022-10-04
 
