@@ -17,13 +17,23 @@ image::../images/omni_motion_vectors.png[]
 
 == Wheel speed calculation
 
+=== In meters per second
+
 ----
-wheelLinearVelocity = robotSpeed * cos(robotDirectionAngle - wheelAngle) + wheelDistanceFromCenter * robotAngularVelocity`
+wheelLinearVelocity = robotSpeed * cos(robotDirectionAngle - wheelAngle) + wheelDistanceFromCenter * robotAngularVelocity
+----
+
+=== In mainboard units
+
+Mainboard units can be used directly without any conversion to meters per second.
+
+----
+wheelVelocityInMainboardUnits = robotSpeedInMainboardUnits * cos(robotDirectionAngle - wheelAngle) + robotAngularVelocityInMainboardUnits
 ----
 
 == Using forward and sideways robot speeds
 
-robotSpeed and robotDirectionAngle can be calculated using sideways
+`robotSpeed` and `robotDirectionAngle` can be calculated using sideways
 (x-axis direction) and forward (y-axis direction) speeds:
 
 ----
@@ -35,7 +45,7 @@ robotDirectionAngle = atan2(robotSpeedY, robotSpeedX)
 == Wheel linear velocity in mainboard units
 
 ----
-wheelAngularSpeedMainboardUnits = (wheelAngularVelocity / (2 * PI())) * encoderCountsPerWheelRevolution * pidControlPeriod
+wheelAngularSpeedInMainboardUnits = (wheelAngularVelocity / (2 * PI())) * encoderCountsPerWheelRevolution * pidControlPeriod
 ----
 
 where
@@ -51,40 +61,35 @@ pidControlPeriod = 1 / pidControlFrequency
 *Simplified*
 
 ----
-wheelAngularSpeedMainboardUnits = wheelLinearVelocity * gearboxReductionRatio * encoderEdgesPerMotorRevolution / (2 * PI  wheelRadius * pidControlFrequency)
+wheelAngularSpeedInMainboardUnits = wheelLinearVelocity * gearboxReductionRatio * encoderEdgesPerMotorRevolution / (2 * PI * wheelRadius * pidControlFrequency)
 ----
 
 OR
 
 ----
-wheelAngularSpeedMainboardUnits = wheelLinearVelocity * wheelSpeedToMainboardUnits
+wheelAngularSpeedInMainboardUnits = wheelLinearVelocity * wheelSpeedToMainboardUnits
 ----
 
-Where wheelSpeedToMainboardUnits is constant and can be calculated once
-in advance:
+Where `wheelSpeedToMainboardUnits` is constant and can be calculated once in advance:
 
 ----
-wheelSpeedToMainboardUnits = gearboxReductionRatio * encoderEdgesPerMotorRevolution / (2 * PI * wheelRadius * idControlFrequency)
+wheelSpeedToMainboardUnits = gearboxReductionRatio * encoderEdgesPerMotorRevolution / (2 * PI * wheelRadius * pidControlFrequency)
 ----
 
 *Example*
 
 * Pololu 37D 19:1 motor
-* 60 Hz PID calculation frequency
+* 100 Hz PID calculation frequency
 * 70mm diameter wheels
 
 * gearboxReductionRatio = 18.75
 * encoderEdgesPerMotorRevolution = 64
 * wheelRadius = 0.035 [m]
-* pidControlFrequency = 60 [Hz]
+* pidControlFrequency = 100 [Hz]
 * wheelLinearVelocity = 2 [m/s]
 
 ----
-wheelSpeedToMainboardUnits = 18.75 * 64 / (2 * PI * 0.035 * 60)
+wheelSpeedToMainboardUnits = 18.75 * 64 / (2 * PI * 0.035 * 100) ≈ 54.5674
 
-wheelSpeedToMainboardUnits ≈ 90.9
-
-wheelAngularSpeedMainboardUnits = 2 * 90.9457
-
-wheelSpeedToMainboardUnits ≈ 181.8914
+wheelAngularSpeedInMainboardUnits = 2 * 54.5674 ≈ 109.1348
 ----
