@@ -59,9 +59,23 @@
 <div class="sect1">
 <h2 id="_wheel_speed_calculation">Wheel speed calculation</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_in_meters_per_second">In meters per second</h3>
 <div class="listingblock">
 <div class="content">
-<pre>wheelLinearVelocity = robotSpeed * cos(robotDirectionAngle - wheelAngle) + wheelDistanceFromCenter * robotAngularVelocity`</pre>
+<pre>wheelLinearVelocity = robotSpeed * cos(robotDirectionAngle - wheelAngle) + wheelDistanceFromCenter * robotAngularVelocity</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_in_mainboard_units">In mainboard units</h3>
+<div class="paragraph">
+<p>Mainboard units can be used directly without any conversion to meters per second.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>wheelVelocityInMainboardUnits = robotSpeedInMainboardUnits * cos(robotDirectionAngle - wheelAngle) + robotAngularVelocityInMainboardUnits</pre>
+</div>
 </div>
 </div>
 </div>
@@ -70,7 +84,7 @@
 <h2 id="_using_forward_and_sideways_robot_speeds">Using forward and sideways robot speeds</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>robotSpeed and robotDirectionAngle can be calculated using sideways
+<p><code>robotSpeed</code> and <code>robotDirectionAngle</code> can be calculated using sideways
 (x-axis direction) and forward (y-axis direction) speeds:</p>
 </div>
 <div class="listingblock">
@@ -87,7 +101,7 @@ robotDirectionAngle = atan2(robotSpeedY, robotSpeedX)</pre>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre>wheelAngularSpeedMainboardUnits = (wheelAngularVelocity / (2 * PI())) * encoderCountsPerWheelRevolution * pidControlPeriod</pre>
+<pre>wheelAngularSpeedInMainboardUnits = (wheelAngularVelocity / (2 * PI())) * encoderCountsPerWheelRevolution * pidControlPeriod</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -107,7 +121,7 @@ pidControlPeriod = 1 / pidControlFrequency</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>wheelAngularSpeedMainboardUnits = wheelLinearVelocity * gearboxReductionRatio * encoderEdgesPerMotorRevolution / (2 * PI  wheelRadius * pidControlFrequency)</pre>
+<pre>wheelAngularSpeedInMainboardUnits = wheelLinearVelocity * gearboxReductionRatio * encoderEdgesPerMotorRevolution / (2 * PI * wheelRadius * pidControlFrequency)</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -115,16 +129,15 @@ pidControlPeriod = 1 / pidControlFrequency</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>wheelAngularSpeedMainboardUnits = wheelLinearVelocity * wheelSpeedToMainboardUnits</pre>
+<pre>wheelAngularSpeedInMainboardUnits = wheelLinearVelocity * wheelSpeedToMainboardUnits</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Where wheelSpeedToMainboardUnits is constant and can be calculated once
-in advance:</p>
+<p>Where <code>wheelSpeedToMainboardUnits</code> is constant and can be calculated once in advance:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>wheelSpeedToMainboardUnits = gearboxReductionRatio * encoderEdgesPerMotorRevolution / (2 * PI * wheelRadius * idControlFrequency)</pre>
+<pre>wheelSpeedToMainboardUnits = gearboxReductionRatio * encoderEdgesPerMotorRevolution / (2 * PI * wheelRadius * pidControlFrequency)</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -136,7 +149,7 @@ in advance:</p>
 <p>Pololu 37D 19:1 motor</p>
 </li>
 <li>
-<p>60 Hz PID calculation frequency</p>
+<p>100 Hz PID calculation frequency</p>
 </li>
 <li>
 <p>70mm diameter wheels</p>
@@ -151,7 +164,7 @@ in advance:</p>
 <p>wheelRadius = 0.035 [m]</p>
 </li>
 <li>
-<p>pidControlFrequency = 60 [Hz]</p>
+<p>pidControlFrequency = 100 [Hz]</p>
 </li>
 <li>
 <p>wheelLinearVelocity = 2 [m/s]</p>
@@ -160,13 +173,9 @@ in advance:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>wheelSpeedToMainboardUnits = 18.75 * 64 / (2 * PI * 0.035 * 60)
+<pre>wheelSpeedToMainboardUnits = 18.75 * 64 / (2 * PI * 0.035 * 100) ≈ 54.5674
 
-wheelSpeedToMainboardUnits ≈ 90.9
-
-wheelAngularSpeedMainboardUnits = 2 * 90.9457
-
-wheelSpeedToMainboardUnits ≈ 181.8914</pre>
+wheelAngularSpeedInMainboardUnits = 2 * 54.5674 ≈ 109.1348</pre>
 </div>
 </div>
 </div>

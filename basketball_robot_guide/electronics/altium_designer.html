@@ -50,6 +50,7 @@
 <li><a href="#_hiding_rooms">Hiding rooms</a></li>
 <li><a href="#_changing_layer_stackup">Changing layer stackup</a></li>
 <li><a href="#_routing_traces">Routing traces</a></li>
+<li><a href="#_repouring_polygons">Repouring polygons</a></li>
 </ul>
 </li>
 </ul>
@@ -386,7 +387,17 @@ and clicking on the rectangle.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Open Rules with Design &#8594; Rules&#8230;&#8203;</p>
+<p>Press <strong>Q</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Units can be checked in the bottom left corner.</p>
+</li>
+<li>
+<p>Millimeters are recommended for the PCB.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -396,14 +407,34 @@ and clicking on the rectangle.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Press <strong>Q</strong></p>
+<p>In the schematic document:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Units can be checked in the bottom left corner.</p>
+<p>Press <strong>G</strong></p>
 </li>
 <li>
-<p>Millimeters are recommended for the PCB.</p>
+<p>Active grid is shown at the bottom left next to the coordinates.</p>
+</li>
+<li>
+<p>It&#8217;s recommended to use 100 mil grid for components and wires as the symbols are created for that grid size.
+Sometimes it&#8217;s useful to use finer grid when creating schematic symbols
+or moving reference designators and component values.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>In PCB layout document:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Press <strong>G</strong> and select suitable grid size from the list.</p>
+</li>
+<li>
+<p>Good grid size for most of the layout is 0.1 mm.
+0.025mm might work better for smaller components and thin tracks.
+1mm grid is useful for changing board size.</p>
 </li>
 </ul>
 </div>
@@ -471,6 +502,23 @@ and clicking on the rectangle.</p>
 <p>Press Ctrl + W to start routing.</p>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_repouring_polygons">Repouring polygons</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select <strong>T</strong>ools &#8594; Poly<strong>g</strong>on Pours &#8594; Repour <strong>A</strong>ll</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Shortcut: T &#8594; G &#8594; A</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
