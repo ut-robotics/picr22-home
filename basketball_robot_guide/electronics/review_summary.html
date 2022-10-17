@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.18">
+<title>Review summary</title>
+<link rel="stylesheet" href="./../../asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Review summary</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_add_decoupling_capacitors_to_power_pins">Add decoupling capacitors to power pins</a></li>
+<li><a href="#_place_decoupling_capacitors_as_close_as_possible_to_power_pins">Place decoupling capacitors as close as possible to power pins</a></li>
+<li><a href="#_place_esd_protection_as_close_as_possible_to_the_usb_connector">Place ESD protection as close as possible to the USB connector</a></li>
+<li><a href="#_use_correct_layers">Use correct layers</a></li>
+<li><a href="#_use_solid_grounds_on_inner_layers">Use solid grounds on inner layers</a></li>
+<li><a href="#_avoid_routing_ground">Avoid routing ground</a></li>
+<li><a href="#_avoid_routing_signals_on_gnd_layers">Avoid routing signals on GND layers</a></li>
+<li><a href="#_make_connections_as_short_as_possible_between_components">Make connections as short as possible between components</a></li>
+<li><a href="#_keep_isolated_sides_separate_and_do_not_route_over_the_isolation_gap">Keep isolated sides separate and do not route over the isolation gap</a></li>
+<li><a href="#_make_the_isolation_gap_as_wide_as_possible">Make the isolation gap as wide as possible</a></li>
+<li><a href="#_use_correct_pinouts_for_connectors">Use correct pinouts for connectors</a></li>
+<li><a href="#_make_sure_that_all_pins_are_connected_correctly">Make sure that all pins are connected correctly</a></li>
+<li><a href="#_connect_motor_driver_nsleep_pin_to_mcu">Connect motor driver nSLEEP pin to MCU</a></li>
+<li><a href="#_use_wide_and_short_connections_for_high_currents">Use wide and short connections for high currents</a></li>
+<li><a href="#_use_components_that_are_available_in_the_lab_or_are_available_to_order_at_low_cost">Use components that are available in the lab or are available to order at low cost</a></li>
+<li><a href="#_make_sure_that_all_necessary_components_have_been_added">Make sure that all necessary components have been added</a></li>
+<li><a href="#_add_more_bulk_capacitors_to_motor_driver_vm_pins">Add (more) bulk capacitors to motor driver VM pins</a></li>
+<li><a href="#_use_correct_component_package">Use correct component package</a></li>
+<li><a href="#_use_correct_footprint">Use correct footprint</a></li>
+<li><a href="#_make_sure_passive_components_have_correct_values">Make sure passive components have correct values</a></li>
+<li><a href="#_fix_drc_errors">Fix DRC errors</a></li>
+<li><a href="#_make_sure_that_all_the_connections_have_been_routed_or_connected_with_polygons">Make sure that all the connections have been routed or connected with polygons</a></li>
+<li><a href="#_silkscreen_errors_and_improvements">Silkscreen errors and improvements</a></li>
+<li><a href="#_make_sure_that_the_usb_connector_does_not_collide_with_the_pcb">Make sure that the USB connector does not collide with the PCB</a></li>
+<li><a href="#_create_board_outline_clearance_rule">Create board outline clearance rule</a></li>
+<li><a href="#_avoid_overlapping_schematics_objects">Avoid overlapping schematics objects</a></li>
+<li><a href="#_add_decoupling_capacitor_to_mcu_nrst_pin">Add decoupling capacitor to MCU NRST pin</a></li>
+<li><a href="#_remove_dead_copper">Remove dead copper</a></li>
+<li><a href="#_differential_signal_routing">Differential signal routing</a></li>
+<li><a href="#_place_vias_near_pads">Place vias near pads</a></li>
+<li><a href="#_make_sure_there_is_enough_room_for_micromatch_and_programmer_connectors">Make sure there is enough room for MicroMatch and programmer connectors</a></li>
+<li><a href="#_make_sure_that_3d_models_in_footprint_are_placed_correctly">Make sure that 3D models in footprint are placed correctly</a></li>
+<li><a href="#_do_not_connect_mounting_holes_electrically">Do not connect mounting holes electrically</a></li>
+<li><a href="#_do_not_add_unnecessary_vias">Do not add unnecessary vias</a></li>
+<li><a href="#_use_tented_vias">Use tented vias</a></li>
+<li><a href="#_add_mounting_holes_or_some_way_to_attach_pcb_to_robot">Add mounting holes or some way to attach PCB to robot</a></li>
+<li><a href="#_add_clearance_to_mounting_holes">Add clearance to mounting holes</a></li>
+<li><a href="#_make_pcb_small">Make PCB small</a></li>
+<li><a href="#_use_direct_connection_for_vias">Use direct connection for vias</a></li>
+<li><a href="#_use_switching_regulator_for_servo_power">Use switching regulator for servo power</a></li>
+<li><a href="#_follow_switching_regulator_guidelines">Follow switching regulator guidelines</a></li>
+<li><a href="#_component_symbol_errors">Component symbol errors</a></li>
+<li><a href="#_connect_leds_with_correct_polarity">Connect LEDs with correct polarity</a></li>
+<li><a href="#_keep_tracks_and_components_above_reference_plane">Keep tracks and components above reference plane</a></li>
+<li><a href="#_use_only_through_hole_vias">Use only through hole vias</a></li>
+<li><a href="#_make_sure_each_component_has_reference_designator">Make sure each component has reference designator</a></li>
+<li><a href="#_use_100_mil_grid_on_schematic">Use 100 mil grid on schematic</a></li>
+<li><a href="#_avoid_routing_tracks_close_to_each_other">Avoid routing tracks close to each other</a></li>
+<li><a href="#_follow_pcb_manufacturers_recommendations">Follow PCB manufacturer&#8217;s recommendations</a></li>
+<li><a href="#_add_more_output_capacitance_to_switching_voltage_regulator">Add more output capacitance to switching voltage regulator</a></li>
+<li><a href="#_pull_up_resistor_on_usb_d_line_is_not_needed_for_stm32g4xx">Pull-up resistor on USB D+ line is not needed for STM32G4xx</a></li>
+<li><a href="#_linear_regulator_is_not_needed_when_switching_regulator_is_used_for_servo_power">Linear regulator is not needed when switching regulator is used for servo power</a></li>
+<li><a href="#_3_3v_is_not_needed_on_motor_drivers_side">3.3V is not needed on motor drivers side</a></li>
+<li><a href="#_generate_gerber_x2">Generate Gerber X2</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_add_decoupling_capacitors_to_power_pins">Add decoupling capacitors to power pins</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/47" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/47</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/46" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/46</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/42" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/42</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/41" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/41</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_place_decoupling_capacitors_as_close_as_possible_to_power_pins">Place decoupling capacitors as close as possible to power pins</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/84" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/84</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/57" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/57</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/43" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/43</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/57" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/57</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr22-team-saga/issues/33" class="bare">https://github.com/ut-robotics/picr22-team-saga/issues/33</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_place_esd_protection_as_close_as_possible_to_the_usb_connector">Place ESD protection as close as possible to the USB connector</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/88" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/88</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/47" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/47</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/58" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/58</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/44" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/44</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/56" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/56</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr22-team-saga/issues/30" class="bare">https://github.com/ut-robotics/picr22-team-saga/issues/30</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_correct_layers">Use correct layers</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/49" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/49</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/47" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/47</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_solid_grounds_on_inner_layers">Use solid grounds on inner layers</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/24" class="bare">https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/24</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-robothree/issues/17" class="bare">https://github.com/ut-robotics/picr21-team-robothree/issues/17</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_avoid_routing_ground">Avoid routing ground</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/83" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/83</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/60" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/60</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/42" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/42</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/54" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/54</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_avoid_routing_signals_on_gnd_layers">Avoid routing signals on GND layers</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/89" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/89</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_make_connections_as_short_as_possible_between_components">Make connections as short as possible between components</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/82" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/82</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/49" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/49</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/46" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/46</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/87" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/87</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_keep_isolated_sides_separate_and_do_not_route_over_the_isolation_gap">Keep isolated sides separate and do not route over the isolation gap</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/21" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/21</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/55" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/55</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/54" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/54</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/41" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/41</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/38" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/38</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/23" class="bare">https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/23</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-robothree/issues/18" class="bare">https://github.com/ut-robotics/picr21-team-robothree/issues/18</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr22-team-saga/issues/20" class="bare">https://github.com/ut-robotics/picr22-team-saga/issues/20</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_make_the_isolation_gap_as_wide_as_possible">Make the isolation gap as wide as possible</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/77" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/77</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_correct_pinouts_for_connectors">Use correct pinouts for connectors</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/75" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/75</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/40" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/40</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/11" class="bare">https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/11</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-robothree/issues/21" class="bare">https://github.com/ut-robotics/picr21-team-robothree/issues/21</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr22-team-saga/issues/15" class="bare">https://github.com/ut-robotics/picr22-team-saga/issues/15</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr22-team-saga/issues/16" class="bare">https://github.com/ut-robotics/picr22-team-saga/issues/16</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_make_sure_that_all_pins_are_connected_correctly">Make sure that all pins are connected correctly</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/73" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/73</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/72" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/72</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/71" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/71</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/53" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/53</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/59" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/59</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/37" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/37</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/35" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/35</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/34" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/34</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/51" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/51</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/39" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/39</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/37" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/37</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/36" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/36</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/35" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/35</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/50" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/50</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/45" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/45</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/10" class="bare">https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/10</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr22-team-saga/issues/11" class="bare">https://github.com/ut-robotics/picr22-team-saga/issues/11</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr22-team-saga/issues/12" class="bare">https://github.com/ut-robotics/picr22-team-saga/issues/12</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr22-team-saga/issues/13" class="bare">https://github.com/ut-robotics/picr22-team-saga/issues/13</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr22-team-saga/issues/17" class="bare">https://github.com/ut-robotics/picr22-team-saga/issues/17</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_connect_motor_driver_nsleep_pin_to_mcu">Connect motor driver nSLEEP pin to MCU</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/76" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/76</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/50" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/50</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/34" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/34</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_wide_and_short_connections_for_high_currents">Use wide and short connections for high currents</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/19" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/19</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/48" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/48</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/61" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/61</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/45" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/45</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/60" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/60</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/58" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/58</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-robothree/issues/20" class="bare">https://github.com/ut-robotics/picr21-team-robothree/issues/20</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr22-team-saga/issues/24" class="bare">https://github.com/ut-robotics/picr22-team-saga/issues/24</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_components_that_are_available_in_the_lab_or_are_available_to_order_at_low_cost">Use components that are available in the lab or are available to order at low cost</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/18" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/18</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/71" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/71</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/38" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/38</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/36" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/36</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/40" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/40</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/33" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/33</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr22-team-saga/issues/25" class="bare">https://github.com/ut-robotics/picr22-team-saga/issues/25</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_make_sure_that_all_necessary_components_have_been_added">Make sure that all necessary components have been added</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/48" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/48</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/12" class="bare">https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/12</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr22-team-saga/issues/23" class="bare">https://github.com/ut-robotics/picr22-team-saga/issues/23</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_add_more_bulk_capacitors_to_motor_driver_vm_pins">Add (more) bulk capacitors to motor driver VM pins</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/44" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/44</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/15" class="bare">https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/15</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr22-team-saga/issues/19" class="bare">https://github.com/ut-robotics/picr22-team-saga/issues/19</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_correct_component_package">Use correct component package</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/48" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/48</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/33" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/33</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_correct_footprint">Use correct footprint</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/59" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/59</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/55" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/55</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr22-team-saga/issues/10" class="bare">https://github.com/ut-robotics/picr22-team-saga/issues/10</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr22-team-saga/issues/18" class="bare">https://github.com/ut-robotics/picr22-team-saga/issues/18</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_make_sure_passive_components_have_correct_values">Make sure passive components have correct values</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/85" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/85</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/40" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/40</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/62" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/62</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/43" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/43</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fix_drc_errors">Fix DRC errors</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/86" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/86</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/72" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/72</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-robothree/issues/22" class="bare">https://github.com/ut-robotics/picr21-team-robothree/issues/22</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr22-team-saga/issues/31" class="bare">https://github.com/ut-robotics/picr22-team-saga/issues/31</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_make_sure_that_all_the_connections_have_been_routed_or_connected_with_polygons">Make sure that all the connections have been routed or connected with polygons</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/80" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/80</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/67" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/67</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_silkscreen_errors_and_improvements">Silkscreen errors and improvements</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/87" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/87</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/60" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/60</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/74" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/74</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/48" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/48</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/64" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/64</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_make_sure_that_the_usb_connector_does_not_collide_with_the_pcb">Make sure that the USB connector does not collide with the PCB</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/81" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/81</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_board_outline_clearance_rule">Create board outline clearance rule</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/79" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/79</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_avoid_overlapping_schematics_objects">Avoid overlapping schematics objects</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/76" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/76</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/54" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/54</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/66" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/66</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/61" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/61</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_add_decoupling_capacitor_to_mcu_nrst_pin">Add decoupling capacitor to MCU NRST pin</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/74" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/74</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/47" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/47</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/29" class="bare">https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/29</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_remove_dead_copper">Remove dead copper</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/49" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/49</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_differential_signal_routing">Differential signal routing</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/22" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/22</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr22-team-saga/issues/32" class="bare">https://github.com/ut-robotics/picr22-team-saga/issues/32</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_place_vias_near_pads">Place vias near pads</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/20" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/20</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/26" class="bare">https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/26</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_make_sure_there_is_enough_room_for_micromatch_and_programmer_connectors">Make sure there is enough room for MicroMatch and programmer connectors</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/56" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/56</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/52" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/52</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_make_sure_that_3d_models_in_footprint_are_placed_correctly">Make sure that 3D models in footprint are placed correctly</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/52" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/52</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_do_not_connect_mounting_holes_electrically">Do not connect mounting holes electrically</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/51" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/51</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_do_not_add_unnecessary_vias">Do not add unnecessary vias</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/50" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/50</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_tented_vias">Use tented vias</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/75" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/75</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_add_mounting_holes_or_some_way_to_attach_pcb_to_robot">Add mounting holes or some way to attach PCB to robot</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/64" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/64</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/85" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/85</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_add_clearance_to_mounting_holes">Add clearance to mounting holes</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr22-team-saga/issues/22" class="bare">https://github.com/ut-robotics/picr22-team-saga/issues/22</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_make_pcb_small">Make PCB small</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/63" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/63</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr22-team-saga/issues/21" class="bare">https://github.com/ut-robotics/picr22-team-saga/issues/21</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_direct_connection_for_vias">Use direct connection for vias</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/56" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/56</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_switching_regulator_for_servo_power">Use switching regulator for servo power</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/53" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/53</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr22-team-saga/issues/26" class="bare">https://github.com/ut-robotics/picr22-team-saga/issues/26</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_follow_switching_regulator_guidelines">Follow switching regulator guidelines</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/28" class="bare">https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/28</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/25" class="bare">https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/25</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_component_symbol_errors">Component symbol errors</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/49" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/49</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/49" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/49</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/13" class="bare">https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/13</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-robothree/issues/19" class="bare">https://github.com/ut-robotics/picr21-team-robothree/issues/19</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_connect_leds_with_correct_polarity">Connect LEDs with correct polarity</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/39" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/39</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_keep_tracks_and_components_above_reference_plane">Keep tracks and components above reference plane</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/86" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/86</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/27" class="bare">https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/27</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_only_through_hole_vias">Use only through hole vias</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/63" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/63</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_make_sure_each_component_has_reference_designator">Make sure each component has reference designator</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/39" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/39</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_100_mil_grid_on_schematic">Use 100 mil grid on schematic</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/38" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/38</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_avoid_routing_tracks_close_to_each_other">Avoid routing tracks close to each other</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/31" class="bare">https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/31</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_follow_pcb_manufacturers_recommendations">Follow PCB manufacturer&#8217;s recommendations</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/30" class="bare">https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/30</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_add_more_output_capacitance_to_switching_voltage_regulator">Add more output capacitance to switching voltage regulator</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/14" class="bare">https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/14</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pull_up_resistor_on_usb_d_line_is_not_needed_for_stm32g4xx">Pull-up resistor on USB D+ line is not needed for STM32G4xx</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr22-team-saga/issues/9" class="bare">https://github.com/ut-robotics/picr22-team-saga/issues/9</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_linear_regulator_is_not_needed_when_switching_regulator_is_used_for_servo_power">Linear regulator is not needed when switching regulator is used for servo power</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr22-team-saga/issues/14" class="bare">https://github.com/ut-robotics/picr22-team-saga/issues/14</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3_3v_is_not_needed_on_motor_drivers_side">3.3V is not needed on motor drivers side</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr22-team-saga/issues/14" class="bare">https://github.com/ut-robotics/picr22-team-saga/issues/14</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_generate_gerber_x2">Generate Gerber X2</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/90" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/90</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

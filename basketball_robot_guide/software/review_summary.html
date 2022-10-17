@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.18">
+<title>Code review summary</title>
+<link rel="stylesheet" href="./../../asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Code review summary</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_follow_style_guide_for_python_code_pep_8_if_the_team_does_that_have_any_other_preferences">Follow style guide for Python Code (PEP 8), if the team does that have any other preferences</a></li>
+<li><a href="#_use_uniform_writing_style_of_variables_functions_classes_files">Use uniform writing style (of variables, functions, classes, files)</a></li>
+<li><a href="#_use_understandable_naming_for_variables_functions_classes_files">Use understandable naming (for variables, functions, classes, files)</a></li>
+<li><a href="#_use_english">Use English</a></li>
+<li><a href="#_do_not_create_separate_code_for_completing_tasks">Do not create separate code for completing tasks</a></li>
+<li><a href="#_do_not_duplicate_code">Do not duplicate code</a></li>
+<li><a href="#_do_not_use_global_variables">Do not use global variables</a></li>
+<li><a href="#_use_pyrealsense2">Use pyrealsense2</a></li>
+<li><a href="#_use_manual_camera_exposure_and_white_balance">Use manual camera exposure and white balance</a></li>
+<li><a href="#_use_wide_camera_resolutions_and_higher_frame_rates">Use wide camera resolutions and higher frame rates</a></li>
+<li><a href="#_align_camera_depth_frames_with_color_frames_when_using_depth_data">Align camera depth frames with color frames when using depth data</a></li>
+<li><a href="#_use_serial_tools_list_ports_or_equivalent_to_find_correct_serial_port">Use serial.tools.list_ports (or equivalent) to find correct serial port</a></li>
+<li><a href="#_use_enums">Use enums</a></li>
+<li><a href="#_avoid_unnamedhardcodedrepeated_constants">Avoid unnamed/hardcoded/repeated constants</a></li>
+<li><a href="#_create_configuration_files_for_constants_that_need_to_be_changed">Create configuration files for constants that need to be changed</a></li>
+<li><a href="#_use_loops_instead_of_repeating_similar_code">Use loops instead of repeating similar code</a></li>
+<li><a href="#_keep_different_parts_of_the_code_separate_separation_of_concerns">Keep different parts of the code separate (separation of concerns)</a></li>
+<li><a href="#_use_state_machine_for_game_logic">Use state machine for game logic</a></li>
+<li><a href="#_create_separate_functions_for_state_handlers">Create separate functions for state handlers</a></li>
+<li><a href="#_make_manual_control_one_of_the_game_logic_states">Make manual control one of the game logic states</a></li>
+<li><a href="#_do_not_use_hardcoded_movement_functions">Do not use hardcoded movement functions</a></li>
+<li><a href="#_use_proportional_driving">Use proportional driving</a></li>
+<li><a href="#_use_omni_motion_to_calculate_motor_speeds">Use omni-motion to calculate motor speeds</a></li>
+<li><a href="#_do_not_open_serial_port_connection_multiple_times">Do not open serial port connection multiple times</a></li>
+<li><a href="#_do_not_send_commands_to_mainboard_too_frequently">Do not send commands to mainboard too frequently</a></li>
+<li><a href="#_close_opened_resources_camera_serial_port_files">Close opened resources (camera, serial port, files)</a></li>
+<li><a href="#_fix_typos">Fix typos</a></li>
+<li><a href="#_remove_unused_code">Remove unused code</a></li>
+<li><a href="#_use_websockets_for_receiving_referee_signals">Use WebSockets for receiving referee signals</a></li>
+<li><a href="#_do_not_send_anything_over_websocket_to_robot_basketball_manager">Do not send anything over WebSocket to robot basketball manager</a></li>
+<li><a href="#_make_sure_that_all_the_functionality_has_been_implemented_that_is_required_in_the_task_description">Make sure that all the functionality has been implemented that is required in the task description</a></li>
+<li><a href="#_test_and_review_the_code">Test and review the code</a></li>
+<li><a href="#_do_not_overuse_threads">Do not overuse threads</a></li>
+<li><a href="#_use_unpacking_operator_in_python">Use unpacking operator (in Python)</a></li>
+<li><a href="#_use_map_or_list_comprehension_in_python">Use map() or list comprehension (in Python)</a></li>
+<li><a href="#_use_elif_else_if">Use elif (else if)</a></li>
+<li><a href="#_throw_and_handle_exceptions">Throw and handle exceptions</a></li>
+<li><a href="#_create_connectopen_method_for_serial_connection">Create connect/open method for serial connection</a></li>
+<li><a href="#_sample_multiple_depth_pixels_to_find_less_noisy_distance">Sample multiple depth pixels to find less noisy distance</a></li>
+<li><a href="#_avoid_driving_too_close_to_basket">Avoid driving too close to basket</a></li>
+<li><a href="#_other_code_style_improvements">Other code style improvements</a></li>
+<li><a href="#_performance_optimisation">Performance optimisation</a></li>
+<li><a href="#_other">Other</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_follow_style_guide_for_python_code_pep_8_if_the_team_does_that_have_any_other_preferences">Follow style guide for Python Code (PEP 8), if the team does that have any other preferences</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://peps.python.org/pep-0008/" class="bare">https://peps.python.org/pep-0008/</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_uniform_writing_style_of_variables_functions_classes_files">Use uniform writing style (of variables, functions, classes, files)</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/51" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/51</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/24" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/24</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/43" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/43</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/29" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/29</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/32" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/32</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/87" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/87</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/23" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/23</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/27" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/27</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/56" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/56</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/33" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/33</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/82" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/82</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-robothree/issues/4" class="bare">https://github.com/ut-robotics/picr21-team-robothree/issues/4</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_understandable_naming_for_variables_functions_classes_files">Use understandable naming (for variables, functions, classes, files)</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/66" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/66</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/41" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/41</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/70" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/70</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/31" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/31</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/77" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/77</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_english">Use English</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/12" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/12</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-robothree/issues/7" class="bare">https://github.com/ut-robotics/picr21-team-robothree/issues/7</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_do_not_create_separate_code_for_completing_tasks">Do not create separate code for completing tasks</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/22" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/22</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/11" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/11</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/53" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/53</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_do_not_duplicate_code">Do not duplicate code</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/11" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/11</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/25" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/25</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/45" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/45</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/19" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/19</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/79" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/79</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/89" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/89</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/23" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/23</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/44" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/44</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/45" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/45</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/26" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/26</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/57" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/57</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/12" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/12</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_do_not_use_global_variables">Do not use global variables</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/26" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/26</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/58" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/58</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/13" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/13</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-4meats/issues/14" class="bare">https://github.com/ut-robotics/picr21-team-4meats/issues/14</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-robothree/issues/2" class="bare">https://github.com/ut-robotics/picr21-team-robothree/issues/2</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_pyrealsense2">Use pyrealsense2</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/8" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/8</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/16" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/16</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/25" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/25</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_manual_camera_exposure_and_white_balance">Use manual camera exposure and white balance</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/28" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/28</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/55" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/55</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_wide_camera_resolutions_and_higher_frame_rates">Use wide camera resolutions and higher frame rates</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/29" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/29</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/21" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/21</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/22" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/22</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/27" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/27</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-robothree/issues/8" class="bare">https://github.com/ut-robotics/picr21-team-robothree/issues/8</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_align_camera_depth_frames_with_color_frames_when_using_depth_data">Align camera depth frames with color frames when using depth data</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/30" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/30</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/88" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/88</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/69" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/69</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/24" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/24</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/58" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/58</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-4meats/issues/15" class="bare">https://github.com/ut-robotics/picr21-team-4meats/issues/15</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_serial_tools_list_ports_or_equivalent_to_find_correct_serial_port">Use serial.tools.list_ports (or equivalent) to find correct serial port</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/25" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/25</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/14" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/14</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/18" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/18</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/16" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/16</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/19" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/19</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-4meats/issues/11" class="bare">https://github.com/ut-robotics/picr21-team-4meats/issues/11</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/8" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/8</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/8" class="bare">https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/8</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-robothree/issues/1" class="bare">https://github.com/ut-robotics/picr21-team-robothree/issues/1</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_enums">Use enums</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/26" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/26</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/10" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/10</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/42" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/42</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/15" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/15</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_avoid_unnamedhardcodedrepeated_constants">Avoid unnamed/hardcoded/repeated constants</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/9" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/9</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/57" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/57</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/18" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/18</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/17" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/17</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/80" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/80</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_configuration_files_for_constants_that_need_to_be_changed">Create configuration files for constants that need to be changed</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/70" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/70</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/30" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/30</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/14" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/14</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_loops_instead_of_repeating_similar_code">Use loops instead of repeating similar code</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/10" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/10</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/15" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/15</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/14" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/14</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_keep_different_parts_of_the_code_separate_separation_of_concerns">Keep different parts of the code separate (separation of concerns)</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/12" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/12</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/39" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/39</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/16" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/16</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/44" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/44</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/41" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/41</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/59" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/59</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/20" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/20</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/21" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/21</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/28" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/28</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-4meats/issues/8" class="bare">https://github.com/ut-robotics/picr21-team-4meats/issues/8</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-4meats/issues/16" class="bare">https://github.com/ut-robotics/picr21-team-4meats/issues/16</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/13" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/13</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/15" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/15</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/16" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/16</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/36" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/36</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/76" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/76</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/94" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/94</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/33" class="bare">https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/33</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-robothree/issues/9" class="bare">https://github.com/ut-robotics/picr21-team-robothree/issues/9</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_state_machine_for_game_logic">Use state machine for game logic</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/38" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/38</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/46" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/46</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/17" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/17</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/45" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/45</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/29" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/29</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-4meats/issues/13" class="bare">https://github.com/ut-robotics/picr21-team-4meats/issues/13</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/29" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/29</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_separate_functions_for_state_handlers">Create separate functions for state handlers</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/17" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/17</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/43" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/43</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/54" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/54</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_make_manual_control_one_of_the_game_logic_states">Make manual control one of the game logic states</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/42" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/42</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/34" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/34</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_do_not_use_hardcoded_movement_functions">Do not use hardcoded movement functions</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/13" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/13</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/20" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/20</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-robothree/issues/3" class="bare">https://github.com/ut-robotics/picr21-team-robothree/issues/3</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_proportional_driving">Use proportional driving</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/29" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/29</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-4meats/issues/10" class="bare">https://github.com/ut-robotics/picr21-team-4meats/issues/10</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/18" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/18</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_omni_motion_to_calculate_motor_speeds">Use omni-motion to calculate motor speeds</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/23" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/23</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/21" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/21</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/20" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/20</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-robothree/issues/6" class="bare">https://github.com/ut-robotics/picr21-team-robothree/issues/6</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_do_not_open_serial_port_connection_multiple_times">Do not open serial port connection multiple times</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/24" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/24</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_do_not_send_commands_to_mainboard_too_frequently">Do not send commands to mainboard too frequently</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/31" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/31</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_close_opened_resources_camera_serial_port_files">Close opened resources (camera, serial port, files)</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/52" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/52</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fix_typos">Fix typos</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/40" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/40</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_remove_unused_code">Remove unused code</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/53" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/53</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/27" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/27</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/35" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/35</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/37" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/37</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_websockets_for_receiving_referee_signals">Use WebSockets for receiving referee signals</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/65" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/65</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_do_not_send_anything_over_websocket_to_robot_basketball_manager">Do not send anything over WebSocket to robot basketball manager</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/52" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/52</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_make_sure_that_all_the_functionality_has_been_implemented_that_is_required_in_the_task_description">Make sure that all the functionality has been implemented that is required in the task description</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/67" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/67</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_test_and_review_the_code">Test and review the code</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-jordan/issues/38" class="bare">https://github.com/ut-robotics/picr21-team-jordan/issues/38</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/28" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/28</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/53" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/53</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_do_not_overuse_threads">Do not overuse threads</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/82" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/82</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-shaq/issues/30" class="bare">https://github.com/ut-robotics/picr21-team-shaq/issues/30</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_unpacking_operator_in_python">Use unpacking operator (in Python)</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/17" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/17</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_map_or_list_comprehension_in_python">Use map() or list comprehension (in Python)</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/19" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/19</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_elif_else_if">Use elif (else if)</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/65" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/65</a>
+s
+== Use finally clause</p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/81" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/81</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_throw_and_handle_exceptions">Throw and handle exceptions</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/10" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/10</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_connectopen_method_for_serial_connection">Create connect/open method for serial connection</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/11" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/11</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sample_multiple_depth_pixels_to_find_less_noisy_distance">Sample multiple depth pixels to find less noisy distance</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/83" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/83</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_avoid_driving_too_close_to_basket">Avoid driving too close to basket</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/93" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/93</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_other_code_style_improvements">Other code style improvements</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/26" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/26</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/9" class="bare">https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/9</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_performance_optimisation">Performance optimisation</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/84" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/84</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_other">Other</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-sauna-madis/issues/47" class="bare">https://github.com/ut-robotics/picr21-team-sauna-madis/issues/47</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/31" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/31</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/33" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/33</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/78" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/78</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-bts/issues/80" class="bare">https://github.com/ut-robotics/picr21-team-bts/issues/80</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/68" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/68</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-tlo-rock/issues/73" class="bare">https://github.com/ut-robotics/picr21-team-tlo-rock/issues/73</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-4meats/issues/9" class="bare">https://github.com/ut-robotics/picr21-team-4meats/issues/9</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-4meats/issues/12" class="bare">https://github.com/ut-robotics/picr21-team-4meats/issues/12</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-4meats/issues/17" class="bare">https://github.com/ut-robotics/picr21-team-4meats/issues/17</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-4meats/issues/18" class="bare">https://github.com/ut-robotics/picr21-team-4meats/issues/18</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/9" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/9</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/30" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/30</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/32" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/32</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/78" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/78</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-kobe/issues/79" class="bare">https://github.com/ut-robotics/picr21-team-kobe/issues/79</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-robothree/issues/5" class="bare">https://github.com/ut-robotics/picr21-team-robothree/issues/5</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ut-robotics/picr21-team-robothree/issues/10" class="bare">https://github.com/ut-robotics/picr21-team-robothree/issues/10</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
