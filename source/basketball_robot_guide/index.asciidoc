@@ -18,17 +18,29 @@ link:electronics/pcb_layout.asciidoc[PCB layout]
 
 link:electronics/firmware.asciidoc[Firmware]
 
+link:electronics/review_summary.asciidoc[Review summary]
+
 == Mechanics
 
 link:mechanics/design.asciidoc[Design]
 
 link:mechanics/cam.asciidoc[Fusion 360 CAM]
 
+link:mechanics/review_summary.asciidoc[Review summary]
+
 == Software
 
 link:software/omni_motion.asciidoc[Omni-motion]
 
+link:software/review_summary.asciidoc[Review summary]
+
 == Changelog
+
+=== 2022-10-16
+
+. Created electronics review summary page.
+. Created code review summary page.
+. Created mechanics review summary page.
 
 === 2022-10-09
 

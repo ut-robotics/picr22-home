@@ -1,0 +1,309 @@
+:toc:
+
+= Mechanics review summary
+
+== Fully define sketches
+. https://github.com/ut-robotics/picr21-team-bts/issues/1
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/25
+. https://github.com/ut-robotics/picr21-team-shaq/issues/3
+. https://github.com/ut-robotics/picr21-team-4meats/issues/1
+. https://github.com/ut-robotics/picr21-team-kobe/issues/1
+. https://github.com/ut-robotics/picr21-team-kobe/issues/88
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/2
+. https://github.com/ut-robotics/picr21-team-robothree/issues/12
+
+== Fix warnings in the designs
+. https://github.com/ut-robotics/picr21-team-bts/issues/109
+
+== Prefer feature patterns to sketch patterns
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/18
+
+== Create design assembly of test thrower and test robot chassis to see how the thrower fits
+. https://github.com/ut-robotics/picr21-team-jordan/issues/1
+. https://github.com/ut-robotics/picr21-team-sauna-madis/issues/5
+. https://github.com/ut-robotics/picr21-team-bts/issues/5
+. https://github.com/ut-robotics/picr21-team-shaq/issues/4
+
+== Make sure that (deformed) ball does not interfere with anything during throw
+. https://github.com/ut-robotics/picr21-team-jordan/issues/2
+. https://github.com/ut-robotics/picr21-team-kobe/issues/3
+
+== Use parts that are available in the lab or are easy to buy
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/37
+
+== Use correct length spacers
+. https://github.com/ut-robotics/picr21-team-jordan/issues/3
+
+== Use correct material thickness
+. https://github.com/ut-robotics/picr21-team-jordan/issues/4
+. https://github.com/ut-robotics/picr21-team-kobe/issues/2
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/1
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/51
+
+== Increase thrower rigidity
+. https://github.com/ut-robotics/picr21-team-jordan/issues/5
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/81
+. https://github.com/ut-robotics/picr21-team-kobe/issues/73
+. https://github.com/ut-robotics/picr21-team-kobe/issues/89
+
+== Consider where the thrower motor wires will run
+. https://github.com/ut-robotics/picr21-team-bts/issues/110
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/8
+. https://github.com/ut-robotics/picr21-team-kobe/issues/4
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/3
+
+== Reduce wasted material
+. https://github.com/ut-robotics/picr21-team-jordan/issues/27
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/24
+. https://github.com/ut-robotics/picr21-team-shaq/issues/11
+. https://github.com/ut-robotics/picr21-team-4meats/issues/3
+. https://github.com/ut-robotics/picr21-team-kobe/issues/24
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/5
+. https://github.com/ut-robotics/picr21-team-robothree/issues/11
+
+== Add more material to increase rigidity if necessary
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/86
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/42
+
+== Improve wheel roller mounting
+. https://github.com/ut-robotics/picr21-team-jordan/issues/28
+. https://github.com/ut-robotics/picr21-team-bts/issues/27
+
+== Think ahead what screw lengths to use
+. https://github.com/ut-robotics/picr21-team-jordan/issues/29
+. https://github.com/ut-robotics/picr21-team-bts/issues/99
+
+== Use through holes for threads if possible
+. https://github.com/ut-robotics/picr21-team-jordan/issues/30
+
+== Use correct drill diameters for threaded holes
+. https://github.com/ut-robotics/picr21-team-jordan/issues/58
+. https://github.com/ut-robotics/picr21-team-bts/issues/2
+
+== Make threaded holes longer so that there is more thread
+. https://github.com/ut-robotics/picr21-team-bts/issues/12
+
+== Prefer threaded holes to nuts
+. https://github.com/ut-robotics/picr21-team-shaq/issues/12
+
+== Use correct hole sizes for bolts
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/84
+
+== Use countersunk screws if necessary or beneficial
+. https://github.com/ut-robotics/picr21-team-jordan/issues/31
+. https://github.com/ut-robotics/picr21-team-sauna-madis/issues/9
+. https://github.com/ut-robotics/picr21-team-bts/issues/36
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/7
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/26
+. https://github.com/ut-robotics/picr21-team-shaq/issues/6
+. https://github.com/ut-robotics/picr21-team-kobe/issues/75
+
+== Check for interferences
+. https://github.com/ut-robotics/picr21-team-jordan/issues/57
+. https://github.com/ut-robotics/picr21-team-bts/issues/6
+. https://github.com/ut-robotics/picr21-team-bts/issues/71
+. https://github.com/ut-robotics/picr21-team-bts/issues/73
+. https://github.com/ut-robotics/picr21-team-bts/issues/107
+. https://github.com/ut-robotics/picr21-team-bts/issues/111
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/6
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/87
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/88
+. https://github.com/ut-robotics/picr21-team-kobe/issues/5
+. https://github.com/ut-robotics/picr21-team-kobe/issues/69
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/46
+
+== For milled parts use internal corner cutouts (dogbones) if needed
+. https://github.com/ut-robotics/picr21-team-jordan/issues/62
+. https://github.com/ut-robotics/picr21-team-sauna-madis/issues/3
+. https://github.com/ut-robotics/picr21-team-kobe/issues/72
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/4
+
+== Make sure all the necessary mounting holes have been created
+. https://github.com/ut-robotics/picr21-team-jordan/issues/60
+. https://github.com/ut-robotics/picr21-team-jordan/issues/61
+. https://github.com/ut-robotics/picr21-team-sauna-madis/issues/4
+. https://github.com/ut-robotics/picr21-team-sauna-madis/issues/31
+. https://github.com/ut-robotics/picr21-team-bts/issues/66
+. https://github.com/ut-robotics/picr21-team-bts/issues/69
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/78
+. https://github.com/ut-robotics/picr21-team-shaq/issues/17
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/44
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/45
+
+== Make sure that the mounting holes are aligned
+. https://github.com/ut-robotics/picr21-team-kobe/issues/70
+
+== Make sure that there is enough room to place and remove the batteries
+. https://github.com/ut-robotics/picr21-team-jordan/issues/63
+
+== Make sure that the batteries are held in place
+. https://github.com/ut-robotics/picr21-team-kobe/issues/74
+
+== Use correct thrower motor hole pattern
+. https://github.com/ut-robotics/picr21-team-sauna-madis/issues/1
+
+== Make sure that there is right amount of distance between thrower motor and ramp
+. https://github.com/ut-robotics/picr21-team-sauna-madis/issues/6
+. https://github.com/ut-robotics/picr21-team-shaq/issues/5
+. https://github.com/ut-robotics/picr21-team-4meats/issues/4
+
+== Design thrower ramp to be constant distance away from the motor
+. https://github.com/ut-robotics/picr21-team-bts/issues/3
+
+== Make sure that the distance between thrower motor and the floor is only slightly smaller than the ball
+. https://github.com/ut-robotics/picr21-team-bts/issues/3
+. https://github.com/ut-robotics/picr21-team-shaq/issues/8
+. https://github.com/ut-robotics/picr21-team-kobe/issues/6
+
+== Make sure that all the parts can be attached to each other
+. https://github.com/ut-robotics/picr21-team-sauna-madis/issues/2
+. https://github.com/ut-robotics/picr21-team-bts/issues/98
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/83
+
+== Add computer power adapter socket cutout
+. https://github.com/ut-robotics/picr21-team-sauna-madis/issues/32
+
+== Use correct size cutouts for switches and computer power adapter socket
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/38
+
+== Create cutouts for wires and cables
+. https://github.com/ut-robotics/picr21-team-bts/issues/67
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/40
+
+== Add PCBs/boards to the design
+. https://github.com/ut-robotics/picr21-team-sauna-madis/issues/33
+. https://github.com/ut-robotics/picr21-team-kobe/issues/66
+
+== Make sure that there is enough room for electronics and cables
+. https://github.com/ut-robotics/picr21-team-bts/issues/70
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/80
+
+== Prefer solid parts to adjustable ones
+. https://github.com/ut-robotics/picr21-team-sauna-madis/issues/34
+
+== Consider whether balls can get stuck inside the robot
+. https://github.com/ut-robotics/picr21-team-sauna-madis/issues/35
+. https://github.com/ut-robotics/picr21-team-kobe/issues/67
+
+== Make sure that the chassis is not creating too many blind spots for the camera
+. https://github.com/ut-robotics/picr21-team-sauna-madis/issues/36
+
+== Make sure that the ball will be centered before the throw
+. https://github.com/ut-robotics/picr21-team-sauna-madis/issues/37
+. https://github.com/ut-robotics/picr21-team-4meats/issues/2
+. https://github.com/ut-robotics/picr21-team-kobe/issues/90
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/36
+
+== Support wheel rollers from the sides
+. https://github.com/ut-robotics/picr21-team-bts/issues/25
+. https://github.com/ut-robotics/picr21-team-shaq/issues/16
+. https://github.com/ut-robotics/picr21-team-kobe/issues/22
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/16
+
+== Avoid wheel rollers from protruding out of the robot
+. https://github.com/ut-robotics/picr21-team-bts/issues/26
+. https://github.com/ut-robotics/picr21-team-kobe/issues/21
+
+== Make parts symmetric if it simplifies assembly
+. https://github.com/ut-robotics/picr21-team-bts/issues/22
+. https://github.com/ut-robotics/picr21-team-shaq/issues/13
+. https://github.com/ut-robotics/picr21-team-kobe/issues/20
+
+== Use appropriate fits
+. https://github.com/ut-robotics/picr21-team-bts/issues/24
+. https://github.com/ut-robotics/picr21-team-bts/issues/96
+
+== Increase clearance if needed
+. https://github.com/ut-robotics/picr21-team-bts/issues/102
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/82
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/17
+
+== Avoid adding features that make assembly more complicated
+. https://github.com/ut-robotics/picr21-team-bts/issues/62
+. https://github.com/ut-robotics/picr21-team-bts/issues/74
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/79
+. https://github.com/ut-robotics/picr21-team-kobe/issues/68
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/39
+
+== Consider ways to simplify assembly
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/85
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/89
+. https://github.com/ut-robotics/picr21-team-shaq/issues/7
+. https://github.com/ut-robotics/picr21-team-kobe/issues/23
+. https://github.com/ut-robotics/picr21-team-kobe/issues/71
+
+== Design camera RGB sensor to be in the middle of the robot
+. https://github.com/ut-robotics/picr21-team-bts/issues/64
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/41
+
+== Consider camera field of view during design
+. https://github.com/ut-robotics/picr21-team-bts/issues/65
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/34
+
+== Consider the printing orientation for the parts that will be 3D-printed
+. https://github.com/ut-robotics/picr21-team-bts/issues/4
+
+== Use thicker layers when 3D-printing
+. https://github.com/ut-robotics/picr21-team-bts/issues/13
+
+== Consider the manufacturing method when designing
+. https://github.com/ut-robotics/picr21-team-bts/issues/7
+. https://github.com/ut-robotics/picr21-team-bts/issues/10
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/19
+
+== Avoid modeling threads
+. https://github.com/ut-robotics/picr21-team-bts/issues/68
+
+== Thrower angle adjustment
+. https://github.com/ut-robotics/picr21-team-bts/issues/95
+. https://github.com/ut-robotics/picr21-team-bts/issues/97
+. https://github.com/ut-robotics/picr21-team-bts/issues/103
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/35
+
+== Thrower grabber
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/43
+
+== CAM
+
+=== Use manufacturing model
+. https://github.com/ut-robotics/picr21-team-robothree/issues/13
+
+=== Leave enough space between milled parts
+. https://github.com/ut-robotics/picr21-team-4meats/issues/7
+. https://github.com/ut-robotics/picr21-team-kobe/issues/92
+
+=== Do not create multiple setups if not needed
+. https://github.com/ut-robotics/picr21-team-jordan/issues/6
+
+=== Make sure that work zero point is on top of the stock
+. https://github.com/ut-robotics/picr21-team-robothree/issues/15
+
+=== Order of operations
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/48
+
+=== Select correct geometry for operations
+. https://github.com/ut-robotics/picr21-team-robothree/issues/14
+
+=== Use partial retract drilling
+. https://github.com/ut-robotics/picr21-team-shaq/issues/9
+. https://github.com/ut-robotics/picr21-team-4meats/issues/5
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/6
+
+=== Do not use Lead In/Out
+. https://github.com/ut-robotics/picr21-team-sauna-madis/issues/7
+
+=== Use tabs
+. https://github.com/ut-robotics/picr21-team-sauna-madis/issues/39
+. https://github.com/ut-robotics/picr21-team-shaq/issues/10
+. https://github.com/ut-robotics/picr21-team-kobe/issues/91
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/47
+
+=== Disable or use negative Stock to Leave to make fitting parts together easier
+. https://github.com/ut-robotics/picr21-team-sauna-madis/issues/40
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/50
+
+=== Make sure that everything will be milled in manufacturing simulation
+. https://github.com/ut-robotics/picr21-team-4meats/issues/6
+. https://github.com/ut-robotics/picr21-team-robothree/issues/16
+
+

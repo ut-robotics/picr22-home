@@ -1,0 +1,266 @@
+:toc:
+
+= Review summary
+
+== Add decoupling capacitors to power pins
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/47
+. https://github.com/ut-robotics/picr21-team-kobe/issues/46
+. https://github.com/ut-robotics/picr21-team-kobe/issues/42
+. https://github.com/ut-robotics/picr21-team-kobe/issues/41
+
+== Place decoupling capacitors as close as possible to power pins
+. https://github.com/ut-robotics/picr21-team-jordan/issues/84
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/57
+. https://github.com/ut-robotics/picr21-team-shaq/issues/43
+. https://github.com/ut-robotics/picr21-team-kobe/issues/57
+. https://github.com/ut-robotics/picr22-team-saga/issues/33
+
+== Place ESD protection as close as possible to the USB connector
+. https://github.com/ut-robotics/picr21-team-jordan/issues/88
+. https://github.com/ut-robotics/picr21-team-bts/issues/47
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/58
+. https://github.com/ut-robotics/picr21-team-shaq/issues/44
+. https://github.com/ut-robotics/picr21-team-kobe/issues/56
+. https://github.com/ut-robotics/picr22-team-saga/issues/30
+
+== Use correct layers
+. https://github.com/ut-robotics/picr21-team-shaq/issues/49
+. https://github.com/ut-robotics/picr21-team-shaq/issues/47
+
+== Use solid grounds on inner layers
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/24
+. https://github.com/ut-robotics/picr21-team-robothree/issues/17
+
+== Avoid routing ground
+. https://github.com/ut-robotics/picr21-team-jordan/issues/83
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/60
+. https://github.com/ut-robotics/picr21-team-shaq/issues/42
+. https://github.com/ut-robotics/picr21-team-kobe/issues/54
+
+== Avoid routing signals on GND layers
+. https://github.com/ut-robotics/picr21-team-jordan/issues/89
+
+== Make connections as short as possible between components
+. https://github.com/ut-robotics/picr21-team-jordan/issues/82
+. https://github.com/ut-robotics/picr21-team-bts/issues/49
+. https://github.com/ut-robotics/picr21-team-shaq/issues/46
+. https://github.com/ut-robotics/picr21-team-kobe/issues/87
+
+== Keep isolated sides separate and do not route over the isolation gap
+. https://github.com/ut-robotics/picr21-team-sauna-madis/issues/21
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/55
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/54
+. https://github.com/ut-robotics/picr21-team-shaq/issues/41
+. https://github.com/ut-robotics/picr21-team-shaq/issues/38
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/23
+. https://github.com/ut-robotics/picr21-team-robothree/issues/18
+. https://github.com/ut-robotics/picr22-team-saga/issues/20
+
+== Make the isolation gap as wide as possible
+. https://github.com/ut-robotics/picr21-team-jordan/issues/77
+
+== Use correct pinouts for connectors
+. https://github.com/ut-robotics/picr21-team-jordan/issues/75
+. https://github.com/ut-robotics/picr21-team-kobe/issues/40
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/11
+. https://github.com/ut-robotics/picr21-team-robothree/issues/21
+. https://github.com/ut-robotics/picr22-team-saga/issues/15
+. https://github.com/ut-robotics/picr22-team-saga/issues/16
+
+== Make sure that all pins are connected correctly
+. https://github.com/ut-robotics/picr21-team-jordan/issues/73
+. https://github.com/ut-robotics/picr21-team-jordan/issues/72
+. https://github.com/ut-robotics/picr21-team-jordan/issues/71
+. https://github.com/ut-robotics/picr21-team-bts/issues/53
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/59
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/37
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/35
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/34
+. https://github.com/ut-robotics/picr21-team-shaq/issues/51
+. https://github.com/ut-robotics/picr21-team-shaq/issues/39
+. https://github.com/ut-robotics/picr21-team-shaq/issues/37
+. https://github.com/ut-robotics/picr21-team-shaq/issues/36
+. https://github.com/ut-robotics/picr21-team-shaq/issues/35
+. https://github.com/ut-robotics/picr21-team-kobe/issues/50
+. https://github.com/ut-robotics/picr21-team-kobe/issues/45
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/10
+. https://github.com/ut-robotics/picr22-team-saga/issues/11
+. https://github.com/ut-robotics/picr22-team-saga/issues/12
+. https://github.com/ut-robotics/picr22-team-saga/issues/13
+. https://github.com/ut-robotics/picr22-team-saga/issues/17
+
+== Connect motor driver nSLEEP pin to MCU
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/76
+. https://github.com/ut-robotics/picr21-team-shaq/issues/50
+. https://github.com/ut-robotics/picr21-team-shaq/issues/34
+
+== Use wide and short connections for high currents
+. https://github.com/ut-robotics/picr21-team-sauna-madis/issues/19
+. https://github.com/ut-robotics/picr21-team-bts/issues/48
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/61
+. https://github.com/ut-robotics/picr21-team-shaq/issues/45
+. https://github.com/ut-robotics/picr21-team-kobe/issues/60
+. https://github.com/ut-robotics/picr21-team-kobe/issues/58
+. https://github.com/ut-robotics/picr21-team-robothree/issues/20
+. https://github.com/ut-robotics/picr22-team-saga/issues/24
+
+== Use components that are available in the lab or are available to order at low cost
+. https://github.com/ut-robotics/picr21-team-sauna-madis/issues/18
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/71
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/38
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/36
+. https://github.com/ut-robotics/picr21-team-shaq/issues/40
+. https://github.com/ut-robotics/picr21-team-shaq/issues/33
+. https://github.com/ut-robotics/picr22-team-saga/issues/25
+
+== Make sure that all necessary components have been added
+. https://github.com/ut-robotics/picr21-team-kobe/issues/48
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/12
+. https://github.com/ut-robotics/picr22-team-saga/issues/23
+
+== Add (more) bulk capacitors to motor driver VM pins
+. https://github.com/ut-robotics/picr21-team-kobe/issues/44
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/15
+. https://github.com/ut-robotics/picr22-team-saga/issues/19
+
+== Use correct component package
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/48
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/33
+
+== Use correct footprint
+. https://github.com/ut-robotics/picr21-team-kobe/issues/59
+. https://github.com/ut-robotics/picr21-team-kobe/issues/55
+. https://github.com/ut-robotics/picr22-team-saga/issues/10
+. https://github.com/ut-robotics/picr22-team-saga/issues/18
+
+== Make sure passive components have correct values
+. https://github.com/ut-robotics/picr21-team-jordan/issues/85
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/40
+. https://github.com/ut-robotics/picr21-team-kobe/issues/62
+. https://github.com/ut-robotics/picr21-team-kobe/issues/43
+
+== Fix DRC errors
+. https://github.com/ut-robotics/picr21-team-jordan/issues/86
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/72
+. https://github.com/ut-robotics/picr21-team-robothree/issues/22
+. https://github.com/ut-robotics/picr22-team-saga/issues/31
+
+== Make sure that all the connections have been routed or connected with polygons
+. https://github.com/ut-robotics/picr21-team-jordan/issues/80
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/67
+
+== Silkscreen errors and improvements
+. https://github.com/ut-robotics/picr21-team-jordan/issues/87
+. https://github.com/ut-robotics/picr21-team-bts/issues/60
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/74
+. https://github.com/ut-robotics/picr21-team-shaq/issues/48
+. https://github.com/ut-robotics/picr21-team-kobe/issues/64
+
+== Make sure that the USB connector does not collide with the PCB
+. https://github.com/ut-robotics/picr21-team-jordan/issues/81
+
+== Create board outline clearance rule
+. https://github.com/ut-robotics/picr21-team-jordan/issues/79
+
+== Avoid overlapping schematics objects
+. https://github.com/ut-robotics/picr21-team-jordan/issues/76
+. https://github.com/ut-robotics/picr21-team-bts/issues/54
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/66
+. https://github.com/ut-robotics/picr21-team-kobe/issues/61
+
+== Add decoupling capacitor to MCU NRST pin
+. https://github.com/ut-robotics/picr21-team-jordan/issues/74
+. https://github.com/ut-robotics/picr21-team-kobe/issues/47
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/29
+
+== Remove dead copper
+. https://github.com/ut-robotics/picr21-team-sauna-madis/issues/49
+
+== Differential signal routing
+. https://github.com/ut-robotics/picr21-team-sauna-madis/issues/22
+. https://github.com/ut-robotics/picr22-team-saga/issues/32
+
+== Place vias near pads
+. https://github.com/ut-robotics/picr21-team-sauna-madis/issues/20
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/26
+
+== Make sure there is enough room for MicroMatch and programmer connectors
+. https://github.com/ut-robotics/picr21-team-bts/issues/56
+. https://github.com/ut-robotics/picr21-team-shaq/issues/52
+
+== Make sure that 3D models in footprint are placed correctly
+. https://github.com/ut-robotics/picr21-team-bts/issues/52
+
+== Do not connect mounting holes electrically
+. https://github.com/ut-robotics/picr21-team-bts/issues/51
+
+== Do not add unnecessary vias
+. https://github.com/ut-robotics/picr21-team-bts/issues/50
+
+== Use tented vias
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/75
+
+== Add mounting holes or some way to attach PCB to robot
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/64
+. https://github.com/ut-robotics/picr21-team-kobe/issues/85
+
+== Add clearance to mounting holes
+. https://github.com/ut-robotics/picr22-team-saga/issues/22
+
+== Make PCB small
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/63
+. https://github.com/ut-robotics/picr22-team-saga/issues/21
+
+== Use direct connection for vias
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/56
+
+== Use switching regulator for servo power
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/53
+. https://github.com/ut-robotics/picr22-team-saga/issues/26
+
+== Follow switching regulator guidelines
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/28
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/25
+
+== Component symbol errors
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/49
+. https://github.com/ut-robotics/picr21-team-kobe/issues/49
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/13
+. https://github.com/ut-robotics/picr21-team-robothree/issues/19
+
+== Connect LEDs with correct polarity
+. https://github.com/ut-robotics/picr21-team-tlo-rock/issues/39
+
+== Keep tracks and components above reference plane
+. https://github.com/ut-robotics/picr21-team-kobe/issues/86
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/27
+
+== Use only through hole vias
+. https://github.com/ut-robotics/picr21-team-kobe/issues/63
+
+== Make sure each component has reference designator
+. https://github.com/ut-robotics/picr21-team-kobe/issues/39
+
+== Use 100 mil grid on schematic
+. https://github.com/ut-robotics/picr21-team-kobe/issues/38
+
+== Avoid routing tracks close to each other
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/31
+
+== Follow PCB manufacturer's recommendations
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/30
+
+== Add more output capacitance to switching voltage regulator
+. https://github.com/ut-robotics/picr21-team-kurgimopeed/issues/14
+
+== Pull-up resistor on USB D+ line is not needed for STM32G4xx
+. https://github.com/ut-robotics/picr22-team-saga/issues/9
+
+== Linear regulator is not needed when switching regulator is used for servo power
+. https://github.com/ut-robotics/picr22-team-saga/issues/14
+
+== 3.3V is not needed on motor drivers side
+. https://github.com/ut-robotics/picr22-team-saga/issues/14
+
+== Generate Gerber X2
+. https://github.com/ut-robotics/picr21-team-jordan/issues/90
